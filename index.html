@@ -75,6 +75,8 @@ table{width:100%;border-collapse:collapse;font-size:12.5px}
 th,td{padding:7px 8px;text-align:left;border-bottom:1px solid var(--line)}
 th{color:var(--dim);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase}
 td.who{display:flex;flex-wrap:wrap;gap:5px}
+.same{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-bottom:4px}
+.same>span:last-child{color:var(--dim);font-variant-numeric:tabular-nums}
 .tag{padding:2px 8px;border-radius:999px;font-size:10.5px;font-weight:700;color:#0a0b10}
 .matrix{border-collapse:separate;border-spacing:3px}
 .matrix td,.matrix th{border:none;text-align:center;padding:0}
@@ -138,7 +140,7 @@ footer{color:var(--dim);font-size:11.5px;text-align:center;margin-top:26px}
 </div>
 
 <div class="two">
-  <div class="card"><h2>Shared classes</h2><div id="shared"></div></div>
+  <div class="card"><h2>Shared courses <span style="text-transform:none;letter-spacing:0;color:var(--dim)">and who is actually in the same class</span></h2><div id="shared"></div></div>
   <div class="card"><h2>Everyone free (Mon&ndash;Fri, 8a&ndash;9p)</h2><div class="freelist" id="freelist"></div></div>
 </div>
 
@@ -415,6 +417,7 @@ function stats(people){
     ["unique courses",new Set([...all.map(b=>b.course),
         ...people.flatMap(n=>(DATA[n].untimed||[]).map(u=>u.course))]).size,"var(--accent)"],
     ["shared courses",sharedCourses(people).length,"#4dd4ac"],
+    ["shared classes",new Set(sharedClasses(people).map(x=>x.course)).size,"#7dd3fc"],
     ["combined hrs/wk",hrs(mins),"#5aa9ff"],
     ["shared free hrs",people.length>1?hrs(freeMin):"n/a","#c084fc"],
     ["earliest start",all.length?fmt(Math.min(...all.map(b=>b.start))):"n/a","#ffa94d"],
@@ -456,7 +459,24 @@ function matrix(people){
   $("#matrix").innerHTML=h+"</table>";
 }
 
-function sharedCourses(people){
+function sharedClasses(people){        // same course AND same meeting time: actually sitting together
+  const meet=new Map();
+  for(const n of people) for(const b of DATA[n].blocks){
+    const k=[b.course,b.day,b.start,b.end].join("|");
+    if(!meet.has(k)) meet.set(k,{...b,who:[]});
+    meet.get(k).who.push(n);
+  }
+  const out=new Map();                 // an MWF lecture is one shared class, not three
+  for(const m of meet.values()){
+    if(m.who.length<2) continue;
+    const k=[m.course,m.start,m.end,m.who.join(",")].join("|");
+    if(!out.has(k)) out.set(k,{...m,days:[]});
+    out.get(k).days.push(m.day);
+  }
+  return [...out.values()].sort((a,b)=>b.who.length-a.who.length||a.start-b.start);
+}
+
+function sharedCourses(people){        // same course code, section or time need not match
   const map={};
   for(const n of people) for(const c of new Set(DATA[n].blocks.map(b=>b.course))) (map[c]??=[]).push(n);
   return Object.entries(map).filter(([,w])=>w.length>1).sort((a,b)=>b[1].length-a[1].length);
@@ -465,9 +485,17 @@ function shared(people){
   const s=sharedCourses(people);
   if(!s.length){$("#shared").innerHTML='<div class="empty">No classes in common with this selection.</div>';return}
   const title=c=>{for(const n of NAMES){const b=DATA[n].blocks.find(x=>x.course===c); if(b)return b.title} return""};
-  $("#shared").innerHTML='<table><tr><th>Course</th><th>Title</th><th>Together</th></tr>'+
-    s.map(([c,w])=>`<tr><td><b>${c}</b></td><td style="color:var(--dim)">${title(c)}</td>
-      <td class="who">${w.map(n=>`<span class="tag" style="background:${color(n)}">${n}</span>`).join("")}</td></tr>`).join("")+"</table>";
+  const classes=sharedClasses(people);
+  const chips=w=>w.map(n=>`<span class="tag" style="background:${color(n)}">${n}</span>`).join("");
+  const same=c=>{
+    const rows=classes.filter(x=>x.course===c);
+    return rows.length?rows.map(x=>`<div class="same">${chips(x.who)}
+      <span>${x.days.sort().map(d=>["M","T","W","Th","F"][d]).join("")} ${fmt(x.start)}&ndash;${fmt(x.end)}</span></div>`).join("")
+      : '<span class="empty">different sections</span>';
+  };
+  $("#shared").innerHTML='<table><tr><th>Course</th><th>Taking it</th><th>In the same class</th></tr>'+
+    s.map(([c,w])=>`<tr><td><b>${c}</b><div style="color:var(--dim)">${title(c)}</div></td>
+      <td class="who">${chips(w)}</td><td>${same(c)}</td></tr>`).join("")+"</table>";
 }
 
 function freetime(people){
