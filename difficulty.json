@@ -1,0 +1,1091 @@
+{
+ "Abby": {
+  "courses": [
+   {
+    "course": "BIOL 58601",
+    "title": "Ecology",
+    "credits": 3,
+    "score": 8.3,
+    "gpa": 2.69,
+    "gpaOf": "Ximena Bernal",
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
+    "parts": {
+     "grades": 8.1,
+     "prof": 8.1,
+     "level": 9.0
+    }
+   },
+   {
+    "course": "SCI 39500",
+    "title": "Global Science Experience",
+    "credits": 1,
+    "score": 5.4,
+    "gpa": null,
+    "gpaOf": null,
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
+    "parts": {
+     "grades": 5.0,
+     "prof": 5.0,
+     "level": 7.0
+    }
+   },
+   {
+    "course": "PHYS 23300",
+    "title": "Physics For Life Sciences I",
+    "credits": 4,
+    "score": 5.1,
+    "gpa": 3.15,
+    "gpaOf": "Ian Arnold",
+    "prof": "Ian Arnold",
+    "rating": 3.5,
+    "profDiff": 3.2,
+    "ratings": 28,
+    "dept": "Physics",
+    "parts": {
+     "grades": 5.0,
+     "prof": 5.4,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "BIOL 58602",
+    "title": "Laboratory In Ecology",
+    "credits": 1,
+    "score": 5.0,
+    "gpa": 3.66,
+    "gpaOf": "Denise Zielinski",
+    "prof": "Denise Zielinski",
+    "rating": 2,
+    "profDiff": 4.3,
+    "ratings": 129,
+    "dept": "Biological Sciences",
+    "parts": {
+     "grades": 1.6,
+     "prof": 8.1,
+     "level": 9.0
+    }
+   },
+   {
+    "course": "ANTH 25400",
+    "title": "Archaeological Hoaxes, Myths And Frauds",
+    "credits": 3,
+    "score": 4.1,
+    "gpa": 3.4,
+    "gpaOf": "Ian Lindsay",
+    "prof": "Ian Lindsay",
+    "rating": 4.2,
+    "profDiff": 2.8,
+    "ratings": 13,
+    "dept": "Anthropology",
+    "parts": {
+     "grades": 3.3,
+     "prof": 4.6,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "WGSS 28000",
+    "title": "Women's, Gender, And Sexuality Studies: An Introduction",
+    "credits": 3,
+    "score": 1.6,
+    "gpa": 3.79,
+    "gpaOf": "Ozgun Basmaz",
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
+    "parts": {
+     "grades": 0.7,
+     "prof": 0.7,
+     "level": 5.0
+    }
+   }
+  ],
+  "credits": 15,
+  "load": 0.0,
+  "score": 4.9
+ },
+ "Bremer": {
+  "courses": [
+   {
+    "course": "ME 20000",
+    "title": "Thermodynamics I",
+    "credits": 3,
+    "score": 7.8,
+    "gpa": 2.62,
+    "gpaOf": null,
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
+    "parts": {
+     "grades": 8.5,
+     "prof": 8.5,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ME 27000",
+    "title": "Basic Mechanics I",
+    "credits": 3,
+    "score": 6.7,
+    "gpa": 2.76,
+    "gpaOf": "Fabio Semperlotti",
+    "prof": "Fabio Semperlotti",
+    "rating": 2.3,
+    "profDiff": 3.7,
+    "ratings": 15,
+    "dept": "Mechanical Engineering",
+    "parts": {
+     "grades": 7.6,
+     "prof": 6.3,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "MA 26100",
+    "title": "Multivariate Calculus",
+    "credits": 4,
+    "score": 5.6,
+    "gpa": 2.92,
+    "gpaOf": "Yik Li",
+    "prof": "Andrew Toms",
+    "rating": 4.6,
+    "profDiff": 2.8,
+    "ratings": 95,
+    "dept": "Mathematics",
+    "parts": {
+     "grades": 6.5,
+     "prof": 4.5,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "PHYS 27200",
+    "title": "Electric And Magnetic Interactions",
+    "credits": 4,
+    "score": 5.6,
+    "gpa": 2.9,
+    "gpaOf": "Laura Urba",
+    "prof": "Laura Urba",
+    "rating": 4.3,
+    "profDiff": 2.7,
+    "ratings": 41,
+    "dept": "Statistics",
+    "parts": {
+     "grades": 6.7,
+     "prof": 4.3,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECON 25100",
+    "title": "Microeconomics",
+    "credits": 3,
+    "score": 4.3,
+    "gpa": 3.33,
+    "gpaOf": "Abigail Banan",
+    "prof": "Abigail Banan",
+    "rating": 3.9,
+    "profDiff": 2.8,
+    "ratings": 73,
+    "dept": "Economics",
+    "parts": {
+     "grades": 3.8,
+     "prof": 4.5,
+     "level": 5.0
+    }
+   }
+  ],
+  "credits": 17,
+  "load": 0.2,
+  "score": 6.1
+ },
+ "Diana": {
+  "courses": [
+   {
+    "course": "MA 26600",
+    "title": "Ordinary Differential Equations",
+    "credits": 3,
+    "score": 7.5,
+    "gpa": 2.68,
+    "gpaOf": null,
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
+    "parts": {
+     "grades": 8.1,
+     "prof": 8.1,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "PHYS 27200",
+    "title": "Electric And Magnetic Interactions",
+    "credits": 4,
+    "score": 6.0,
+    "gpa": 2.92,
+    "gpaOf": null,
+    "prof": "Matthew Route",
+    "rating": 3.1,
+    "profDiff": 3.6,
+    "ratings": 7,
+    "dept": "Physics",
+    "parts": {
+     "grades": 6.5,
+     "prof": 5.9,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "MSE 25000",
+    "title": "Physical Properties In Engineering Systems",
+    "credits": 3,
+    "score": 5.7,
+    "gpa": 2.81,
+    "gpaOf": null,
+    "prof": "Mohamad Zbib",
+    "rating": 4.8,
+    "profDiff": 2.3,
+    "ratings": 19,
+    "dept": "Engineering",
+    "parts": {
+     "grades": 7.3,
+     "prof": 3.6,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "MSE 39000",
+    "title": "Materials Engineering Seminar",
+    "credits": 1,
+    "score": 5.4,
+    "gpa": null,
+    "gpaOf": null,
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
+    "parts": {
+     "grades": 5.0,
+     "prof": 5.0,
+     "level": 7.0
+    }
+   },
+   {
+    "course": "MSE 42000",
+    "title": "Structure And Properties Of Organic Materials",
+    "credits": 3,
+    "score": 4.8,
+    "gpa": 3.31,
+    "gpaOf": null,
+    "prof": "John Howarter",
+    "rating": 2.1,
+    "profDiff": 2.4,
+    "ratings": 7,
+    "dept": "Materials Engineering",
+    "parts": {
+     "grades": 3.9,
+     "prof": 4.1,
+     "level": 8.0
+    }
+   },
+   {
+    "course": "MSE 23000",
+    "title": "Structure And Properties Of Materials",
+    "credits": 3,
+    "score": 4.5,
+    "gpa": 3.34,
+    "gpaOf": null,
+    "prof": "Maria Okuniewski",
+    "rating": 2.5,
+    "profDiff": 3.5,
+    "ratings": 4,
+    "dept": "Materials Engineering",
+    "parts": {
+     "grades": 3.7,
+     "prof": 5.6,
+     "level": 5.0
+    }
+   }
+  ],
+  "credits": 17,
+  "load": 0.2,
+  "score": 5.9
+ },
+ "Manny": {
+  "courses": [
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engineering Fundamentals I",
+    "credits": 3,
+    "score": 7.4,
+    "gpa": 2.44,
+    "gpaOf": null,
+    "prof": "Dana Weinstein",
+    "rating": 4.3,
+    "profDiff": 3,
+    "ratings": 3,
+    "dept": "Electrical Engineering",
+    "parts": {
+     "grades": 9.7,
+     "prof": 5.0,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "VIP 27920",
+    "title": "Sophomore Participation In Vertically Integrated Projects (VIP)",
+    "credits": 2,
+    "score": 5.1,
+    "gpa": 3.4,
+    "gpaOf": "Mark Johnson",
+    "prof": "Mark Johnson",
+    "rating": 4,
+    "profDiff": 4.5,
+    "ratings": 29,
+    "dept": "Engineering",
+    "parts": {
+     "grades": 3.3,
+     "prof": 8.2,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 27000",
+    "title": "Introduction To Digital System Design",
+    "credits": 4,
+    "score": 5.0,
+    "gpa": 3.1,
+    "gpaOf": "Junfei Li",
+    "prof": "Junfei Li",
+    "rating": 3.8,
+    "profDiff": 2.8,
+    "ratings": 49,
+    "dept": "Engineering",
+    "parts": {
+     "grades": 5.3,
+     "prof": 4.5,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 20869",
+    "title": "Discrete Math For Computer Engineering",
+    "credits": 3,
+    "score": 4.9,
+    "gpa": null,
+    "gpaOf": null,
+    "prof": "Saurabh Bagchi",
+    "rating": 4,
+    "profDiff": 2.8,
+    "ratings": 145,
+    "dept": "Engineering",
+    "parts": {
+     "grades": 5.0,
+     "prof": 4.5,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 26400",
+    "title": "Advanced C Programming",
+    "credits": 3,
+    "score": 4.6,
+    "gpa": 3.4,
+    "gpaOf": "Xiaoqian Wang",
+    "prof": "Xiaoqian Wang",
+    "rating": 2.4,
+    "profDiff": 3.8,
+    "ratings": 14,
+    "dept": "Electrical Engineering",
+    "parts": {
+     "grades": 3.3,
+     "prof": 6.5,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 20007",
+    "title": "Electrical Engineering Fundamentals I Lab",
+    "credits": 1,
+    "score": 3.3,
+    "gpa": 3.47,
+    "gpaOf": null,
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
+    "parts": {
+     "grades": 2.9,
+     "prof": 2.9,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 29401",
+    "title": "Electrical And Computer Engineering Sophomore Seminar",
+    "credits": 1,
+    "score": 3.1,
+    "gpa": 3.57,
+    "gpaOf": "Angela Rainwater",
+    "prof": "Angela Rainwater",
+    "rating": 2.8,
+    "profDiff": 2,
+    "ratings": 11,
+    "dept": "Electrical Engineering",
+    "parts": {
+     "grades": 2.2,
+     "prof": 3.3,
+     "level": 5.0
+    }
+   }
+  ],
+  "credits": 17,
+  "load": 0.2,
+  "score": 5.3
+ },
+ "Matt": {
+  "courses": [
+   {
+    "course": "MA 26100",
+    "title": "Multivariate Calculus",
+    "credits": 4,
+    "score": 6.1,
+    "gpa": 2.84,
+    "gpaOf": null,
+    "prof": "Daniel Johnstone",
+    "rating": 4.3,
+    "profDiff": 3.1,
+    "ratings": 50,
+    "dept": "Mathematics",
+    "parts": {
+     "grades": 7.1,
+     "prof": 5.2,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "CHM 11510",
+    "title": "General Chemistry I",
+    "credits": 3,
+    "score": 5.0,
+    "gpa": null,
+    "gpaOf": null,
+    "prof": "Garth Simpson",
+    "rating": 3,
+    "profDiff": 3.6,
+    "ratings": 30,
+    "dept": "Chemistry",
+    "parts": {
+     "grades": 5.0,
+     "prof": 6.3,
+     "level": 3.0
+    }
+   },
+   {
+    "course": "CHM 11520",
+    "title": "General Chemistry I",
+    "credits": 1,
+    "score": 4.6,
+    "gpa": null,
+    "gpaOf": null,
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
+    "parts": {
+     "grades": 5.0,
+     "prof": 5.0,
+     "level": 3.0
+    }
+   },
+   {
+    "course": "ENGR 13100",
+    "title": "Transforming Ideas To Innovation I",
+    "credits": 2,
+    "score": 3.3,
+    "gpa": 3.68,
+    "gpaOf": null,
+    "prof": "Taeho Jeong",
+    "rating": 4.5,
+    "profDiff": 3.8,
+    "ratings": 16,
+    "dept": "Civil Engineering",
+    "parts": {
+     "grades": 1.5,
+     "prof": 6.5,
+     "level": 3.0
+    }
+   },
+   {
+    "course": "ENGR 10301",
+    "title": "Engr And Public Service",
+    "credits": 1,
+    "score": 1.8,
+    "gpa": 3.99,
+    "gpaOf": null,
+    "prof": "Lucas Petersen",
+    "rating": 5,
+    "profDiff": 1.5,
+    "ratings": 2,
+    "dept": "Music",
+    "parts": {
+     "grades": 0,
+     "prof": 3.9,
+     "level": 3.0
+    }
+   },
+   {
+    "course": "BAND 11800",
+    "title": "Collegiate Band",
+    "credits": 2,
+    "score": 1.5,
+    "gpa": 3.99,
+    "gpaOf": "David Blon",
+    "prof": "David Blon",
+    "rating": 3.1,
+    "profDiff": 1.8,
+    "ratings": 12,
+    "dept": "Music",
+    "parts": {
+     "grades": 0,
+     "prof": 2.9,
+     "level": 3.0
+    }
+   }
+  ],
+  "credits": 13,
+  "load": -0.2,
+  "score": 4.1
+ },
+ "Morgan": {
+  "courses": [
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engineering Fundamentals I",
+    "credits": 3,
+    "score": 7.4,
+    "gpa": 2.44,
+    "gpaOf": null,
+    "prof": "Can Wu",
+    "rating": 2.3,
+    "profDiff": 3,
+    "ratings": 3,
+    "dept": "Statistics",
+    "parts": {
+     "grades": 9.7,
+     "prof": 5.0,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "MA 26100",
+    "title": "Multivariate Calculus",
+    "credits": 4,
+    "score": 6.2,
+    "gpa": 2.84,
+    "gpaOf": null,
+    "prof": "Shuyi Weng",
+    "rating": 4.2,
+    "profDiff": 3.3,
+    "ratings": 69,
+    "dept": "Mathematics",
+    "parts": {
+     "grades": 7.1,
+     "prof": 5.7,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "PHYS 27200",
+    "title": "Electric And Magnetic Interactions",
+    "credits": 4,
+    "score": 5.6,
+    "gpa": 2.9,
+    "gpaOf": "Laura Urba",
+    "prof": "Laura Urba",
+    "rating": 4.3,
+    "profDiff": 2.7,
+    "ratings": 41,
+    "dept": "Statistics",
+    "parts": {
+     "grades": 6.7,
+     "prof": 4.3,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "VIP 27920",
+    "title": "Sophomore Participation In Vertically Integrated Projects (VIP)",
+    "credits": 2,
+    "score": 5.1,
+    "gpa": 3.4,
+    "gpaOf": "Mark Johnson",
+    "prof": "Mark Johnson",
+    "rating": 4,
+    "profDiff": 4.5,
+    "ratings": 29,
+    "dept": "Engineering",
+    "parts": {
+     "grades": 3.3,
+     "prof": 8.2,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 20875",
+    "title": "Python For Data Science",
+    "credits": 3,
+    "score": 4.6,
+    "gpa": 3.17,
+    "gpaOf": "Qiang Qiu",
+    "prof": "Qiang Qiu",
+    "rating": 4.7,
+    "profDiff": 2.2,
+    "ratings": 6,
+    "dept": "Computer Engineering",
+    "parts": {
+     "grades": 4.9,
+     "prof": 3.9,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 20007",
+    "title": "Electrical Engineering Fundamentals I Lab",
+    "credits": 1,
+    "score": 3.3,
+    "gpa": 3.47,
+    "gpaOf": null,
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
+    "parts": {
+     "grades": 2.9,
+     "prof": 2.9,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 29401",
+    "title": "Electrical And Computer Engineering Sophomore Seminar",
+    "credits": 1,
+    "score": 3.1,
+    "gpa": 3.57,
+    "gpaOf": "Angela Rainwater",
+    "prof": "Angela Rainwater",
+    "rating": 2.8,
+    "profDiff": 2,
+    "ratings": 11,
+    "dept": "Electrical Engineering",
+    "parts": {
+     "grades": 2.2,
+     "prof": 3.3,
+     "level": 5.0
+    }
+   }
+  ],
+  "credits": 18,
+  "load": 0.2,
+  "score": 5.8
+ },
+ "Noah": {
+  "courses": [
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engineering Fundamentals I",
+    "credits": 3,
+    "score": 7.4,
+    "gpa": 2.44,
+    "gpaOf": null,
+    "prof": "Can Wu",
+    "rating": 2.3,
+    "profDiff": 3,
+    "ratings": 3,
+    "dept": "Statistics",
+    "parts": {
+     "grades": 9.7,
+     "prof": 5.0,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "MA 26100",
+    "title": "Multivariate Calculus",
+    "credits": 4,
+    "score": 6.2,
+    "gpa": 2.84,
+    "gpaOf": null,
+    "prof": "Shuyi Weng",
+    "rating": 4.2,
+    "profDiff": 3.3,
+    "ratings": 69,
+    "dept": "Mathematics",
+    "parts": {
+     "grades": 7.1,
+     "prof": 5.7,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "VIP 27920",
+    "title": "Sophomore Participation In Vertically Integrated Projects (VIP)",
+    "credits": 2,
+    "score": 4.7,
+    "gpa": 3.4,
+    "gpaOf": "Mark Johnson",
+    "prof": "Johnathan Hong",
+    "rating": 3.2,
+    "profDiff": 4.3,
+    "ratings": 6,
+    "dept": "Economics",
+    "parts": {
+     "grades": 3.3,
+     "prof": 6.8,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 20875",
+    "title": "Python For Data Science",
+    "credits": 3,
+    "score": 4.6,
+    "gpa": 3.17,
+    "gpaOf": "Qiang Qiu",
+    "prof": "Qiang Qiu",
+    "rating": 4.7,
+    "profDiff": 2.2,
+    "ratings": 6,
+    "dept": "Computer Engineering",
+    "parts": {
+     "grades": 4.9,
+     "prof": 3.9,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 20007",
+    "title": "Electrical Engineering Fundamentals I Lab",
+    "credits": 1,
+    "score": 3.3,
+    "gpa": 3.47,
+    "gpaOf": null,
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
+    "parts": {
+     "grades": 2.9,
+     "prof": 2.9,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 29401",
+    "title": "Electrical And Computer Engineering Sophomore Seminar",
+    "credits": 1,
+    "score": 3.1,
+    "gpa": 3.57,
+    "gpaOf": "Angela Rainwater",
+    "prof": "Angela Rainwater",
+    "rating": 2.8,
+    "profDiff": 2,
+    "ratings": 11,
+    "dept": "Electrical Engineering",
+    "parts": {
+     "grades": 2.2,
+     "prof": 3.3,
+     "level": 5.0
+    }
+   }
+  ],
+  "credits": 14,
+  "load": -0.1,
+  "score": 5.4
+ },
+ "Romir": {
+  "courses": [
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engineering Fundamentals I",
+    "credits": 3,
+    "score": 8.0,
+    "gpa": 2.25,
+    "gpaOf": "Alexander Kildishev",
+    "prof": "Alexander Kildishev",
+    "rating": 1.8,
+    "profDiff": 3.9,
+    "ratings": 12,
+    "dept": "Electrical Engineering",
+    "parts": {
+     "grades": 10,
+     "prof": 6.6,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "MA 26600",
+    "title": "Ordinary Differential Equations",
+    "credits": 3,
+    "score": 7.1,
+    "gpa": 2.43,
+    "gpaOf": "Gert Vercleyen",
+    "prof": "Gert Vercleyen",
+    "rating": 4.9,
+    "profDiff": 2.6,
+    "ratings": 26,
+    "dept": "Mathematics",
+    "parts": {
+     "grades": 9.8,
+     "prof": 4.2,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 26400",
+    "title": "Advanced C Programming",
+    "credits": 3,
+    "score": 6.4,
+    "gpa": 2.92,
+    "gpaOf": "Cheng-Kok Koh",
+    "prof": "Cheng-Kok Koh",
+    "rating": 4.2,
+    "profDiff": 3.9,
+    "ratings": 57,
+    "dept": "Computer Engineering",
+    "parts": {
+     "grades": 6.5,
+     "prof": 7.1,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "VIP 27920",
+    "title": "Sophomore Participation In Vertically Integrated Projects (VIP)",
+    "credits": 2,
+    "score": 5.1,
+    "gpa": 3.4,
+    "gpaOf": "Mark Johnson",
+    "prof": "Mark Johnson",
+    "rating": 4,
+    "profDiff": 4.5,
+    "ratings": 29,
+    "dept": "Engineering",
+    "parts": {
+     "grades": 3.3,
+     "prof": 8.2,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 27000",
+    "title": "Introduction To Digital System Design",
+    "credits": 4,
+    "score": 5.0,
+    "gpa": 3.1,
+    "gpaOf": "Junfei Li",
+    "prof": "Junfei Li",
+    "rating": 3.8,
+    "profDiff": 2.8,
+    "ratings": 49,
+    "dept": "Engineering",
+    "parts": {
+     "grades": 5.3,
+     "prof": 4.5,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 20007",
+    "title": "Electrical Engineering Fundamentals I Lab",
+    "credits": 1,
+    "score": 3.3,
+    "gpa": 3.47,
+    "gpaOf": null,
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
+    "parts": {
+     "grades": 2.9,
+     "prof": 2.9,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 29401",
+    "title": "Electrical And Computer Engineering Sophomore Seminar",
+    "credits": 1,
+    "score": 3.1,
+    "gpa": 3.57,
+    "gpaOf": "Angela Rainwater",
+    "prof": "Angela Rainwater",
+    "rating": 2.8,
+    "profDiff": 2,
+    "ratings": 11,
+    "dept": "Electrical Engineering",
+    "parts": {
+     "grades": 2.2,
+     "prof": 3.3,
+     "level": 5.0
+    }
+   }
+  ],
+  "credits": 17,
+  "load": 0.2,
+  "score": 6.1
+ },
+ "Vlad": {
+  "courses": [
+   {
+    "course": "ECE 30100",
+    "title": "Signals And Systems",
+    "credits": 3,
+    "score": 7.7,
+    "gpa": 2.66,
+    "gpaOf": null,
+    "prof": "I-Fan Lin",
+    "rating": 1.2,
+    "profDiff": 4.4,
+    "ratings": 9,
+    "dept": "Statistics",
+    "parts": {
+     "grades": 8.3,
+     "prof": 7.2,
+     "level": 7.0
+    }
+   },
+   {
+    "course": "ECE 36800",
+    "title": "Data Structures",
+    "credits": 3,
+    "score": 6.5,
+    "gpa": 2.8,
+    "gpaOf": null,
+    "prof": "Suleyman Uslu",
+    "rating": 2.5,
+    "profDiff": 2.5,
+    "ratings": 2,
+    "dept": "Electrical Engineering",
+    "parts": {
+     "grades": 7.3,
+     "prof": 4.6,
+     "level": 7.0
+    }
+   },
+   {
+    "course": "ECE 36200",
+    "title": "Microprocessor Systems And Interfacing",
+    "credits": 4,
+    "score": 5.8,
+    "gpa": 3.06,
+    "gpaOf": "Younghyun Kim",
+    "prof": "Younghyun Kim",
+    "rating": 2.9,
+    "profDiff": 3.3,
+    "ratings": 8,
+    "dept": "Computer Engineering",
+    "parts": {
+     "grades": 5.6,
+     "prof": 5.5,
+     "level": 7.0
+    }
+   },
+   {
+    "course": "VIP 27920",
+    "title": "Sophomore Participation In Vertically Integrated Projects (VIP)",
+    "credits": 2,
+    "score": 5.1,
+    "gpa": 3.4,
+    "gpaOf": "Mark Johnson",
+    "prof": "Mark Johnson",
+    "rating": 4,
+    "profDiff": 4.5,
+    "ratings": 29,
+    "dept": "Engineering",
+    "parts": {
+     "grades": 3.3,
+     "prof": 8.2,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 33700",
+    "title": "ASIC Design Laboratory",
+    "credits": 2,
+    "score": 4.7,
+    "gpa": 3.49,
+    "gpaOf": "Matthew Swabey",
+    "prof": "Matthew Swabey",
+    "rating": 2.5,
+    "profDiff": 4.3,
+    "ratings": 4,
+    "dept": "Engineering",
+    "parts": {
+     "grades": 2.7,
+     "prof": 6.4,
+     "level": 7.0
+    }
+   },
+   {
+    "course": "ECE 29401",
+    "title": "Electrical And Computer Engineering Sophomore Seminar",
+    "credits": 1,
+    "score": 2.9,
+    "gpa": 3.54,
+    "gpaOf": "Jamie Seadeek",
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
+    "parts": {
+     "grades": 2.4,
+     "prof": 2.4,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "EAPS 10500",
+    "title": "The Planets",
+    "credits": 3,
+    "score": 1.9,
+    "gpa": 3.65,
+    "gpaOf": null,
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
+    "parts": {
+     "grades": 1.7,
+     "prof": 1.7,
+     "level": 3.0
+    }
+   }
+  ],
+  "credits": 18,
+  "load": 0.2,
+  "score": 5.5
+ }
+}
