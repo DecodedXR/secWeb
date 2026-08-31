@@ -348,12 +348,14 @@ function chips(){
     if(days.size===1&&days.has(d)) return;         // at least one day must stay on
     days.has(d)?days.delete(d):days.add(d);
     c.classList.toggle("on",days.has(d)); render();};
-  $("#all").onclick=()=>{sel=new Set(NAMES);sync();render()};
+  $("#all").onclick=()=>{sel=new Set(NAMES);days=new Set([0,1,2,3,4]);sync();dsync();render()};
   $("#none").onclick=()=>{sel=new Set();sync();render()};
   $("#freebtn").onclick=()=>{showFree=!showFree;$("#freestate").textContent=showFree?"on":"off";render()};
   $("#dl").onclick=download;
 }
-const sync=()=>document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("on",sel.has(c.dataset.n)));
+// scoped to #chips: a bare ".chip" also matches the day chips and would blank them out
+const sync=()=>document.querySelectorAll("#chips .chip").forEach(c=>c.classList.toggle("on",sel.has(c.dataset.n)));
+const dsync=()=>document.querySelectorAll("#dchips .chip").forEach(c=>c.classList.toggle("on",days.has(+c.dataset.d)));
 
 const blocksOf=(n,d)=>DATA[n].blocks.filter(b=>b.day===d);
 function merge(iv){                                     // union of [start,end] intervals
