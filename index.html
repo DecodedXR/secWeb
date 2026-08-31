@@ -45,13 +45,14 @@ button.act.primary{background:var(--accent);color:#191100;border-color:var(--acc
 .stat .n{font-size:26px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
 .stat .l{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.1em;margin-top:5px}
 #shot{background:var(--panel);border-radius:16px}
-.gridhead{display:grid;grid-template-columns:58px repeat(5,1fr);gap:6px;margin-bottom:6px}
-.gridhead div{text-align:center;font-weight:700;font-size:12px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase}
-.grid{display:grid;grid-template-columns:58px repeat(5,1fr);gap:6px}
+.gridhead{display:grid;grid-template-columns:70px repeat(5,1fr);gap:6px;margin-bottom:6px}
+.gridhead div{text-align:center;font-weight:800;font-size:13px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase}
+.grid{display:grid;grid-template-columns:70px repeat(5,1fr);gap:6px}
 .gutter{position:relative}
-.gutter span{position:absolute;right:6px;transform:translateY(-50%);font-size:10px;color:var(--dim);font-variant-numeric:tabular-nums}
+.gutter span{position:absolute;right:8px;transform:translateY(-50%);font-size:13px;font-weight:700;color:#b9c0d6;font-variant-numeric:tabular-nums}
 .day{position:relative;background:#0d0f16;border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.hour{position:absolute;left:0;right:0;border-top:1px solid #1b1f2c}
+.hour{position:absolute;left:0;right:0;border-top:1px solid #2b3143}
+.half{position:absolute;left:0;right:0;border-top:1px dashed #1c2130}
 .free{position:absolute;left:0;right:0;background:repeating-linear-gradient(45deg,#1f3a2e,#1f3a2e 6px,#183026 6px,#183026 12px);
   border-top:1px solid #2f6b52;border-bottom:1px solid #2f6b52}
 .blk{position:absolute;border-radius:7px;padding:3px 6px;overflow:hidden;font-size:10.5px;line-height:1.25;
@@ -188,7 +189,8 @@ function grid(people){
   let html=`<div class="gutter" style="height:${H}px">${gut}</div>`;
   for(let d=0;d<5;d++){
     let c=`<div class="day" style="height:${H}px">`;
-    for(let m=Math.ceil(T0/60)*60;m<=T1;m+=60) c+=`<div class="hour" style="top:${(m-T0)*PX}px"></div>`;
+    for(let m=Math.ceil(T0/30)*30;m<=T1;m+=30)
+      c+=`<div class="${m%60?"half":"hour"}" style="top:${(m-T0)*PX}px"></div>`;
     if(showFree&&people.length>1) for(const f of freeWindows(people,d))
       c+=`<div class="free" style="top:${(f[0]-T0)*PX}px;height:${(f[1]-f[0])*PX}px"></div>`;
     const w=100/people.length;
