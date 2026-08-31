@@ -12,6 +12,10 @@ def course_of(s):                       # some rows carry a wrapped, multi-line 
     m = re.match(r"([A-Z]+)\s+(\d+)", norm(s))
     return f"{m.group(1)} {m.group(2)}" if m else norm(s)
 
+def label_of(typ, name, course):        # "Course" says nothing; the name holds the real label
+    extra = norm(norm(name).replace(course, " "))
+    return typ if "Exam" in typ else (extra or "Session")
+
 def parse_days(s):
     out, i = [], 0
     while i < len(s):
@@ -37,22 +41,25 @@ for path in sorted(glob.glob("*.csv")):
     seen, blocks, exams, eseen = set(), [], [], set()
     with open(path, newline="", encoding="utf-8-sig") as f:
         for r in csv.DictReader(f):
-            typ = r["Type"]
-            if "Exam" in typ:
-                k = (course_of(r["Name"]), typ, r["First Date"], r["Published Start"])
+            typ, course = norm(r["Type"]), course_of(r["Name"])
+            # Rows whose Section is "Offering" are one-off dated events (exams, breakout sessions).
+            # Every genuinely recurring meeting carries a real section number, so this is what keeps
+            # a single-date breakout out of the weekly grid.
+            if norm(r["Section"]) == "Offering" or "Exam" in typ:
+                k = (course, typ, r["First Date"], r["Published Start"])
                 if k not in eseen and r["Published Start"]:
                     eseen.add(k)
-                    exams.append({"course": course_of(r["Name"]), "title": norm(r["Title"]), "type": typ,
+                    exams.append({"course": course, "title": norm(r["Title"]), "type": label_of(typ, r["Name"], course),
                                   "date": r["First Date"], "start": parse_time(r["Published Start"]),
                                   "end": parse_time(r["Published End"] or r["Published Start"])})
                 continue
             days, start, end = parse_days(r["Day Of Week"] or ""), parse_time(r["Published Start"] or ""), parse_time(r["Published End"] or "")
             if not days or start is None or end is None: continue
             for d in days:
-                key = (course_of(r["Name"]), typ, d, start, end, norm(r["Location"]))
+                key = (course, typ, d, start, end, norm(r["Location"]))
                 if key in seen: continue
                 seen.add(key)
-                blocks.append({"course": course_of(r["Name"]), "title": norm(r["Title"]), "type": norm(typ),
+                blocks.append({"course": course, "title": norm(r["Title"]), "type": typ,
                                "section": norm(r["Section"]), "day": d, "start": start, "end": end,
                                "loc": norm(r["Location"]), "instructor": norm(r["Instructor / Organization"]),
                                "first": r["First Date"], "last": r["Last Date"]})
@@ -68,4 +75,8 @@ def _test():
     assert parse_time("12:30p") == 750 and parse_time("8:30a") == 510 and parse_time("12:05a") == 5
     assert all(b["end"] > b["start"] for p in people.values() for b in p["blocks"])
     assert all(p["blocks"] for p in people.values())
+    assert label_of("Course", "ECE 29401 Breakout Session\n  ECE 29401", "ECE 29401") == "Breakout Session"
+    # the Tuesday 10:30a ECE 29401 breakout is a one-off: only Vlad's weekly section actually meets then
+    tue = {n: [b for b in p["blocks"] if b["day"] == 1 and b["course"] == "ECE 29401"] for n, p in people.items()}
+    assert not any(tue[n] for n in ("Morgan", "Noah", "Romir")) and tue["Vlad"], tue
 _test()

@@ -348,19 +348,6 @@
     "last": "09/04/2026"
    },
    {
-    "course": "ECE 29401",
-    "title": "ECE Sophomore Seminar",
-    "type": "Course",
-    "section": "Offering",
-    "day": 1,
-    "start": 630,
-    "end": 680,
-    "loc": "MSEE B012",
-    "instructor": "",
-    "first": "09/08/2026",
-    "last": ""
-   },
-   {
     "course": "MA 26100",
     "title": "Multivariate Calculus",
     "type": "Recitation",
@@ -545,6 +532,14 @@
   ],
   "exams": [
    {
+    "course": "ECE 29401",
+    "title": "ECE Sophomore Seminar",
+    "type": "Breakout Session",
+    "date": "09/08/2026",
+    "start": 630,
+    "end": 680
+   },
+   {
     "course": "ECE 20001",
     "title": "Electrical Engr Fundamentals I",
     "type": "Midterm Examination",
@@ -583,6 +578,14 @@
     "date": "11/05/2026",
     "start": 1200,
     "end": 1260
+   },
+   {
+    "course": "ECE 29401",
+    "title": "ECE Sophomore Seminar",
+    "type": "Breakout Session",
+    "date": "11/10/2026",
+    "start": 630,
+    "end": 680
    },
    {
     "course": "ECE 20875",
@@ -650,19 +653,6 @@
     "instructor": "Qiu, Qiang (Instr)",
     "first": "08/24/2026",
     "last": "09/04/2026"
-   },
-   {
-    "course": "ECE 29401",
-    "title": "ECE Sophomore Seminar",
-    "type": "Course",
-    "section": "Offering",
-    "day": 1,
-    "start": 630,
-    "end": 680,
-    "loc": "MSEE B012",
-    "instructor": "",
-    "first": "09/08/2026",
-    "last": ""
    },
    {
     "course": "MA 26100",
@@ -810,6 +800,14 @@
   ],
   "exams": [
    {
+    "course": "ECE 29401",
+    "title": "ECE Sophomore Seminar",
+    "type": "Breakout Session",
+    "date": "09/08/2026",
+    "start": 630,
+    "end": 680
+   },
+   {
     "course": "ECE 20001",
     "title": "Electrical Engr Fundamentals I",
     "type": "Midterm Examination",
@@ -840,6 +838,14 @@
     "date": "11/05/2026",
     "start": 1200,
     "end": 1260
+   },
+   {
+    "course": "ECE 29401",
+    "title": "ECE Sophomore Seminar",
+    "type": "Breakout Session",
+    "date": "11/10/2026",
+    "start": 630,
+    "end": 680
    },
    {
     "course": "ECE 20875",
@@ -912,19 +918,6 @@
     "instructor": "Vercleyen, Gert (Instr)",
     "first": "08/25/2026",
     "last": "10/08/2026"
-   },
-   {
-    "course": "ECE 29401",
-    "title": "ECE Sophomore Seminar",
-    "type": "Course",
-    "section": "Offering",
-    "day": 1,
-    "start": 630,
-    "end": 680,
-    "loc": "MSEE B012",
-    "instructor": "",
-    "first": "09/08/2026",
-    "last": ""
    },
    {
     "course": "ECE 20001",
@@ -1072,6 +1065,14 @@
   ],
   "exams": [
    {
+    "course": "ECE 29401",
+    "title": "ECE Sophomore Seminar",
+    "type": "Breakout Session",
+    "date": "09/08/2026",
+    "start": 630,
+    "end": 680
+   },
+   {
     "course": "ECE 27000",
     "title": "Intro Digitl Sys Desgn",
     "type": "Midterm Examination",
@@ -1110,6 +1111,14 @@
     "date": "11/05/2026",
     "start": 1200,
     "end": 1260
+   },
+   {
+    "course": "ECE 29401",
+    "title": "ECE Sophomore Seminar",
+    "type": "Breakout Session",
+    "date": "11/10/2026",
+    "start": 630,
+    "end": 680
    },
    {
     "course": "MA 26600",
@@ -1182,19 +1191,6 @@
     "instructor": "Seadeek, Jamie L (Instr)",
     "first": "08/25/2026",
     "last": "10/06/2026"
-   },
-   {
-    "course": "ECE 29401",
-    "title": "ECE Sophomore Seminar",
-    "type": "Course",
-    "section": "Offering",
-    "day": 1,
-    "start": 630,
-    "end": 680,
-    "loc": "MSEE B012",
-    "instructor": "",
-    "first": "09/08/2026",
-    "last": ""
    },
    {
     "course": "ECE 36200",
@@ -1329,6 +1325,14 @@
   ],
   "exams": [
    {
+    "course": "ECE 29401",
+    "title": "ECE Sophomore Seminar",
+    "type": "Breakout Session",
+    "date": "09/08/2026",
+    "start": 630,
+    "end": 680
+   },
+   {
     "course": "ECE 30100",
     "title": "Signals And Systems",
     "type": "Midterm Examination",
@@ -1351,6 +1355,14 @@
     "date": "10/26/2026",
     "start": 1110,
     "end": 1170
+   },
+   {
+    "course": "ECE 29401",
+    "title": "ECE Sophomore Seminar",
+    "type": "Breakout Session",
+    "date": "11/10/2026",
+    "start": 630,
+    "end": 680
    },
    {
     "course": "ECE 30100",

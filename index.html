@@ -53,6 +53,9 @@ button.act.primary{background:var(--accent);color:#191100;border-color:var(--acc
 .day{position:relative;background:#0d0f16;border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .hour{position:absolute;left:0;right:0;border-top:1px solid #2b3143}
 .half{position:absolute;left:0;right:0;border-top:1px dashed #1c2130}
+.now{position:absolute;left:0;right:0;border-top:2px solid #ff4d4f;z-index:6;pointer-events:none}
+.now::before{content:"";position:absolute;left:-3px;top:-5px;width:8px;height:8px;border-radius:50%;background:#ff4d4f}
+.gutter span.nowlbl{background:#ff4d4f;color:#fff;border-radius:5px;padding:1px 5px;font-size:11px;z-index:6}
 .free{position:absolute;left:0;right:0;background:repeating-linear-gradient(45deg,#1f3a2e,#1f3a2e 6px,#183026 6px,#183026 12px);
   border-top:1px solid #2f6b52;border-bottom:1px solid #2f6b52}
 .blk{position:absolute;border-radius:7px;padding:3px 6px;overflow:hidden;font-size:10.5px;line-height:1.25;
@@ -203,6 +206,7 @@ function parseTime(t){
   if(ap==="a"&&h===12) h=0;
   return h*60+mi;
 }
+const labelOf=(type,name,course)=>/Exam/i.test(type)?type:(norm(norm(name).split(course).join(" "))||"Session");
 function personFromCSV(text){
   const rows=parseCSV(text); if(rows.length<2) return null;
   const head=rows[0].map(norm), idx=n=>head.indexOf(n);
@@ -217,10 +221,13 @@ function personFromCSV(text){
     const course=courseOf(g(r,"course")), type=norm(g(r,"type"));
     const start=parseTime(g(r,"s")), end=parseTime(g(r,"e"));
     if(!course) continue;
-    if(/Exam/i.test(type)){
+    // Section "Offering" means a one-off dated event (exam, breakout session); recurring
+    // meetings always carry a real section number, so these never belong in the weekly grid.
+    if(norm(g(r,"sec"))==="Offering"||/Exam/i.test(type)){
       const k=[course,type,g(r,"first"),g(r,"s")].join("|");
       if(start!==null&&!eseen.has(k)){ eseen.add(k);
-        exams.push({course,title:norm(g(r,"title")),type,date:norm(g(r,"first")),start,end:end??start}); }
+        exams.push({course,title:norm(g(r,"title")),type:labelOf(type,g(r,"course"),course),
+                    date:norm(g(r,"first")),start,end:end??start}); }
       continue;
     }
     const days=parseDays(norm(g(r,"days")));
@@ -283,13 +290,17 @@ function selfTest(){                               // load the page with ?test t
   const csv='"Name","Section","Type","Title","Note","Day Of Week","First Date","Last Date","Published Start","Published End","Location","Capacity","Instructor / Organization"\n'
     +'"ECE 29401 Breakout Session\n  ECE 29401","1","Lecture","Sem","","TTh","08/25/2026","10/06/2026","10:30a","11:20a","WALC 1132","10","X"\n'
     +'"MA 26100","2","Midterm Examination","Calc","","","09/28/2026","","8p:00p","9:30p","BHEE","10","Y"\n'
-    +'"MA 26100","2","Midterm Examination","Calc","","","09/28/2026","","8:00p","9:30p","BHEE","10","Y"\n';
+    +'"MA 26100","2","Midterm Examination","Calc","","","09/28/2026","","8:00p","9:30p","BHEE","10","Y"\n'
+    +'"ECE 29401 Breakout Session\n  ECE 29401","Offering","Course","Sem","","T","09/08/2026","","10:30a","11:20a","MSEE","96",""\n';
   const p=personFromCSV(csv), t=[], ok=(c,m)=>t.push((c?"ok   ":"FAIL ")+m);
   ok(p.blocks.length===2,"TTh becomes two weekly blocks");
+  ok(!p.blocks.some(b=>b.type==="Course"),"one-off Offering rows stay out of the weekly grid");
   ok(p.blocks[0].course==="ECE 29401","wrapped course name is unwrapped");
   ok(p.blocks[0].day===1&&p.blocks[1].day===3,"TTh maps to Tue/Thu");
   ok(p.blocks[0].start===630&&p.blocks[0].end===680,"10:30a-11:20a parsed");
-  ok(p.exams.length===1&&p.exams[0].start===1200&&p.exams[0].end===1290,"exam split out, 8-9:30p");
+  const ex=p.exams.find(e=>/Exam/.test(e.type));
+  ok(p.exams.length===2&&ex.start===1200&&ex.end===1290,"exam split out, 8-9:30p");
+  ok(p.exams.some(e=>e.type==="Breakout Session"),"breakout labelled from its wrapped name");
   ok(nameFromFile("romirfall2026schedule.csv")==="Romir","name from filename");
   ok(nameFromFile("NoahSchedule (1).csv")==="Noah","filename (1) ignored");
   ok(parseCSV('a,"b,c"\ne,f')[0][1]==="b,c","quoted comma kept in one field");
@@ -358,7 +369,19 @@ function grid(people){
     html+=c+"</div>";
   }
   $("#grid").innerHTML=html;
+  nowLine();
 }
+
+function nowLine(){                                // Google-Calendar-style marker for right now
+  document.querySelectorAll(".now,.nowlbl").forEach(e=>e.remove());
+  const d=new Date(), day=d.getDay()-1, m=d.getHours()*60+d.getMinutes();
+  const cols=$("#grid").children;
+  if(day<0||day>4||m<T0||m>T1||!cols.length) return;
+  const top=(m-T0)*PX;
+  cols[day+1].insertAdjacentHTML("beforeend",`<div class="now" style="top:${top}px"></div>`);
+  cols[0].insertAdjacentHTML("beforeend",`<span class="nowlbl" style="top:${top}px">${fmt(m)}</span>`);
+}
+setInterval(nowLine,30000);
 
 function freeWindows(people,d){        // windows (>=30 min, 8a-9p) where nobody selected has class
   const lo=Math.max(T0,8*60), hi=Math.min(T1,21*60);
