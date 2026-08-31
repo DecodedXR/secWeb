@@ -1,9 +1,14 @@
 """Parse Purdue schedule CSVs into schedule.json for the site. Run: python build.py"""
 import csv, json, glob, re, os
+from datetime import datetime
 
 NAMES = {"BremerFall2026Schedule": "Bremer", "diana_events": "Diana", "Morgan": "Morgan",
-         "Noah": "Noah", "Romir": "Romir", "Vlad": "Vlad", "Abby": "Abby", "Manny": "Manny"}
+         "Noah": "Noah", "Romir": "Romir", "Vlad": "Vlad", "Abby": "Abby", "Manny": "Manny", "Matt": "Matt"}
 DAYMAP = [("Th", 3), ("Su", 6), ("M", 0), ("T", 1), ("W", 2), ("F", 4), ("S", 5)]
+
+def as_date(s):                         # some exports write 9/24/2026, others 09/24/2026
+    try: return datetime.strptime(norm(s), "%m/%d/%Y")
+    except ValueError: return datetime.max
 
 def norm(s):
     return re.sub(r"\s+", " ", (s or "")).strip()
@@ -38,7 +43,7 @@ people = {}
 for path in sorted(glob.glob("*.csv")):
     person = NAMES.get(os.path.splitext(os.path.basename(path))[0])
     if not person: continue
-    seen, blocks, exams, eseen = set(), [], [], set()
+    seen, blocks, exams, eseen = {}, [], [], set()
     timed, listed = set(), {}                       # every course seen, and which ones ever have a time
     with open(path, newline="", encoding="utf-8-sig") as f:
         for r in csv.DictReader(f):
@@ -59,18 +64,27 @@ for path in sorted(glob.glob("*.csv")):
             days, start, end = parse_days(r["Day Of Week"] or ""), parse_time(r["Published Start"] or ""), parse_time(r["Published End"] or "")
             if not days or start is None or end is None: continue
             for d in days:
-                key = (course, typ, d, start, end, norm(r["Location"]))
-                if key in seen: continue
-                seen.add(key)
-                blocks.append({"course": course, "title": norm(r["Title"]), "type": typ,
-                               "section": norm(r["Section"]), "day": d, "start": start, "end": end,
-                               "loc": norm(r["Location"]), "instructor": norm(r["Instructor / Organization"]),
-                               "first": r["First Date"], "last": r["Last Date"]})
+                # a meeting spread over adjacent rooms is listed once per room: one block, rooms merged
+                key = (course, typ, d, start, end)
+                if key in seen:
+                    rooms = seen[key]["_rooms"]
+                    if norm(r["Location"]) not in rooms: rooms.append(norm(r["Location"]))
+                    continue
+                b = {"course": course, "title": norm(r["Title"]), "type": typ,
+                     "section": norm(r["Section"]), "day": d, "start": start, "end": end,
+                     "loc": norm(r["Location"]), "instructor": norm(r["Instructor / Organization"]),
+                     "first": r["First Date"], "last": r["Last Date"],
+                     "_rooms": [norm(r["Location"])]}
+                seen[key] = b
+                blocks.append(b)
+    for b in blocks:
+        rooms = b.pop("_rooms")
+        b["loc"] = rooms[0] + (f" +{len(rooms)-1}" if len(rooms) > 1 else "")
     # asynchronous/online courses never carry a time, so they would otherwise vanish entirely
     untimed = [{"course": c, "title": t, "type": ty, "loc": lo}
                for c, (t, ty, lo) in sorted(listed.items()) if c not in timed]
     people[person] = {"blocks": sorted(blocks, key=lambda b: (b["day"], b["start"])),
-                      "exams": sorted(exams, key=lambda e: (e["date"], e["start"])),
+                      "exams": sorted(exams, key=lambda e: (as_date(e["date"]), e["start"])),
                       "untimed": untimed}
 
 json.dump(people, open("schedule.json", "w"), indent=1)
@@ -83,6 +97,8 @@ def _test():
     assert all(b["end"] > b["start"] for p in people.values() for b in p["blocks"])
     assert all(p["blocks"] for p in people.values())
     assert [u["course"] for u in people["Vlad"]["untimed"]] == ["EAPS 10500"], people["Vlad"]["untimed"]
+    engr = [b for b in people["Matt"]["blocks"] if b["course"] == "ENGR 13100"]
+    assert len(engr) == 2 and engr[0]["loc"] == "LMBS 3239A +2", engr
     assert label_of("Course", "ECE 29401 Breakout Session\n  ECE 29401", "ECE 29401") == "Breakout Session"
     # the Tuesday 10:30a ECE 29401 breakout is a one-off: only Vlad's weekly section actually meets then
     tue = {n: [b for b in p["blocks"] if b["day"] == 1 and b["course"] == "ECE 29401"] for n, p in people.items()}

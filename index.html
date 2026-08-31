@@ -36,10 +36,10 @@ h1{margin:0;font-size:clamp(28px,4vw,46px);letter-spacing:-.03em;font-weight:800
 .chip.on .dot{background:#0a0b10}
 .chip small{font-weight:500;opacity:.75}
 .tools{display:flex;flex-wrap:wrap;gap:9px;margin-left:auto}
-button.act{padding:8px 14px;border-radius:10px;border:1px solid var(--line);background:#0e1018;color:var(--txt);
-  font-weight:600;cursor:pointer;font-size:13px}
-button.act:hover{border-color:var(--accent);color:var(--accent)}
-button.act.primary{background:var(--accent);color:#191100;border-color:var(--accent)}
+.act{display:inline-flex;align-items:center;gap:5px;padding:8px 14px;border-radius:10px;border:1px solid var(--line);
+  background:#0e1018;color:var(--txt);font:600 13px/1 inherit;font-family:inherit;cursor:pointer}
+.act:hover{border-color:var(--accent);color:var(--accent)}
+.act.primary{background:var(--accent);color:#191100;border-color:var(--accent)}
 .statgrid{display:flex;gap:10px;overflow-x:auto}
 .stat{flex:1 1 0;min-width:104px}
 .stat{background:#0e1018;border:1px solid var(--line);border-radius:12px;padding:12px 13px}
@@ -91,7 +91,6 @@ td.who{display:flex;flex-wrap:wrap;gap:5px}
 .empty{color:var(--dim);font-size:12.5px;padding:6px 0}
 .note{color:var(--dim);font-size:11.5px;margin-top:11px}
 .note b{color:var(--accent)}
-label.act{cursor:pointer;display:inline-block}
 .chip .x{margin-left:2px;padding:0 3px;border-radius:6px;font-weight:800;opacity:.55}
 .chip .x:hover{opacity:1;background:rgba(0,0,0,.25)}
 #drop{position:fixed;inset:0;z-index:9;display:none;align-items:center;justify-content:center;
@@ -156,7 +155,7 @@ footer{color:var(--dim);font-size:11.5px;text-align:center;margin-top:26px}
 const DABBR=["Mon","Tue","Wed","Thu","Fri"];
 const T0=7*60+30, T1=22*60, PX=1.05;            // grid window and pixels per minute
 const TYPE={Lecture:"LEC",Laboratory:"LAB",Recitation:"REC",Studio:"STU","Distance Learning (Online)":"ONL"};
-const COLORS=["#ff6b6b","#4dd4ac","#5aa9ff","#c084fc","#ffa94d","#f472b6","#7dd3fc","#a3e635","#fb923c","#e879f9"];
+const COLORS=["#ff6b6b","#4dd4ac","#5aa9ff","#c084fc","#ffa94d","#f472b6","#7dd3fc","#a3e635","#facc15","#94a3b8"];
 const $=s=>document.querySelector(s);
 const fmt=m=>{const h=Math.floor(m/60),x=m%60,ap=h>=12?"p":"a",hh=h%12===0?12:h%12;
   return hh+(x?":"+String(x).padStart(2,"0"):"")+ap};
@@ -223,7 +222,7 @@ function personFromCSV(text){
              first:idx("First Date"),last:idx("Last Date")};
   if(col.course<0||col.days<0||col.s<0) return null;
   const g=(r,k)=>col[k]>=0?(r[col[k]]||""):"";
-  const blocks=[],exams=[],seen=new Set(),eseen=new Set(),timed=new Set(),listed=new Map();
+  const blocks=[],exams=[],seen=new Map(),eseen=new Set(),timed=new Set(),listed=new Map();
   for(const r of rows.slice(1)){
     const course=courseOf(g(r,"course")), type=norm(g(r,"type"));
     const start=parseTime(g(r,"s")), end=parseTime(g(r,"e"));
@@ -242,14 +241,19 @@ function personFromCSV(text){
     const days=parseDays(norm(g(r,"days")));
     if(!days.length||start===null||end===null||end<=start) continue;
     for(const d of days){
-      const k=[course,type,d,start,end,norm(g(r,"loc"))].join("|");
-      if(seen.has(k)) continue; seen.add(k);
-      blocks.push({course,title:norm(g(r,"title")),type,section:norm(g(r,"sec")),day:d,start,end,
-                   loc:norm(g(r,"loc")),instructor:norm(g(r,"who")),
-                   first:norm(g(r,"first")),last:norm(g(r,"last"))});
+      const k=[course,type,d,start,end].join("|"), room=norm(g(r,"loc"));
+      if(seen.has(k)){                                 // same meeting, another room: merge, do not stack
+        const rooms=seen.get(k).rooms;
+        if(!rooms.includes(room)) rooms.push(room);
+        continue;
+      }
+      const b={course,title:norm(g(r,"title")),type,section:norm(g(r,"sec")),day:d,start,end,
+               loc:room,instructor:norm(g(r,"who")),first:norm(g(r,"first")),last:norm(g(r,"last")),rooms:[room]};
+      seen.set(k,b); blocks.push(b);
     }
   }
   if(!blocks.length) return null;
+  for(const b of blocks){ const r=b.rooms; delete b.rooms; b.loc=r[0]+(r.length>1?" +"+(r.length-1):"") }
   blocks.sort((a,b)=>a.day-b.day||a.start-b.start);
   exams.sort((a,b)=>new Date(a.date)-new Date(b.date)||a.start-b.start);
   const untimed=[...listed.values()].filter(x=>!timed.has(x.course));   // async/online, never on the grid
@@ -299,6 +303,7 @@ addEventListener("drop",e=>{ e.preventDefault(); $("#drop").classList.remove("sh
 function selfTest(){                               // load the page with ?test to run this in the console
   const csv='"Name","Section","Type","Title","Note","Day Of Week","First Date","Last Date","Published Start","Published End","Location","Capacity","Instructor / Organization"\n'
     +'"ECE 29401 Breakout Session\n  ECE 29401","1","Lecture","Sem","","TTh","08/25/2026","10/06/2026","10:30a","11:20a","WALC 1132","10","X"\n'
+    +'"ECE 29401 Breakout Session\n  ECE 29401","1","Lecture","Sem","","TTh","08/25/2026","10/06/2026","10:30a","11:20a","WALC 1133","10","X"\n'
     +'"MA 26100","2","Midterm Examination","Calc","","","09/28/2026","","8p:00p","9:30p","BHEE","10","Y"\n'
     +'"MA 26100","2","Midterm Examination","Calc","","","09/28/2026","","8:00p","9:30p","BHEE","10","Y"\n'
     +'"ECE 29401 Breakout Session\n  ECE 29401","Offering","Course","Sem","","T","09/08/2026","","10:30a","11:20a","MSEE","96",""\n'
@@ -313,6 +318,7 @@ function selfTest(){                               // load the page with ?test t
   ok(p.exams.length===2&&ex.start===1200&&ex.end===1290,"exam split out, 8-9:30p");
   ok(p.exams.some(e=>e.type==="Breakout Session"),"breakout labelled from its wrapped name");
   ok(p.untimed.length===1&&p.untimed[0].course==="EAPS 10500","untimed online course kept aside");
+  ok(p.blocks[0].loc==="WALC 1132 +1","one meeting listed per room becomes one block");
   ok(nameFromFile("romirfall2026schedule.csv")==="Romir","name from filename");
   ok(nameFromFile("NoahSchedule (1).csv")==="Noah","filename (1) ignored");
   ok(parseCSV('a,"b,c"\ne,f')[0][1]==="b,c","quoted comma kept in one field");
@@ -469,7 +475,7 @@ function sharedClasses(people){        // same course AND same meeting time: act
   for(const n of people) for(const b of DATA[n].blocks){
     const k=[b.course,b.day,b.start,b.end].join("|");
     if(!meet.has(k)) meet.set(k,{...b,who:[]});
-    meet.get(k).who.push(n);
+    if(!meet.get(k).who.includes(n)) meet.get(k).who.push(n);
   }
   const out=new Map();                 // an MWF lecture is one shared class, not three
   for(const m of meet.values()){
