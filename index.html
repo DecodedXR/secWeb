@@ -59,10 +59,10 @@ h1{margin:0;font-size:clamp(28px,4vw,46px);letter-spacing:-.03em;font-weight:800
 .gutter span.nowlbl{background:#ff4d4f;color:#fff;border-radius:5px;padding:1px 5px;font-size:11px;z-index:6}
 .free{position:absolute;left:0;right:0;background:repeating-linear-gradient(45deg,#1f3a2e,#1f3a2e 6px,#183026 6px,#183026 12px);
   border-top:1px solid #2f6b52;border-bottom:1px solid #2f6b52}
-.blk{position:absolute;border-radius:7px;padding:3px 6px;overflow:hidden;font-size:10.5px;line-height:1.25;
+.blk{position:absolute;border-radius:7px;padding:3px 5px;overflow:hidden;font-size:10.5px;line-height:1.2;
   color:#0a0b10;font-weight:600;border:1px solid rgba(0,0,0,.35)}
 .blk b{display:block;font-size:11px;font-weight:800;letter-spacing:-.01em}
-.blk em{font-style:normal;font-size:9px;font-weight:800;letter-spacing:.04em;opacity:.62}
+.blk i b{display:inline;font-size:9.5px;font-weight:800;letter-spacing:.04em}
 .blk i{font-style:normal;opacity:.82;font-size:9.5px;display:block}
 .blk.lab{background-image:repeating-linear-gradient(135deg,rgba(0,0,0,.16) 0 5px,transparent 5px 10px)}
 .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px;font-size:11.5px;color:var(--dim);align-items:center}
@@ -369,7 +369,7 @@ function untimed(people){                           // courses with no meeting t
 }
 
 function grid(people){
-  $("#gwrap").style.minWidth=(people.length>6?70+people.length*230:820)+"px";  // keep lanes readable past six people
+  $("#gwrap").style.minWidth=(people.length>6?70+people.length*260:820)+"px";  // keep lanes readable past six people
   $("#ghead").innerHTML="<div></div>"+DABBR.map(d=>`<div>${d}</div>`).join("");
   const H=(T1-T0)*PX;
   let gut="";
@@ -389,7 +389,7 @@ function grid(people){
         const kind=TYPE[b.type]||b.type.slice(0,3).toUpperCase();
         c+=`<div class="blk${lab}" title="${n}: ${b.course} ${b.type}\n${fmt(b.start)}–${fmt(b.end)} · ${b.loc}\n${b.title}"
              style="top:${top}px;height:${h}px;left:${i*w}%;width:${w}%;background:${color(n)}">
-             <b>${b.course} <em>${kind}</em></b>${h>68?`<i>${fmt(b.start)}–${fmt(b.end)}</i>`:""}${h>92?`<i>${b.loc}</i>`:""}</div>`;
+             <b>${b.course}</b>${h>40?`<i><b>${kind}</b> ${b.loc}</i>`:""}${h>78?`<i>${fmt(b.start)}–${fmt(b.end)}</i>`:""}</div>`;
       }
     });
     html+=c+"</div>";
