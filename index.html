@@ -34,6 +34,8 @@ h1{margin:0;font-size:clamp(28px,4vw,46px);letter-spacing:-.03em;font-weight:800
 .chip .dot{width:10px;height:10px;border-radius:50%;background:currentColor;flex:none}
 .chip.on{color:#0a0b10;background:var(--c);border-color:var(--c);box-shadow:0 0 22px -6px var(--c)}
 .chip.on .dot{background:#0a0b10}
+.daychips{margin:0 0 12px}
+.daychips .chip{padding:5px 13px;font-size:12px}
 .chip small{font-weight:500;opacity:.75}
 .tools{display:flex;flex-wrap:wrap;gap:9px;margin-left:auto}
 .act{display:inline-flex;align-items:center;gap:5px;padding:8px 14px;border-radius:10px;border:1px solid var(--line);
@@ -125,6 +127,7 @@ footer{color:var(--dim);font-size:11.5px;text-align:center;margin-top:26px}
 
 <div class="card" id="shot">
   <h2>Weekly grid:<span style="text-transform:none;letter-spacing:0;color:var(--dim)" id="gridnote"></span></h2>
+  <div class="chips daychips" id="dchips"></div>
   <div class="scroll">
     <div id="gwrap" style="min-width:820px">
       <div class="gridhead" id="ghead"></div>
@@ -328,6 +331,8 @@ function selfTest(){                               // load the page with ?test t
 if(location.search.includes("test")) addEventListener("load",()=>console.log("selfTest passed:",selfTest()));
 const color=n=>COLORS[NAMES.indexOf(n)%COLORS.length];
 const on=()=>NAMES.filter(n=>sel.has(n));
+let days=new Set([0,1,2,3,4]);                    // which weekdays the grid (and the PNG) shows
+const onDays=()=>[...days].sort();
 
 function chips(){
   $("#chips").innerHTML=NAMES.map(n=>
@@ -336,6 +341,13 @@ function chips(){
   $("#chips").onclick=e=>{const c=e.target.closest(".chip"); if(!c)return;
     const n=c.dataset.n; sel.has(n)?sel.delete(n):sel.add(n);
     c.classList.toggle("on",sel.has(n)); render();};
+  $("#dchips").innerHTML=DABBR.map((d,i)=>
+    `<div class="chip on" style="--c:#8b93a8" data-d="${i}">${d}</div>`).join("");
+  $("#dchips").onclick=e=>{const c=e.target.closest(".chip"); if(!c)return;
+    const d=+c.dataset.d;
+    if(days.size===1&&days.has(d)) return;         // at least one day must stay on
+    days.has(d)?days.delete(d):days.add(d);
+    c.classList.toggle("on",days.has(d)); render();};
   $("#all").onclick=()=>{sel=new Set(NAMES);sync();render()};
   $("#none").onclick=()=>{sel=new Set();sync();render()};
   $("#freebtn").onclick=()=>{showFree=!showFree;$("#freestate").textContent=showFree?"on":"off";render()};
@@ -369,13 +381,17 @@ function untimed(people){                           // courses with no meeting t
 }
 
 function grid(people){
-  $("#gwrap").style.minWidth=(people.length>6?70+people.length*260:820)+"px";  // keep lanes readable past six people
-  $("#ghead").innerHTML="<div></div>"+DABBR.map(d=>`<div>${d}</div>`).join("");
+  const ds=onDays();
+  // width follows the days actually shown, so one day exports as a narrow image, not a mostly empty one
+  $("#gwrap").style.minWidth=(70+ds.length*(people.length>6?people.length*52:150))+"px";
+  const cols=`70px repeat(${ds.length},1fr)`;
+  $("#ghead").style.gridTemplateColumns=$("#grid").style.gridTemplateColumns=cols;
+  $("#ghead").innerHTML="<div></div>"+ds.map(d=>`<div>${DABBR[d]}</div>`).join("");
   const H=(T1-T0)*PX;
   let gut="";
   for(let m=Math.ceil(T0/60)*60;m<=T1;m+=60) gut+=`<span style="top:${(m-T0)*PX}px">${fmt(m)}</span>`;
   let html=`<div class="gutter" style="height:${H}px">${gut}</div>`;
-  for(let d=0;d<5;d++){
+  for(const d of ds){
     let c=`<div class="day" style="height:${H}px">`;
     for(let m=Math.ceil(T0/30)*30;m<=T1;m+=30)
       c+=`<div class="${m%60?"half":"hour"}" style="top:${(m-T0)*PX}px"></div>`;
@@ -401,10 +417,10 @@ function grid(people){
 function nowLine(){                                // Google-Calendar-style marker for right now
   document.querySelectorAll(".now,.nowlbl").forEach(e=>e.remove());
   const d=new Date(), day=d.getDay()-1, m=d.getHours()*60+d.getMinutes();
-  const cols=$("#grid").children;
-  if(day<0||day>4||m<T0||m>T1||!cols.length) return;
+  const cols=$("#grid").children, i=onDays().indexOf(day);
+  if(i<0||m<T0||m>T1||!cols.length) return;
   const top=(m-T0)*PX;
-  cols[day+1].insertAdjacentHTML("beforeend",`<div class="now" style="top:${top}px"></div>`);
+  cols[i+1].insertAdjacentHTML("beforeend",`<div class="now" style="top:${top}px"></div>`);
   cols[0].insertAdjacentHTML("beforeend",`<span class="nowlbl" style="top:${top}px">${fmt(m)}</span>`);
 }
 setInterval(nowLine,30000);
@@ -536,13 +552,16 @@ function exams(people){
 
 function download(){
   const btn=$("#dl"), shot=$("#shot"), sc=shot.querySelector(".scroll");
-  const full=$("#gwrap").scrollWidth+40, w0=shot.style.width, o0=sc.style.overflow;
+  // width the grid was laid out for, so exporting one day gives a narrow image, not a stretched one
+  const full=(parseInt($("#gwrap").style.minWidth)||$("#gwrap").scrollWidth)+40,
+        w0=shot.style.width, o0=sc.style.overflow, g0=$("#gwrap").style.width;
+  $("#gwrap").style.width=(full-40)+"px";
   shot.style.width=full+"px"; sc.style.overflow="visible";   // capture the whole grid, not just what fits
   btn.textContent="rendering…";
   html2canvas(shot,{backgroundColor:"#12141d",scale:2,windowWidth:Math.max(innerWidth,full+80)}).then(c=>{
     const a=document.createElement("a");
-    a.download="fall2026-combined-schedule.png"; a.href=c.toDataURL("image/png"); a.click();
-  }).finally(()=>{shot.style.width=w0; sc.style.overflow=o0; btn.innerHTML="&#11015; Download PNG"});
+    a.download="fall2026-schedule-"+onDays().map(d=>DABBR[d]).join("")+".png"; a.href=c.toDataURL("image/png"); a.click();
+  }).finally(()=>{shot.style.width=w0; sc.style.overflow=o0; $("#gwrap").style.width=g0; btn.innerHTML="&#11015; Download PNG"});
 }
 </script>
 </body>
