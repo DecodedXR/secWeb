@@ -291,7 +291,8 @@
     "start": 1200,
     "end": 1260
    }
-  ]
+  ],
+  "untimed": []
  },
  "Morgan": {
   "blocks": [
@@ -611,7 +612,8 @@
     "start": 1200,
     "end": 1260
    }
-  ]
+  ],
+  "untimed": []
  },
  "Noah": {
   "blocks": [
@@ -863,7 +865,8 @@
     "start": 1200,
     "end": 1260
    }
-  ]
+  ],
+  "untimed": []
  },
  "Romir": {
   "blocks": [
@@ -1136,7 +1139,8 @@
     "start": 1200,
     "end": 1260
    }
-  ]
+  ],
+  "untimed": []
  },
  "Vlad": {
   "blocks": [
@@ -1371,6 +1375,14 @@
     "date": "11/23/2026",
     "start": 1110,
     "end": 1170
+   }
+  ],
+  "untimed": [
+   {
+    "course": "EAPS 10500",
+    "title": "The Planets",
+    "type": "Distance Learning (Online)",
+    "loc": "ASYNC ONLINE"
    }
   ]
  },
@@ -1634,6 +1646,7 @@
     "start": 1200,
     "end": 1290
    }
-  ]
+  ],
+  "untimed": []
  }
 }

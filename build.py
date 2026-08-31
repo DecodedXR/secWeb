@@ -39,9 +39,12 @@ for path in sorted(glob.glob("*.csv")):
     person = NAMES.get(os.path.splitext(os.path.basename(path))[0])
     if not person: continue
     seen, blocks, exams, eseen = set(), [], [], set()
+    timed, listed = set(), {}                       # every course seen, and which ones ever have a time
     with open(path, newline="", encoding="utf-8-sig") as f:
         for r in csv.DictReader(f):
             typ, course = norm(r["Type"]), course_of(r["Name"])
+            listed.setdefault(course, (norm(r["Title"]), typ, norm(r["Location"])))
+            if norm(r["Published Start"]): timed.add(course)
             # Rows whose Section is "Offering" are one-off dated events (exams, breakout sessions).
             # Every genuinely recurring meeting carries a real section number, so this is what keeps
             # a single-date breakout out of the weekly grid.
@@ -63,11 +66,15 @@ for path in sorted(glob.glob("*.csv")):
                                "section": norm(r["Section"]), "day": d, "start": start, "end": end,
                                "loc": norm(r["Location"]), "instructor": norm(r["Instructor / Organization"]),
                                "first": r["First Date"], "last": r["Last Date"]})
+    # asynchronous/online courses never carry a time, so they would otherwise vanish entirely
+    untimed = [{"course": c, "title": t, "type": ty, "loc": lo}
+               for c, (t, ty, lo) in sorted(listed.items()) if c not in timed]
     people[person] = {"blocks": sorted(blocks, key=lambda b: (b["day"], b["start"])),
-                      "exams": sorted(exams, key=lambda e: (e["date"], e["start"]))}
+                      "exams": sorted(exams, key=lambda e: (e["date"], e["start"])),
+                      "untimed": untimed}
 
 json.dump(people, open("schedule.json", "w"), indent=1)
-print({k: (len(v["blocks"]), len(v["exams"])) for k, v in people.items()})
+print({k: (len(v["blocks"]), len(v["exams"]), len(v["untimed"])) for k, v in people.items()})
 
 def _test():
     assert course_of("ECE 29401 Breakout Session\n  ECE 29401") == "ECE 29401"
@@ -75,6 +82,7 @@ def _test():
     assert parse_time("12:30p") == 750 and parse_time("8:30a") == 510 and parse_time("12:05a") == 5
     assert all(b["end"] > b["start"] for p in people.values() for b in p["blocks"])
     assert all(p["blocks"] for p in people.values())
+    assert [u["course"] for u in people["Vlad"]["untimed"]] == ["EAPS 10500"], people["Vlad"]["untimed"]
     assert label_of("Course", "ECE 29401 Breakout Session\n  ECE 29401", "ECE 29401") == "Breakout Session"
     # the Tuesday 10:30a ECE 29401 breakout is a one-off: only Vlad's weekly section actually meets then
     tue = {n: [b for b in p["blocks"] if b["day"] == 1 and b["course"] == "ECE 29401"] for n, p in people.items()}

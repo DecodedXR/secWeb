@@ -129,6 +129,7 @@ footer{color:var(--dim);font-size:11.5px;text-align:center;margin-top:26px}
     </div>
   </div>
   <div class="legend" id="legend"></div>
+  <div class="note" id="untimed"></div>
 </div>
 
 <div class="two">
@@ -216,11 +217,13 @@ function personFromCSV(text){
              first:idx("First Date"),last:idx("Last Date")};
   if(col.course<0||col.days<0||col.s<0) return null;
   const g=(r,k)=>col[k]>=0?(r[col[k]]||""):"";
-  const blocks=[],exams=[],seen=new Set(),eseen=new Set();
+  const blocks=[],exams=[],seen=new Set(),eseen=new Set(),timed=new Set(),listed=new Map();
   for(const r of rows.slice(1)){
     const course=courseOf(g(r,"course")), type=norm(g(r,"type"));
     const start=parseTime(g(r,"s")), end=parseTime(g(r,"e"));
     if(!course) continue;
+    if(!listed.has(course)) listed.set(course,{course,title:norm(g(r,"title")),type,loc:norm(g(r,"loc"))});
+    if(norm(g(r,"s"))) timed.add(course);
     // Section "Offering" means a one-off dated event (exam, breakout session); recurring
     // meetings always carry a real section number, so these never belong in the weekly grid.
     if(norm(g(r,"sec"))==="Offering"||/Exam/i.test(type)){
@@ -243,7 +246,8 @@ function personFromCSV(text){
   if(!blocks.length) return null;
   blocks.sort((a,b)=>a.day-b.day||a.start-b.start);
   exams.sort((a,b)=>new Date(a.date)-new Date(b.date)||a.start-b.start);
-  return {blocks,exams};
+  const untimed=[...listed.values()].filter(x=>!timed.has(x.course));   // async/online, never on the grid
+  return {blocks,exams,untimed};
 }
 function nameFromFile(f){                          // "romirfall2026schedule.csv" -> "Romir"
   const t=f.replace(/\.csv$/i,"")
@@ -291,7 +295,8 @@ function selfTest(){                               // load the page with ?test t
     +'"ECE 29401 Breakout Session\n  ECE 29401","1","Lecture","Sem","","TTh","08/25/2026","10/06/2026","10:30a","11:20a","WALC 1132","10","X"\n'
     +'"MA 26100","2","Midterm Examination","Calc","","","09/28/2026","","8p:00p","9:30p","BHEE","10","Y"\n'
     +'"MA 26100","2","Midterm Examination","Calc","","","09/28/2026","","8:00p","9:30p","BHEE","10","Y"\n'
-    +'"ECE 29401 Breakout Session\n  ECE 29401","Offering","Course","Sem","","T","09/08/2026","","10:30a","11:20a","MSEE","96",""\n';
+    +'"ECE 29401 Breakout Session\n  ECE 29401","Offering","Course","Sem","","T","09/08/2026","","10:30a","11:20a","MSEE","96",""\n'
+    +'"EAPS 10500","22696-002","Distance Learning (Online)","The Planets","","","","","","","ASYNC ONLINE","9999","Z"\n';
   const p=personFromCSV(csv), t=[], ok=(c,m)=>t.push((c?"ok   ":"FAIL ")+m);
   ok(p.blocks.length===2,"TTh becomes two weekly blocks");
   ok(!p.blocks.some(b=>b.type==="Course"),"one-off Offering rows stay out of the weekly grid");
@@ -301,6 +306,7 @@ function selfTest(){                               // load the page with ?test t
   const ex=p.exams.find(e=>/Exam/.test(e.type));
   ok(p.exams.length===2&&ex.start===1200&&ex.end===1290,"exam split out, 8-9:30p");
   ok(p.exams.some(e=>e.type==="Breakout Session"),"breakout labelled from its wrapped name");
+  ok(p.untimed.length===1&&p.untimed[0].course==="EAPS 10500","untimed online course kept aside");
   ok(nameFromFile("romirfall2026schedule.csv")==="Romir","name from filename");
   ok(nameFromFile("NoahSchedule (1).csv")==="Noah","filename (1) ignored");
   ok(parseCSV('a,"b,c"\ne,f')[0][1]==="b,c","quoted comma kept in one field");
@@ -341,6 +347,13 @@ function render(){
   $("#legend").innerHTML=people.map(n=>`<span><i style="background:${color(n)}"></i>${n}</span>`).join("")
     +`<span><i style="background:repeating-linear-gradient(45deg,#1f3a2e,#1f3a2e 3px,#183026 3px,#183026 6px)"></i>everyone free</span>`
     +`<span><i style="background:#5c6070;background-image:repeating-linear-gradient(135deg,rgba(0,0,0,.35) 0 3px,transparent 3px 6px)"></i>lab / recitation</span>`;
+  untimed(people);
+}
+
+function untimed(people){                           // courses with no meeting time cannot be drawn
+  const rows=people.flatMap(n=>(DATA[n].untimed||[]).map(u=>
+    `<span style="color:${color(n)}">${n}</span>: <b>${u.course}</b> ${u.title} (${u.type}${u.loc?", "+u.loc:""})`));
+  $("#untimed").innerHTML=rows.length?"No scheduled meeting time, so not on the grid: "+rows.join(" &middot; "):"";
 }
 
 function grid(people){
@@ -399,7 +412,8 @@ function stats(people){
   const busiest=DABBR.map((d,i)=>[d,people.reduce((a,n)=>a+blocksOf(n,i).reduce((x,b)=>x+b.end-b.start,0),0)])
                      .sort((a,b)=>b[1]-a[1])[0];
   const S=[["people",people.length,"var(--txt)"],
-    ["unique courses",new Set(all.map(b=>b.course)).size,"var(--accent)"],
+    ["unique courses",new Set([...all.map(b=>b.course),
+        ...people.flatMap(n=>(DATA[n].untimed||[]).map(u=>u.course))]).size,"var(--accent)"],
     ["shared courses",sharedCourses(people).length,"#4dd4ac"],
     ["combined hrs/wk",hrs(mins),"#5aa9ff"],
     ["shared free hrs",people.length>1?hrs(freeMin):"n/a","#c084fc"],
