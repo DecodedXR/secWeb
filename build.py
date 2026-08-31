@@ -2,7 +2,7 @@
 import csv, json, glob, re, os
 
 NAMES = {"BremerFall2026Schedule": "Bremer", "diana_events": "Diana", "Morgan": "Morgan",
-         "Noah": "Noah", "Romir": "Romir", "Vlad": "Vlad"}
+         "Noah": "Noah", "Romir": "Romir", "Vlad": "Vlad", "Abby": "Abby", "Manny": "Manny"}
 DAYMAP = [("Th", 3), ("Su", 6), ("M", 0), ("T", 1), ("W", 2), ("F", 4), ("S", 5)]
 
 def norm(s):

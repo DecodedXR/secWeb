@@ -1,4 +1,166 @@
 {
+ "Abby": {
+  "blocks": [
+   {
+    "course": "PHYS 23300",
+    "title": "Physics For Life Sci I",
+    "type": "Lecture",
+    "section": "67161-001",
+    "day": 0,
+    "start": 810,
+    "end": 860,
+    "loc": "PHYS 114",
+    "instructor": "Arnold, Ian A (Instr)",
+    "first": "08/24/2026",
+    "last": "09/02/2026"
+   },
+   {
+    "course": "PHYS 23300",
+    "title": "Physics For Life Sci I",
+    "type": "Recitation",
+    "section": "67167-006",
+    "day": 1,
+    "start": 570,
+    "end": 620,
+    "loc": "PHYS 154",
+    "instructor": "Alegria, Emil (Instr)",
+    "first": "08/25/2026",
+    "last": "10/06/2026"
+   },
+   {
+    "course": "BIOL 58601",
+    "title": "Ecology",
+    "type": "Lecture",
+    "section": "23688-001",
+    "day": 1,
+    "start": 630,
+    "end": 705,
+    "loc": "LILY G420",
+    "instructor": "Bernal, Ximena (Instr) Morse, Madeline Grace (Instr) Ospina Larrea, Ana Maria Maria (Instr)",
+    "first": "08/25/2026",
+    "last": "10/08/2026"
+   },
+   {
+    "course": "ANTH 25400",
+    "title": "Arch Hoaxes, Myths And Frauds",
+    "type": "Lecture",
+    "section": "21902-001",
+    "day": 1,
+    "start": 810,
+    "end": 885,
+    "loc": "SCHM 307",
+    "instructor": "Lindsay, Ian C (Instr)",
+    "first": "08/25/2026",
+    "last": "10/08/2026"
+   },
+   {
+    "course": "WGSS 28000",
+    "title": "Women's Studies: An Introductn",
+    "type": "Lecture",
+    "section": "27237-024",
+    "day": 1,
+    "start": 900,
+    "end": 975,
+    "loc": "BRNG 1232",
+    "instructor": "Basmaz, Ozgun (Instr)",
+    "first": "08/25/2026",
+    "last": "10/08/2026"
+   },
+   {
+    "course": "SCI 39500",
+    "title": "WISP Mentorship",
+    "type": "Lecture",
+    "section": "32290-002",
+    "day": 1,
+    "start": 1110,
+    "end": 1160,
+    "loc": "WALC 1055 (Hiler Thtr)",
+    "instructor": "Kaspar, Constance (Instr)",
+    "first": "08/25/2026",
+    "last": "10/06/2026"
+   },
+   {
+    "course": "PHYS 23300",
+    "title": "Physics For Life Sci I",
+    "type": "Laboratory",
+    "section": "67177-016",
+    "day": 2,
+    "start": 690,
+    "end": 800,
+    "loc": "PHYS 154",
+    "instructor": "Poudel Chhetri, Sandeep (Instr)",
+    "first": "08/26/2026",
+    "last": "11/18/2026"
+   },
+   {
+    "course": "PHYS 23300",
+    "title": "Physics For Life Sci I",
+    "type": "Lecture",
+    "section": "67161-001",
+    "day": 2,
+    "start": 810,
+    "end": 860,
+    "loc": "PHYS 114",
+    "instructor": "Arnold, Ian A (Instr)",
+    "first": "08/24/2026",
+    "last": "09/02/2026"
+   },
+   {
+    "course": "BIOL 58601",
+    "title": "Ecology",
+    "type": "Lecture",
+    "section": "23688-001",
+    "day": 3,
+    "start": 630,
+    "end": 705,
+    "loc": "LILY G420",
+    "instructor": "Bernal, Ximena (Instr) Morse, Madeline Grace (Instr) Ospina Larrea, Ana Maria Maria (Instr)",
+    "first": "08/25/2026",
+    "last": "10/08/2026"
+   },
+   {
+    "course": "ANTH 25400",
+    "title": "Arch Hoaxes, Myths And Frauds",
+    "type": "Lecture",
+    "section": "21902-001",
+    "day": 3,
+    "start": 810,
+    "end": 885,
+    "loc": "SCHM 307",
+    "instructor": "Lindsay, Ian C (Instr)",
+    "first": "08/25/2026",
+    "last": "10/08/2026"
+   },
+   {
+    "course": "WGSS 28000",
+    "title": "Women's Studies: An Introductn",
+    "type": "Lecture",
+    "section": "27237-024",
+    "day": 3,
+    "start": 900,
+    "end": 975,
+    "loc": "BRNG 1232",
+    "instructor": "Basmaz, Ozgun (Instr)",
+    "first": "08/25/2026",
+    "last": "10/08/2026"
+   },
+   {
+    "course": "BIOL 58602",
+    "title": "Lab In Ecology",
+    "type": "Laboratory",
+    "section": "32446-002",
+    "day": 4,
+    "start": 570,
+    "end": 740,
+    "loc": "LILY G130",
+    "instructor": "Zielinski, Denise Lore (Instr)",
+    "first": "08/28/2026",
+    "last": "11/20/2026"
+   }
+  ],
+  "exams": [],
+  "untimed": []
+ },
  "Bremer": {
   "blocks": [
    {
@@ -288,6 +450,280 @@
     "title": "Multivariate Calculus",
     "type": "Midterm Examination",
     "date": "11/18/2026",
+    "start": 1200,
+    "end": 1260
+   }
+  ],
+  "untimed": []
+ },
+ "Manny": {
+  "blocks": [
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Lecture",
+    "section": "20739-002",
+    "day": 0,
+    "start": 750,
+    "end": 800,
+    "loc": "BHEE 129",
+    "instructor": "Diaz Rivas, Rosa E (Instr)",
+    "first": "08/24/2026",
+    "last": "09/02/2026"
+   },
+   {
+    "course": "ECE 27000",
+    "title": "Intro Digitl Sys Desgn",
+    "type": "Lecture",
+    "section": "13093-037",
+    "day": 0,
+    "start": 870,
+    "end": 920,
+    "loc": "PHYS 112",
+    "instructor": "Li, Junfei (Instr)",
+    "first": "08/24/2026",
+    "last": "09/04/2026"
+   },
+   {
+    "course": "ECE 26400",
+    "title": "Advanced C Programming",
+    "type": "Lecture",
+    "section": "59109-001",
+    "day": 1,
+    "start": 900,
+    "end": 975,
+    "loc": "BHEE 129",
+    "instructor": "Wang, Xiaoqian (Instr)",
+    "first": "08/25/2026",
+    "last": "10/08/2026"
+   },
+   {
+    "course": "ECE 20869",
+    "title": "Discrete Math For Comput Engr",
+    "type": "Lecture",
+    "section": "31418-001",
+    "day": 1,
+    "start": 990,
+    "end": 1065,
+    "loc": "UC 114",
+    "instructor": "Bagchi, Saurabh (Instr)",
+    "first": "08/25/2026",
+    "last": "10/08/2026"
+   },
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Lecture",
+    "section": "20739-002",
+    "day": 2,
+    "start": 750,
+    "end": 800,
+    "loc": "BHEE 129",
+    "instructor": "Diaz Rivas, Rosa E (Instr)",
+    "first": "08/24/2026",
+    "last": "09/02/2026"
+   },
+   {
+    "course": "ECE 27000",
+    "title": "Intro Digitl Sys Desgn",
+    "type": "Lecture",
+    "section": "13093-037",
+    "day": 2,
+    "start": 870,
+    "end": 920,
+    "loc": "PHYS 112",
+    "instructor": "Li, Junfei (Instr)",
+    "first": "08/24/2026",
+    "last": "09/04/2026"
+   },
+   {
+    "course": "ECE 20007",
+    "title": "Elec Engr Fundamentals I Lab",
+    "type": "Laboratory",
+    "section": "20752-004",
+    "day": 2,
+    "start": 930,
+    "end": 1040,
+    "loc": "BHEE 166",
+    "instructor": "Alukkal, Carl Robanto (Instr)",
+    "first": "08/26/2026",
+    "last": "11/18/2026"
+   },
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Recitation",
+    "section": "19863-030",
+    "day": 3,
+    "start": 690,
+    "end": 740,
+    "loc": "HAMP 1144",
+    "instructor": "Weinstein, Dana (Instr)",
+    "first": "08/27/2026",
+    "last": "11/19/2026"
+   },
+   {
+    "course": "ECE 26400",
+    "title": "Advanced C Programming",
+    "type": "Lecture",
+    "section": "59109-001",
+    "day": 3,
+    "start": 900,
+    "end": 975,
+    "loc": "BHEE 129",
+    "instructor": "Wang, Xiaoqian (Instr)",
+    "first": "08/25/2026",
+    "last": "10/08/2026"
+   },
+   {
+    "course": "ECE 20869",
+    "title": "Discrete Math For Comput Engr",
+    "type": "Lecture",
+    "section": "31418-001",
+    "day": 3,
+    "start": 990,
+    "end": 1065,
+    "loc": "UC 114",
+    "instructor": "Bagchi, Saurabh (Instr)",
+    "first": "08/25/2026",
+    "last": "10/08/2026"
+   },
+   {
+    "course": "VIP 27920",
+    "title": "Soph Part In VIP",
+    "type": "Laboratory",
+    "section": "17649-422*",
+    "day": 3,
+    "start": 1050,
+    "end": 1100,
+    "loc": "BHEE 129",
+    "instructor": "Johnson, Mark C (Instr) Swabey, Matthew A (Instr)",
+    "first": "08/27/2026",
+    "last": "11/19/2026"
+   },
+   {
+    "course": "VIP 27920",
+    "title": "Soph Part In VIP",
+    "type": "Laboratory",
+    "section": "17649-422*",
+    "day": 3,
+    "start": 1110,
+    "end": 1160,
+    "loc": "BHEE 129",
+    "instructor": "Johnson, Mark C (Instr) Swabey, Matthew A (Instr)",
+    "first": "08/27/2026",
+    "last": "11/19/2026"
+   },
+   {
+    "course": "ECE 27000",
+    "title": "Intro Digitl Sys Desgn",
+    "type": "Laboratory",
+    "section": "13103-039",
+    "day": 4,
+    "start": 630,
+    "end": 800,
+    "loc": "BHEE 164",
+    "instructor": "Abba, Abubakar Aliyu (Instr)",
+    "first": "08/28/2026",
+    "last": "11/20/2026"
+   },
+   {
+    "course": "ECE 29401",
+    "title": "ECE Sophomore Seminar",
+    "type": "Lecture",
+    "section": "20774-001",
+    "day": 4,
+    "start": 810,
+    "end": 860,
+    "loc": "WALC 1018",
+    "instructor": "Rainwater, Angela Sue Jones (Instr)",
+    "first": "08/28/2026",
+    "last": "10/16/2026"
+   },
+   {
+    "course": "ECE 27000",
+    "title": "Intro Digitl Sys Desgn",
+    "type": "Lecture",
+    "section": "13093-037",
+    "day": 4,
+    "start": 870,
+    "end": 920,
+    "loc": "PHYS 112",
+    "instructor": "Li, Junfei (Instr)",
+    "first": "08/24/2026",
+    "last": "09/04/2026"
+   }
+  ],
+  "exams": [
+   {
+    "course": "ECE 29401",
+    "title": "ECE Sophomore Seminar",
+    "type": "Breakout Session",
+    "date": "09/08/2026",
+    "start": 630,
+    "end": 680
+   },
+   {
+    "course": "ECE 27000",
+    "title": "Intro Digitl Sys Desgn",
+    "type": "Midterm Examination",
+    "date": "09/21/2026",
+    "start": 1200,
+    "end": 1290
+   },
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Midterm Examination",
+    "date": "09/24/2026",
+    "start": 1200,
+    "end": 1260
+   },
+   {
+    "course": "ECE 26400",
+    "title": "Advanced C Programming",
+    "type": "Midterm Examination",
+    "date": "09/29/2026",
+    "start": 1200,
+    "end": 1260
+   },
+   {
+    "course": "ECE 27000",
+    "title": "Intro Digitl Sys Desgn",
+    "type": "Midterm Examination",
+    "date": "10/20/2026",
+    "start": 1200,
+    "end": 1290
+   },
+   {
+    "course": "ECE 26400",
+    "title": "Advanced C Programming",
+    "type": "Midterm Examination",
+    "date": "11/04/2026",
+    "start": 1110,
+    "end": 1170
+   },
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Midterm Examination",
+    "date": "11/05/2026",
+    "start": 1200,
+    "end": 1260
+   },
+   {
+    "course": "ECE 29401",
+    "title": "ECE Sophomore Seminar",
+    "type": "Breakout Session",
+    "date": "11/10/2026",
+    "start": 630,
+    "end": 680
+   },
+   {
+    "course": "ECE 27000",
+    "title": "Intro Digitl Sys Desgn",
+    "type": "Midterm Examination",
+    "date": "12/02/2026",
     "start": 1200,
     "end": 1260
    }
