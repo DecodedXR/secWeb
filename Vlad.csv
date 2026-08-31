@@ -1,0 +1,50 @@
+"Name","Section","Type","Title","Note","Day Of Week","First Date","Last Date","Published Start","Published End","Location","Capacity","Instructor / Organization","Email","Additional Considerations","Approved",
+"ECE 29401","20798-002","Lecture","ECE Sophomore Seminar ",,,,,,,,,"Seadeek, Jamie L (Instr)","jseadeek@purdue.edu",,"not approved",
+"ECE 29401","20798-002","Lecture","ECE Sophomore Seminar ",,"T","08/25/2026","10/06/2026","10:30a","11:20a","WALC 1132","108","Seadeek, Jamie L (Instr)","jseadeek@purdue.edu",,"01/30/2026",
+"ECE 29401","20798-002","Lecture","ECE Sophomore Seminar ",,"T","10/20/2026",,"10:30a","11:20a","WALC 1132","108","Seadeek, Jamie L (Instr)","jseadeek@purdue.edu",,"01/30/2026",
+"ECE 30100","17102-004","Lecture","Signals And Systems",,"MWF","08/24/2026","09/04/2026","8:30a","9:20a","BHEE 170","170","Lin, I-Fan (Instr)","lini@purdue.edu",,"01/30/2026",
+"ECE 30100","17102-004","Lecture","Signals And Systems",,"MWF","09/09/2026","10/09/2026","8:30a","9:20a","BHEE 170","170","Lin, I-Fan (Instr)","lini@purdue.edu",,"01/30/2026",
+"ECE 30100","17102-004","Lecture","Signals And Systems",,"MWF","10/14/2026","11/23/2026","8:30a","9:20a","BHEE 170","170","Lin, I-Fan (Instr)","lini@purdue.edu",,"01/30/2026",
+"ECE 30100","17102-004","Lecture","Signals And Systems",,"MWF","11/30/2026","12/11/2026","8:30a","9:20a","BHEE 170","170","Lin, I-Fan (Instr)","lini@purdue.edu",,"01/30/2026",
+"ECE 33700","21734-010","Lecture","ASIC Design Lab",,"T","08/25/2026","10/06/2026","8:30a","9:20a","ARMS 1010","150","Swabey, Matthew A (Instr)","maswabey@purdue.edu",,"01/30/2026",
+"ECE 33700","21734-010","Lecture","ASIC Design Lab",,"T","10/20/2026","12/08/2026","8:30a","9:20a","ARMS 1010","150","Swabey, Matthew A (Instr)","maswabey@purdue.edu",,"01/30/2026",
+"ECE 36200","17750-001","Lecture","Micropro Sys & Intrfac","Course may be taken for honors credit. Contact your advisor and instructor for further information.","MWF","08/24/2026","09/04/2026","7:30a","8:20a","WTHR 200","480","Kim, Younghyun (Instr)","younghyun@purdue.edu",,"01/30/2026",
+"ECE 36200","17750-001","Lecture","Micropro Sys & Intrfac","Course may be taken for honors credit. Contact your advisor and instructor for further information.","MWF","09/09/2026","10/09/2026","7:30a","8:20a","WTHR 200","480","Kim, Younghyun (Instr)","younghyun@purdue.edu",,"01/30/2026",
+"ECE 36200","17750-001","Lecture","Micropro Sys & Intrfac","Course may be taken for honors credit. Contact your advisor and instructor for further information.","MWF","10/14/2026","11/23/2026","7:30a","8:20a","WTHR 200","480","Kim, Younghyun (Instr)","younghyun@purdue.edu",,"01/30/2026",
+"ECE 36200","17750-001","Lecture","Micropro Sys & Intrfac","Course may be taken for honors credit. Contact your advisor and instructor for further information.","MWF","11/30/2026","12/11/2026","7:30a","8:20a","WTHR 200","480","Kim, Younghyun (Instr)","younghyun@purdue.edu",,"01/30/2026",
+"ECE 36800","17766-001","Lecture","Data Structures",,"TTh","08/25/2026","10/08/2026","3:00p","4:15p","ARMS 1010","150","Uslu, Suleyman (Instr)",,,"01/30/2026",
+"ECE 36800","17766-001","Lecture","Data Structures",,"TTh","10/15/2026","11/24/2026","3:00p","4:15p","ARMS 1010","150","Uslu, Suleyman (Instr)",,,"01/30/2026",
+"ECE 36800","17766-001","Lecture","Data Structures",,"TTh","12/01/2026","12/10/2026","3:00p","4:15p","ARMS 1010","150","Uslu, Suleyman (Instr)",,,"01/30/2026",
+"VIP 27920","17645-PDL*","Lecture","Soph Part In VIP","Professional Development: PD for SoCET",,,,,,,,"Zoltowski, Carla B (Instr)","cbz@purdue.edu",,"not approved",
+"ECE 33700","61748-008","Laboratory","ASIC Design Lab",,"Th","08/27/2026","11/19/2026","8:30a","11:20a","POTR 176","48",,,,"02/18/2026",
+"ECE 33700","61748-008","Laboratory","ASIC Design Lab",,"Th","12/03/2026","12/10/2026","8:30a","11:20a","POTR 176","48",,,,"02/18/2026",
+"ECE 36200","17758-009","Laboratory","Micropro Sys & Intrfac","Course may be taken for honors credit. Contact your advisor and instructor for further information.","T","08/25/2026","10/06/2026","11:30a","2:20p","BHEE 162","22","Menon, Niraj Manikantadas (Instr)","niraj@purdue.edu",,"02/18/2026",
+"ECE 36200","17758-009","Laboratory","Micropro Sys & Intrfac","Course may be taken for honors credit. Contact your advisor and instructor for further information.","T","10/20/2026","12/08/2026","11:30a","2:20p","BHEE 162","22","Menon, Niraj Manikantadas (Instr)","niraj@purdue.edu",,"02/18/2026",
+"VIP 27920","17649-422*","Laboratory","Soph Part In VIP","SoCET Main","Th","08/27/2026","11/19/2026","6:30p","7:20p","BHEE 129","468","Johnson, Mark C (Instr)
+Swabey, Matthew A (Instr)","mcjohnso@purdue.edu
+swabey@purdue.edu",,"01/30/2026",
+"VIP 27920","17649-422*","Laboratory","Soph Part In VIP","SoCET Main","Th","12/03/2026","12/10/2026","6:30p","7:20p","BHEE 129","468","Johnson, Mark C (Instr)
+Swabey, Matthew A (Instr)","mcjohnso@purdue.edu
+swabey@purdue.edu",,"01/30/2026",
+"VIP 27920","17649-422*","Laboratory","Soph Part In VIP","SoCET Main","Th","08/27/2026","11/19/2026","5:30p","6:20p","BHEE 129","468","Johnson, Mark C (Instr)
+Swabey, Matthew A (Instr)","mcjohnso@purdue.edu
+swabey@purdue.edu",,"01/30/2026",
+"VIP 27920","17649-422*","Laboratory","Soph Part In VIP","SoCET Main","Th","12/03/2026","12/10/2026","5:30p","6:20p","BHEE 129","468","Johnson, Mark C (Instr)
+Swabey, Matthew A (Instr)","mcjohnso@purdue.edu
+swabey@purdue.edu",,"01/30/2026",
+"EAPS 10500","22696-002","Distance Learning (Online)","The Planets",,,,,,,"ASYNC ONLINE","9999","Freed, Andrew M (Instr)","freed@purdue.edu",,"not approved",
+"ECE 30100","Offering","Midterm Examination","Signals And Systems",,"M","09/28/2026",,"6:30p","7:30p","ME 1061","158","Lin, I-Fan","lini@purdue.edu",,"08/18/2026",
+"ECE 30100","Offering","Midterm Examination","Signals And Systems",,"M","09/28/2026",,"6:30p","7:30p","ME 1130","120","Lin, I-Fan","lini@purdue.edu",,"08/18/2026",
+"ECE 30100","Offering","Midterm Examination","Signals And Systems",,"M","09/28/2026",,"6:30p","7:30p","SMTH 108","205","Lin, I-Fan","lini@purdue.edu",,"08/18/2026",
+"ECE 30100","Offering","Midterm Examination","Signals And Systems",,"M","10/26/2026",,"6:30p","7:30p","FRNY G140","234","Lin, I-Fan","lini@purdue.edu",,"08/18/2026",
+"ECE 30100","Offering","Midterm Examination","Signals And Systems",,"M","10/26/2026",,"6:30p","7:30p","UC 114","273","Lin, I-Fan","lini@purdue.edu",,"08/18/2026",
+"ECE 30100","Offering","Midterm Examination","Signals And Systems",,"M","11/23/2026",,"6:30p","7:30p","FRNY G140","234","Lin, I-Fan","lini@purdue.edu",,"08/18/2026",
+"ECE 30100","Offering","Midterm Examination","Signals And Systems",,"M","11/23/2026",,"6:30p","7:30p","UC 114","273","Lin, I-Fan","lini@purdue.edu",,"08/18/2026",
+"ECE 36200","17750-001","Midterm Examination","Micropro Sys & Intrfac",,"M","10/19/2026",,"8:00p","10:00p","LILY G126","189","Kim, Younghyun","younghyun@purdue.edu",,"08/18/2026",
+"ECE 36200","17750-001","Midterm Examination","Micropro Sys & Intrfac",,"M","10/19/2026",,"8:00p","10:00p","MATH 175","180","Kim, Younghyun","younghyun@purdue.edu",,"08/18/2026",
+"ECE 36200","17750-001","Midterm Examination","Micropro Sys & Intrfac",,"M","10/19/2026",,"8:00p","10:00p","ME 1061","158","Kim, Younghyun","younghyun@purdue.edu",,"08/18/2026",
+"ECE 36200","17750-001","Midterm Examination","Micropro Sys & Intrfac",,"M","10/19/2026",,"8:00p","10:00p","RHPH 172","193","Kim, Younghyun","younghyun@purdue.edu",,"08/18/2026",
+"ECE 29401 Breakout Session
+  ECE 29401","Offering","Course","ECE Sophomore Seminar ",,"T","09/08/2026",,"10:30a","11:20a","MSEE B012","96",,,,"06/10/2026",
+"ECE 29401 Breakout Session
+  ECE 29401","Offering","Course","ECE Sophomore Seminar ",,"T","11/10/2026",,"10:30a","11:20a","MSEE B012","96",,,,"06/10/2026",
