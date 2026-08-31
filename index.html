@@ -40,10 +40,11 @@ button.act{padding:8px 14px;border-radius:10px;border:1px solid var(--line);back
   font-weight:600;cursor:pointer;font-size:13px}
 button.act:hover{border-color:var(--accent);color:var(--accent)}
 button.act.primary{background:var(--accent);color:#191100;border-color:var(--accent)}
-.statgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
-.stat{background:#0e1018;border:1px solid var(--line);border-radius:12px;padding:14px}
-.stat .n{font-size:26px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
-.stat .l{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.1em;margin-top:5px}
+.statgrid{display:flex;gap:10px;overflow-x:auto}
+.stat{flex:1 1 0;min-width:104px}
+.stat{background:#0e1018;border:1px solid var(--line);border-radius:12px;padding:12px 13px}
+.stat .n{font-size:23px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.stat .l{color:var(--dim);font-size:10px;white-space:nowrap;text-transform:uppercase;letter-spacing:.1em;margin-top:5px}
 #shot{background:var(--panel);border-radius:16px}
 .gridhead{display:grid;grid-template-columns:70px repeat(5,1fr);gap:6px;margin-bottom:6px}
 .gridhead div{text-align:center;font-weight:800;font-size:13px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase}
@@ -417,7 +418,7 @@ function stats(people){
     ["unique courses",new Set([...all.map(b=>b.course),
         ...people.flatMap(n=>(DATA[n].untimed||[]).map(u=>u.course))]).size,"var(--accent)"],
     ["shared courses",sharedCourses(people).length,"#4dd4ac"],
-    ["shared classes",new Set(sharedClasses(people).map(x=>x.course)).size,"#7dd3fc"],
+    ["shared classes",sharedClasses(people).reduce((a,x)=>a+x.days.length,0),"#7dd3fc"],
     ["combined hrs/wk",hrs(mins),"#5aa9ff"],
     ["shared free hrs",people.length>1?hrs(freeMin):"n/a","#c084fc"],
     ["earliest start",all.length?fmt(Math.min(...all.map(b=>b.start))):"n/a","#ffa94d"],
