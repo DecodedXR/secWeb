@@ -733,12 +733,12 @@
     "course": "ECE 20001",
     "title": "Electrical Engr Fundamentals I",
     "type": "Recitation",
-    "section": "19874-035",
+    "section": "19868-033",
     "day": 3,
-    "start": 870,
-    "end": 920,
+    "start": 930,
+    "end": 980,
     "loc": "PHYS 238",
-    "instructor": "Upadhyaya, Pramey (Instr)",
+    "instructor": "Wu, Can (Instr)",
     "first": "08/27/2026",
     "last": "11/19/2026"
    },
@@ -854,6 +854,276 @@
     "title": "Multivariate Calculus",
     "type": "Midterm Examination",
     "date": "11/18/2026",
+    "start": 1200,
+    "end": 1260
+   }
+  ]
+ },
+ "Romir": {
+  "blocks": [
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Lecture",
+    "section": "20739-002",
+    "day": 0,
+    "start": 750,
+    "end": 800,
+    "loc": "BHEE 129",
+    "instructor": "Diaz Rivas, Rosa E (Instr)",
+    "first": "08/24/2026",
+    "last": "09/02/2026"
+   },
+   {
+    "course": "ECE 27000",
+    "title": "Intro Digitl Sys Desgn",
+    "type": "Lecture",
+    "section": "13093-037",
+    "day": 0,
+    "start": 870,
+    "end": 920,
+    "loc": "PHYS 112",
+    "instructor": "Li, Junfei (Instr)",
+    "first": "08/24/2026",
+    "last": "09/04/2026"
+   },
+   {
+    "course": "ECE 26400",
+    "title": "Advanced C Programming",
+    "type": "Lecture",
+    "section": "59110-002",
+    "day": 1,
+    "start": 540,
+    "end": 615,
+    "loc": "PHYS 114",
+    "instructor": "Koh, Cheng-Kok (Instr)",
+    "first": "08/25/2026",
+    "last": "10/08/2026"
+   },
+   {
+    "course": "MA 26600",
+    "title": "Ordinary Differ Equatn",
+    "type": "Lecture",
+    "section": "13034-096",
+    "day": 1,
+    "start": 630,
+    "end": 705,
+    "loc": "HAMP 2101",
+    "instructor": "Vercleyen, Gert (Instr)",
+    "first": "08/25/2026",
+    "last": "10/08/2026"
+   },
+   {
+    "course": "ECE 29401",
+    "title": "ECE Sophomore Seminar",
+    "type": "Course",
+    "section": "Offering",
+    "day": 1,
+    "start": 630,
+    "end": 680,
+    "loc": "MSEE B012",
+    "instructor": "",
+    "first": "09/08/2026",
+    "last": ""
+   },
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Lecture",
+    "section": "20739-002",
+    "day": 2,
+    "start": 750,
+    "end": 800,
+    "loc": "BHEE 129",
+    "instructor": "Diaz Rivas, Rosa E (Instr)",
+    "first": "08/24/2026",
+    "last": "09/02/2026"
+   },
+   {
+    "course": "ECE 27000",
+    "title": "Intro Digitl Sys Desgn",
+    "type": "Lecture",
+    "section": "13093-037",
+    "day": 2,
+    "start": 870,
+    "end": 920,
+    "loc": "PHYS 112",
+    "instructor": "Li, Junfei (Instr)",
+    "first": "08/24/2026",
+    "last": "09/04/2026"
+   },
+   {
+    "course": "ECE 20007",
+    "title": "Elec Engr Fundamentals I Lab",
+    "type": "Laboratory",
+    "section": "20752-004",
+    "day": 2,
+    "start": 930,
+    "end": 1040,
+    "loc": "BHEE 166",
+    "instructor": "Alukkal, Carl Robanto (Instr)",
+    "first": "08/26/2026",
+    "last": "11/18/2026"
+   },
+   {
+    "course": "ECE 26400",
+    "title": "Advanced C Programming",
+    "type": "Lecture",
+    "section": "59110-002",
+    "day": 3,
+    "start": 540,
+    "end": 615,
+    "loc": "PHYS 114",
+    "instructor": "Koh, Cheng-Kok (Instr)",
+    "first": "08/25/2026",
+    "last": "10/08/2026"
+   },
+   {
+    "course": "MA 26600",
+    "title": "Ordinary Differ Equatn",
+    "type": "Lecture",
+    "section": "13034-096",
+    "day": 3,
+    "start": 630,
+    "end": 705,
+    "loc": "HAMP 2101",
+    "instructor": "Vercleyen, Gert (Instr)",
+    "first": "08/25/2026",
+    "last": "10/08/2026"
+   },
+   {
+    "course": "VIP 27920",
+    "title": "Soph Part In VIP",
+    "type": "Laboratory",
+    "section": "17649-422*",
+    "day": 3,
+    "start": 1050,
+    "end": 1100,
+    "loc": "BHEE 129",
+    "instructor": "Johnson, Mark C (Instr) Swabey, Matthew A (Instr)",
+    "first": "08/27/2026",
+    "last": "11/19/2026"
+   },
+   {
+    "course": "VIP 27920",
+    "title": "Soph Part In VIP",
+    "type": "Laboratory",
+    "section": "17649-422*",
+    "day": 3,
+    "start": 1110,
+    "end": 1160,
+    "loc": "BHEE 129",
+    "instructor": "Johnson, Mark C (Instr) Swabey, Matthew A (Instr)",
+    "first": "08/27/2026",
+    "last": "11/19/2026"
+   },
+   {
+    "course": "ECE 27000",
+    "title": "Intro Digitl Sys Desgn",
+    "type": "Laboratory",
+    "section": "13103-039",
+    "day": 4,
+    "start": 630,
+    "end": 800,
+    "loc": "BHEE 164",
+    "instructor": "Abba, Abubakar Aliyu (Instr)",
+    "first": "08/28/2026",
+    "last": "11/20/2026"
+   },
+   {
+    "course": "ECE 29401",
+    "title": "ECE Sophomore Seminar",
+    "type": "Lecture",
+    "section": "20774-001",
+    "day": 4,
+    "start": 810,
+    "end": 860,
+    "loc": "WALC 1018",
+    "instructor": "Rainwater, Angela Sue Jones (Instr)",
+    "first": "08/28/2026",
+    "last": "10/16/2026"
+   },
+   {
+    "course": "ECE 27000",
+    "title": "Intro Digitl Sys Desgn",
+    "type": "Lecture",
+    "section": "13093-037",
+    "day": 4,
+    "start": 870,
+    "end": 920,
+    "loc": "PHYS 112",
+    "instructor": "Li, Junfei (Instr)",
+    "first": "08/24/2026",
+    "last": "09/04/2026"
+   },
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Recitation",
+    "section": "19866-032",
+    "day": 4,
+    "start": 930,
+    "end": 980,
+    "loc": "ARMS B071",
+    "instructor": "Kildishev, Alexander V (Instr)",
+    "first": "08/28/2026",
+    "last": "11/20/2026"
+   }
+  ],
+  "exams": [
+   {
+    "course": "ECE 27000",
+    "title": "Intro Digitl Sys Desgn",
+    "type": "Midterm Examination",
+    "date": "09/21/2026",
+    "start": 1200,
+    "end": 1290
+   },
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Midterm Examination",
+    "date": "09/24/2026",
+    "start": 1200,
+    "end": 1260
+   },
+   {
+    "course": "MA 26600",
+    "title": "Ordinary Differ Equatn",
+    "type": "Midterm Examination",
+    "date": "10/08/2026",
+    "start": 1200,
+    "end": 1260
+   },
+   {
+    "course": "ECE 27000",
+    "title": "Intro Digitl Sys Desgn",
+    "type": "Midterm Examination",
+    "date": "10/20/2026",
+    "start": 1200,
+    "end": 1290
+   },
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Midterm Examination",
+    "date": "11/05/2026",
+    "start": 1200,
+    "end": 1260
+   },
+   {
+    "course": "MA 26600",
+    "title": "Ordinary Differ Equatn",
+    "type": "Midterm Examination",
+    "date": "11/10/2026",
+    "start": 1200,
+    "end": 1260
+   },
+   {
+    "course": "ECE 27000",
+    "title": "Intro Digitl Sys Desgn",
+    "type": "Midterm Examination",
+    "date": "12/02/2026",
     "start": 1200,
     "end": 1260
    }
@@ -1351,276 +1621,6 @@
     "date": "11/16/2026",
     "start": 1200,
     "end": 1290
-   }
-  ]
- },
- "Romir": {
-  "blocks": [
-   {
-    "course": "ECE 20001",
-    "title": "Electrical Engr Fundamentals I",
-    "type": "Lecture",
-    "section": "20739-002",
-    "day": 0,
-    "start": 750,
-    "end": 800,
-    "loc": "BHEE 129",
-    "instructor": "Diaz Rivas, Rosa E (Instr)",
-    "first": "08/24/2026",
-    "last": "09/02/2026"
-   },
-   {
-    "course": "ECE 27000",
-    "title": "Intro Digitl Sys Desgn",
-    "type": "Lecture",
-    "section": "13093-037",
-    "day": 0,
-    "start": 870,
-    "end": 920,
-    "loc": "PHYS 112",
-    "instructor": "Li, Junfei (Instr)",
-    "first": "08/24/2026",
-    "last": "09/04/2026"
-   },
-   {
-    "course": "ECE 26400",
-    "title": "Advanced C Programming",
-    "type": "Lecture",
-    "section": "59110-002",
-    "day": 1,
-    "start": 540,
-    "end": 615,
-    "loc": "PHYS 114",
-    "instructor": "Koh, Cheng-Kok (Instr)",
-    "first": "08/25/2026",
-    "last": "10/08/2026"
-   },
-   {
-    "course": "MA 26600",
-    "title": "Ordinary Differ Equatn",
-    "type": "Lecture",
-    "section": "13034-096",
-    "day": 1,
-    "start": 630,
-    "end": 705,
-    "loc": "HAMP 2101",
-    "instructor": "Vercleyen, Gert (Instr)",
-    "first": "08/25/2026",
-    "last": "10/08/2026"
-   },
-   {
-    "course": "ECE 29401",
-    "title": "ECE Sophomore Seminar",
-    "type": "Course",
-    "section": "Offering",
-    "day": 1,
-    "start": 630,
-    "end": 680,
-    "loc": "MSEE B012",
-    "instructor": "",
-    "first": "09/08/2026",
-    "last": ""
-   },
-   {
-    "course": "ECE 20007",
-    "title": "Elec Engr Fundamentals I Lab",
-    "type": "Laboratory",
-    "section": "21153-027",
-    "day": 1,
-    "start": 930,
-    "end": 1040,
-    "loc": "BHEE 166",
-    "instructor": "Alukkal, Carl Robanto (Instr)",
-    "first": "08/25/2026",
-    "last": "10/06/2026"
-   },
-   {
-    "course": "ECE 20001",
-    "title": "Electrical Engr Fundamentals I",
-    "type": "Lecture",
-    "section": "20739-002",
-    "day": 2,
-    "start": 750,
-    "end": 800,
-    "loc": "BHEE 129",
-    "instructor": "Diaz Rivas, Rosa E (Instr)",
-    "first": "08/24/2026",
-    "last": "09/02/2026"
-   },
-   {
-    "course": "ECE 27000",
-    "title": "Intro Digitl Sys Desgn",
-    "type": "Lecture",
-    "section": "13093-037",
-    "day": 2,
-    "start": 870,
-    "end": 920,
-    "loc": "PHYS 112",
-    "instructor": "Li, Junfei (Instr)",
-    "first": "08/24/2026",
-    "last": "09/04/2026"
-   },
-   {
-    "course": "ECE 26400",
-    "title": "Advanced C Programming",
-    "type": "Lecture",
-    "section": "59110-002",
-    "day": 3,
-    "start": 540,
-    "end": 615,
-    "loc": "PHYS 114",
-    "instructor": "Koh, Cheng-Kok (Instr)",
-    "first": "08/25/2026",
-    "last": "10/08/2026"
-   },
-   {
-    "course": "MA 26600",
-    "title": "Ordinary Differ Equatn",
-    "type": "Lecture",
-    "section": "13034-096",
-    "day": 3,
-    "start": 630,
-    "end": 705,
-    "loc": "HAMP 2101",
-    "instructor": "Vercleyen, Gert (Instr)",
-    "first": "08/25/2026",
-    "last": "10/08/2026"
-   },
-   {
-    "course": "VIP 27920",
-    "title": "Soph Part In VIP",
-    "type": "Laboratory",
-    "section": "17649-422*",
-    "day": 3,
-    "start": 1050,
-    "end": 1100,
-    "loc": "BHEE 129",
-    "instructor": "Johnson, Mark C (Instr) Swabey, Matthew A (Instr)",
-    "first": "08/27/2026",
-    "last": "11/19/2026"
-   },
-   {
-    "course": "VIP 27920",
-    "title": "Soph Part In VIP",
-    "type": "Laboratory",
-    "section": "17649-422*",
-    "day": 3,
-    "start": 1110,
-    "end": 1160,
-    "loc": "BHEE 129",
-    "instructor": "Johnson, Mark C (Instr) Swabey, Matthew A (Instr)",
-    "first": "08/27/2026",
-    "last": "11/19/2026"
-   },
-   {
-    "course": "ECE 27000",
-    "title": "Intro Digitl Sys Desgn",
-    "type": "Laboratory",
-    "section": "13103-039",
-    "day": 4,
-    "start": 630,
-    "end": 800,
-    "loc": "BHEE 164",
-    "instructor": "Abba, Abubakar Aliyu (Instr)",
-    "first": "08/28/2026",
-    "last": "11/20/2026"
-   },
-   {
-    "course": "ECE 29401",
-    "title": "ECE Sophomore Seminar",
-    "type": "Lecture",
-    "section": "20774-001",
-    "day": 4,
-    "start": 810,
-    "end": 860,
-    "loc": "WALC 1018",
-    "instructor": "Rainwater, Angela Sue Jones (Instr)",
-    "first": "08/28/2026",
-    "last": "10/16/2026"
-   },
-   {
-    "course": "ECE 27000",
-    "title": "Intro Digitl Sys Desgn",
-    "type": "Lecture",
-    "section": "13093-037",
-    "day": 4,
-    "start": 870,
-    "end": 920,
-    "loc": "PHYS 112",
-    "instructor": "Li, Junfei (Instr)",
-    "first": "08/24/2026",
-    "last": "09/04/2026"
-   },
-   {
-    "course": "ECE 20001",
-    "title": "Electrical Engr Fundamentals I",
-    "type": "Recitation",
-    "section": "19866-032",
-    "day": 4,
-    "start": 930,
-    "end": 980,
-    "loc": "ARMS B071",
-    "instructor": "Kildishev, Alexander V (Instr)",
-    "first": "08/28/2026",
-    "last": "11/20/2026"
-   }
-  ],
-  "exams": [
-   {
-    "course": "ECE 27000",
-    "title": "Intro Digitl Sys Desgn",
-    "type": "Midterm Examination",
-    "date": "09/21/2026",
-    "start": 1200,
-    "end": 1290
-   },
-   {
-    "course": "ECE 20001",
-    "title": "Electrical Engr Fundamentals I",
-    "type": "Midterm Examination",
-    "date": "09/24/2026",
-    "start": 1200,
-    "end": 1260
-   },
-   {
-    "course": "MA 26600",
-    "title": "Ordinary Differ Equatn",
-    "type": "Midterm Examination",
-    "date": "10/08/2026",
-    "start": 1200,
-    "end": 1260
-   },
-   {
-    "course": "ECE 27000",
-    "title": "Intro Digitl Sys Desgn",
-    "type": "Midterm Examination",
-    "date": "10/20/2026",
-    "start": 1200,
-    "end": 1290
-   },
-   {
-    "course": "ECE 20001",
-    "title": "Electrical Engr Fundamentals I",
-    "type": "Midterm Examination",
-    "date": "11/05/2026",
-    "start": 1200,
-    "end": 1260
-   },
-   {
-    "course": "MA 26600",
-    "title": "Ordinary Differ Equatn",
-    "type": "Midterm Examination",
-    "date": "11/10/2026",
-    "start": 1200,
-    "end": 1260
-   },
-   {
-    "course": "ECE 27000",
-    "title": "Intro Digitl Sys Desgn",
-    "type": "Midterm Examination",
-    "date": "12/02/2026",
-    "start": 1200,
-    "end": 1260
    }
   ]
  }
