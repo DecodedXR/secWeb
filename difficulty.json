@@ -5,7 +5,7 @@
     "course": "BIOL 58601",
     "title": "Ecology",
     "credits": 3,
-    "score": 8.3,
+    "score": 8.4,
     "gpa": 2.69,
     "gpaOf": "Ximena Bernal",
     "prof": null,
@@ -13,6 +13,18 @@
     "profDiff": null,
     "ratings": 0,
     "dept": null,
+    "syllabus": 5.5,
+    "syllabusOf": "001",
+    "flags": [
+     {
+      "why": "strict A cutoff",
+      "w": 0.5
+     },
+     {
+      "why": "1 exam",
+      "w": 0.0
+     }
+    ],
     "parts": {
      "grades": 8.1,
      "prof": 8.1,
@@ -31,6 +43,9 @@
     "profDiff": null,
     "ratings": 0,
     "dept": null,
+    "syllabus": null,
+    "syllabusOf": null,
+    "flags": [],
     "parts": {
      "grades": 5.0,
      "prof": 5.0,
@@ -41,7 +56,7 @@
     "course": "PHYS 23300",
     "title": "Physics For Life Sciences I",
     "credits": 4,
-    "score": 5.1,
+    "score": 5.2,
     "gpa": 3.15,
     "gpaOf": "Ian Arnold",
     "prof": "Ian Arnold",
@@ -49,6 +64,14 @@
     "profDiff": 3.2,
     "ratings": 28,
     "dept": "Physics",
+    "syllabus": 5.5,
+    "syllabusOf": "001",
+    "flags": [
+     {
+      "why": "2 exams",
+      "w": 0.5
+     }
+    ],
     "parts": {
      "grades": 5.0,
      "prof": 5.4,
@@ -67,6 +90,9 @@
     "profDiff": 4.3,
     "ratings": 129,
     "dept": "Biological Sciences",
+    "syllabus": null,
+    "syllabusOf": null,
+    "flags": [],
     "parts": {
      "grades": 1.6,
      "prof": 8.1,
@@ -77,7 +103,7 @@
     "course": "ANTH 25400",
     "title": "Archaeological Hoaxes, Myths And Frauds",
     "credits": 3,
-    "score": 4.1,
+    "score": 4.2,
     "gpa": 3.4,
     "gpaOf": "Ian Lindsay",
     "prof": "Ian Lindsay",
@@ -85,6 +111,14 @@
     "profDiff": 2.8,
     "ratings": 13,
     "dept": "Anthropology",
+    "syllabus": 5.5,
+    "syllabusOf": "001",
+    "flags": [
+     {
+      "why": "2 exams",
+      "w": 0.5
+     }
+    ],
     "parts": {
      "grades": 3.3,
      "prof": 4.6,
@@ -95,7 +129,7 @@
     "course": "WGSS 28000",
     "title": "Women's, Gender, And Sexuality Studies: An Introduction",
     "credits": 3,
-    "score": 1.6,
+    "score": 1.5,
     "gpa": 3.79,
     "gpaOf": "Ozgun Basmaz",
     "prof": null,
@@ -103,6 +137,14 @@
     "profDiff": null,
     "ratings": 0,
     "dept": null,
+    "syllabus": 4.5,
+    "syllabusOf": "024",
+    "flags": [
+     {
+      "why": "no exams",
+      "w": -0.5
+     }
+    ],
     "parts": {
      "grades": 0.7,
      "prof": 0.7,
@@ -129,6 +171,9 @@
     "profDiff": null,
     "ratings": 0,
     "dept": null,
+    "syllabus": null,
+    "syllabusOf": null,
+    "flags": [],
     "parts": {
      "grades": 8.5,
      "prof": 8.5,
@@ -147,6 +192,9 @@
     "profDiff": 3.7,
     "ratings": 15,
     "dept": "Mechanical Engineering",
+    "syllabus": null,
+    "syllabusOf": null,
+    "flags": [],
     "parts": {
      "grades": 7.6,
      "prof": 6.3,
@@ -165,6 +213,9 @@
     "profDiff": 2.8,
     "ratings": 95,
     "dept": "Mathematics",
+    "syllabus": null,
+    "syllabusOf": null,
+    "flags": [],
     "parts": {
      "grades": 6.5,
      "prof": 4.5,
@@ -183,6 +234,9 @@
     "profDiff": 2.7,
     "ratings": 41,
     "dept": "Statistics",
+    "syllabus": null,
+    "syllabusOf": null,
+    "flags": [],
     "parts": {
      "grades": 6.7,
      "prof": 4.3,
@@ -201,6 +255,14 @@
     "profDiff": 2.8,
     "ratings": 73,
     "dept": "Economics",
+    "syllabus": 5.0,
+    "syllabusOf": "013",
+    "flags": [
+     {
+      "why": "1 exam",
+      "w": 0.0
+     }
+    ],
     "parts": {
      "grades": 3.8,
      "prof": 4.5,
@@ -227,9 +289,38 @@
     "profDiff": null,
     "ratings": 0,
     "dept": null,
+    "syllabus": 5.0,
+    "syllabusOf": "010",
+    "flags": [],
     "parts": {
      "grades": 8.1,
      "prof": 8.1,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "MSE 25000",
+    "title": "Physical Properties In Engineering Systems",
+    "credits": 3,
+    "score": 6.0,
+    "gpa": 2.81,
+    "gpaOf": null,
+    "prof": "Mohamad Zbib",
+    "rating": 4.8,
+    "profDiff": 2.3,
+    "ratings": 19,
+    "dept": "Engineering",
+    "syllabus": 6.5,
+    "syllabusOf": "001",
+    "flags": [
+     {
+      "why": "4 exams",
+      "w": 1.5
+     }
+    ],
+    "parts": {
+     "grades": 7.3,
+     "prof": 3.6,
      "level": 5.0
     }
    },
@@ -245,27 +336,12 @@
     "profDiff": 3.6,
     "ratings": 7,
     "dept": "Physics",
+    "syllabus": null,
+    "syllabusOf": null,
+    "flags": [],
     "parts": {
      "grades": 6.5,
      "prof": 5.9,
-     "level": 5.0
-    }
-   },
-   {
-    "course": "MSE 25000",
-    "title": "Physical Properties In Engineering Systems",
-    "credits": 3,
-    "score": 5.7,
-    "gpa": 2.81,
-    "gpaOf": null,
-    "prof": "Mohamad Zbib",
-    "rating": 4.8,
-    "profDiff": 2.3,
-    "ratings": 19,
-    "dept": "Engineering",
-    "parts": {
-     "grades": 7.3,
-     "prof": 3.6,
      "level": 5.0
     }
    },
@@ -281,6 +357,9 @@
     "profDiff": null,
     "ratings": 0,
     "dept": null,
+    "syllabus": 5.0,
+    "syllabusOf": "001",
+    "flags": [],
     "parts": {
      "grades": 5.0,
      "prof": 5.0,
@@ -299,6 +378,9 @@
     "profDiff": 2.4,
     "ratings": 7,
     "dept": "Materials Engineering",
+    "syllabus": 5.0,
+    "syllabusOf": "001",
+    "flags": [],
     "parts": {
      "grades": 3.9,
      "prof": 4.1,
@@ -317,6 +399,9 @@
     "profDiff": 3.5,
     "ratings": 4,
     "dept": "Materials Engineering",
+    "syllabus": 5.0,
+    "syllabusOf": "001",
+    "flags": [],
     "parts": {
      "grades": 3.7,
      "prof": 5.6,
@@ -327,7 +412,7 @@
   "credits": 17,
   "hours": 15.2,
   "load": 0.3,
-  "score": 6.4
+  "score": 6.5
  },
  "Manny": {
   "courses": [
@@ -335,7 +420,7 @@
     "course": "ECE 20001",
     "title": "Electrical Engineering Fundamentals I",
     "credits": 3,
-    "score": 7.4,
+    "score": 7.8,
     "gpa": 2.44,
     "gpaOf": null,
     "prof": "Dana Weinstein",
@@ -343,6 +428,18 @@
     "profDiff": 3,
     "ratings": 3,
     "dept": "Electrical Engineering",
+    "syllabus": 7.1,
+    "syllabusOf": "044",
+    "flags": [
+     {
+      "why": "no late work",
+      "w": 0.6
+     },
+     {
+      "why": "4 exams",
+      "w": 1.5
+     }
+    ],
     "parts": {
      "grades": 9.7,
      "prof": 5.0,
@@ -350,28 +447,10 @@
     }
    },
    {
-    "course": "VIP 27920",
-    "title": "Sophomore Participation In Vertically Integrated Projects (VIP)",
-    "credits": 2,
-    "score": 5.1,
-    "gpa": 3.4,
-    "gpaOf": "Mark Johnson",
-    "prof": "Mark Johnson",
-    "rating": 4,
-    "profDiff": 4.5,
-    "ratings": 29,
-    "dept": "Engineering",
-    "parts": {
-     "grades": 3.3,
-     "prof": 8.2,
-     "level": 5.0
-    }
-   },
-   {
     "course": "ECE 27000",
     "title": "Introduction To Digital System Design",
     "credits": 4,
-    "score": 5.0,
+    "score": 5.3,
     "gpa": 3.1,
     "gpaOf": "Junfei Li",
     "prof": "Junfei Li",
@@ -379,6 +458,14 @@
     "profDiff": 2.8,
     "ratings": 49,
     "dept": "Engineering",
+    "syllabus": 6.5,
+    "syllabusOf": "011",
+    "flags": [
+     {
+      "why": "5 exams",
+      "w": 1.5
+     }
+    ],
     "parts": {
      "grades": 5.3,
      "prof": 4.5,
@@ -389,7 +476,7 @@
     "course": "ECE 20869",
     "title": "Discrete Math For Computer Engineering",
     "credits": 3,
-    "score": 4.9,
+    "score": 5.0,
     "gpa": null,
     "gpaOf": null,
     "prof": "Saurabh Bagchi",
@@ -397,6 +484,14 @@
     "profDiff": 2.8,
     "ratings": 145,
     "dept": "Engineering",
+    "syllabus": 5.5,
+    "syllabusOf": "001",
+    "flags": [
+     {
+      "why": "2 exams",
+      "w": 0.5
+     }
+    ],
     "parts": {
      "grades": 5.0,
      "prof": 4.5,
@@ -407,7 +502,7 @@
     "course": "ECE 26400",
     "title": "Advanced C Programming",
     "credits": 3,
-    "score": 4.6,
+    "score": 5.0,
     "gpa": 3.4,
     "gpaOf": "Xiaoqian Wang",
     "prof": "Xiaoqian Wang",
@@ -415,9 +510,47 @@
     "profDiff": 3.8,
     "ratings": 14,
     "dept": "Electrical Engineering",
+    "syllabus": 7.1,
+    "syllabusOf": "001",
+    "flags": [
+     {
+      "why": "no rounding",
+      "w": 0.6
+     },
+     {
+      "why": "4 exams",
+      "w": 1.5
+     }
+    ],
     "parts": {
      "grades": 3.3,
      "prof": 6.5,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "VIP 27920",
+    "title": "Sophomore Participation In Vertically Integrated Projects (VIP)",
+    "credits": 2,
+    "score": 5.0,
+    "gpa": 3.4,
+    "gpaOf": "Mark Johnson",
+    "prof": "Mark Johnson",
+    "rating": 4,
+    "profDiff": 4.5,
+    "ratings": 29,
+    "dept": "Engineering",
+    "syllabus": 4.6,
+    "syllabusOf": "023",
+    "flags": [
+     {
+      "why": "no textbook",
+      "w": -0.4
+     }
+    ],
+    "parts": {
+     "grades": 3.3,
+     "prof": 8.2,
      "level": 5.0
     }
    },
@@ -433,6 +566,22 @@
     "profDiff": null,
     "ratings": 0,
     "dept": null,
+    "syllabus": 5.2,
+    "syllabusOf": "029",
+    "flags": [
+     {
+      "why": "no late work",
+      "w": 0.6
+     },
+     {
+      "why": "no textbook",
+      "w": -0.4
+     },
+     {
+      "why": "1 exam",
+      "w": 0.0
+     }
+    ],
     "parts": {
      "grades": 2.9,
      "prof": 2.9,
@@ -451,6 +600,9 @@
     "profDiff": 2,
     "ratings": 11,
     "dept": "Electrical Engineering",
+    "syllabus": 5.0,
+    "syllabusOf": "001",
+    "flags": [],
     "parts": {
      "grades": 2.2,
      "prof": 3.3,
@@ -461,7 +613,7 @@
   "credits": 17,
   "hours": 17.2,
   "load": 0.5,
-  "score": 5.9
+  "score": 6.2
  },
  "Matt": {
   "courses": [
@@ -477,6 +629,9 @@
     "profDiff": 3.1,
     "ratings": 50,
     "dept": "Mathematics",
+    "syllabus": null,
+    "syllabusOf": null,
+    "flags": [],
     "parts": {
      "grades": 7.1,
      "prof": 5.2,
@@ -487,7 +642,7 @@
     "course": "CHM 11510",
     "title": "General Chemistry I",
     "credits": 3,
-    "score": 5.0,
+    "score": 5.1,
     "gpa": null,
     "gpaOf": null,
     "prof": "Garth Simpson",
@@ -495,6 +650,14 @@
     "profDiff": 3.6,
     "ratings": 30,
     "dept": "Chemistry",
+    "syllabus": 5.5,
+    "syllabusOf": "001",
+    "flags": [
+     {
+      "why": "2 exams",
+      "w": 0.5
+     }
+    ],
     "parts": {
      "grades": 5.0,
      "prof": 6.3,
@@ -513,6 +676,9 @@
     "profDiff": null,
     "ratings": 0,
     "dept": null,
+    "syllabus": 5.0,
+    "syllabusOf": "123",
+    "flags": [],
     "parts": {
      "grades": 5.0,
      "prof": 5.0,
@@ -523,7 +689,7 @@
     "course": "ENGR 13100",
     "title": "Transforming Ideas To Innovation I",
     "credits": 2,
-    "score": 3.3,
+    "score": 3.2,
     "gpa": 3.68,
     "gpaOf": null,
     "prof": "Taeho Jeong",
@@ -531,6 +697,14 @@
     "profDiff": 3.8,
     "ratings": 16,
     "dept": "Civil Engineering",
+    "syllabus": 4.6,
+    "syllabusOf": "SC2",
+    "flags": [
+     {
+      "why": "no textbook",
+      "w": -0.4
+     }
+    ],
     "parts": {
      "grades": 1.5,
      "prof": 6.5,
@@ -541,7 +715,7 @@
     "course": "SCLA 10200",
     "title": "Transformative Texts, Critical Thinking And Communication II: Modern World",
     "credits": 3,
-    "score": 2.7,
+    "score": 2.6,
     "gpa": 3.57,
     "gpaOf": null,
     "prof": "Traci Latoz",
@@ -549,6 +723,14 @@
     "profDiff": 1.6,
     "ratings": 5,
     "dept": "Communication",
+    "syllabus": 4.5,
+    "syllabusOf": "007",
+    "flags": [
+     {
+      "why": "no exams",
+      "w": -0.5
+     }
+    ],
     "parts": {
      "grades": 2.2,
      "prof": 3.2,
@@ -567,6 +749,9 @@
     "profDiff": 1.5,
     "ratings": 2,
     "dept": "Music",
+    "syllabus": 5.0,
+    "syllabusOf": "LC2",
+    "flags": [],
     "parts": {
      "grades": 0,
      "prof": 3.9,
@@ -577,7 +762,7 @@
     "course": "BAND 11800",
     "title": "Collegiate Band",
     "credits": 2,
-    "score": 1.5,
+    "score": 1.4,
     "gpa": 3.99,
     "gpaOf": "David Blon",
     "prof": "David Blon",
@@ -585,6 +770,18 @@
     "profDiff": 1.8,
     "ratings": 12,
     "dept": "Music",
+    "syllabus": 4.9,
+    "syllabusOf": "001",
+    "flags": [
+     {
+      "why": "attendance graded",
+      "w": 0.5
+     },
+     {
+      "why": "pass/fail work",
+      "w": -0.6
+     }
+    ],
     "parts": {
      "grades": 0,
      "prof": 2.9,
@@ -595,7 +792,7 @@
   "credits": 16,
   "hours": 19.3,
   "load": 0.5,
-  "score": 4.5
+  "score": 4.4
  },
  "Mila": {
   "courses": [
@@ -603,7 +800,7 @@
     "course": "CNIT 24200",
     "title": "System Administration",
     "credits": 3,
-    "score": 7.8,
+    "score": 8.0,
     "gpa": 2.63,
     "gpaOf": null,
     "prof": null,
@@ -611,6 +808,26 @@
     "profDiff": null,
     "ratings": 0,
     "dept": null,
+    "syllabus": 6.3,
+    "syllabusOf": "001",
+    "flags": [
+     {
+      "why": "no late work",
+      "w": 0.6
+     },
+     {
+      "why": "no make-ups",
+      "w": 0.6
+     },
+     {
+      "why": "no textbook",
+      "w": -0.4
+     },
+     {
+      "why": "2 exams",
+      "w": 0.5
+     }
+    ],
     "parts": {
      "grades": 8.5,
      "prof": 8.5,
@@ -629,8 +846,50 @@
     "profDiff": 3,
     "ratings": 19,
     "dept": "Computer & Informational Tech.",
+    "syllabus": 5.0,
+    "syllabusOf": "008",
+    "flags": [
+     {
+      "why": "1 exam",
+      "w": 0.0
+     }
+    ],
     "parts": {
      "grades": 6.4,
+     "prof": 5.0,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ACCT 21200",
+    "title": "Business Accounting",
+    "credits": 3,
+    "score": 5.4,
+    "gpa": null,
+    "gpaOf": null,
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
+    "syllabus": 7.2,
+    "syllabusOf": "001",
+    "flags": [
+     {
+      "why": "no rounding",
+      "w": 0.6
+     },
+     {
+      "why": "no make-ups",
+      "w": 0.6
+     },
+     {
+      "why": "3 exams",
+      "w": 1.0
+     }
+    ],
+    "parts": {
+     "grades": 5.0,
      "prof": 5.0,
      "level": 5.0
     }
@@ -647,6 +906,9 @@
     "profDiff": 3.3,
     "ratings": 42,
     "dept": "Computer Graphics",
+    "syllabus": 5.0,
+    "syllabusOf": "012",
+    "flags": [],
     "parts": {
      "grades": 5.9,
      "prof": 5.7,
@@ -654,28 +916,10 @@
     }
    },
    {
-    "course": "ACCT 21200",
-    "title": "Business Accounting",
-    "credits": 3,
-    "score": 5.0,
-    "gpa": null,
-    "gpaOf": null,
-    "prof": null,
-    "rating": null,
-    "profDiff": null,
-    "ratings": 0,
-    "dept": null,
-    "parts": {
-     "grades": 5.0,
-     "prof": 5.0,
-     "level": 5.0
-    }
-   },
-   {
     "course": "CGT 36500",
     "title": "Game Development Practicum",
     "credits": 3,
-    "score": 3.3,
+    "score": 3.2,
     "gpa": 3.92,
     "gpaOf": null,
     "prof": "Georgios Pappas",
@@ -683,6 +927,14 @@
     "profDiff": 3.7,
     "ratings": 18,
     "dept": "Biological Sciences",
+    "syllabus": 4.5,
+    "syllabusOf": "004",
+    "flags": [
+     {
+      "why": "no exams",
+      "w": -0.5
+     }
+    ],
     "parts": {
      "grades": 0,
      "prof": 6.4,
@@ -701,6 +953,9 @@
     "profDiff": 1.8,
     "ratings": 35,
     "dept": "Sociology",
+    "syllabus": null,
+    "syllabusOf": null,
+    "flags": [],
     "parts": {
      "grades": 2.7,
      "prof": 2.4,
@@ -711,7 +966,7 @@
   "credits": 18,
   "hours": 19.2,
   "load": 0.8,
-  "score": 6.0
+  "score": 6.2
  },
  "Morgan": {
   "courses": [
@@ -719,7 +974,7 @@
     "course": "ECE 20001",
     "title": "Electrical Engineering Fundamentals I",
     "credits": 3,
-    "score": 7.4,
+    "score": 7.8,
     "gpa": 2.44,
     "gpaOf": null,
     "prof": "Can Wu",
@@ -727,6 +982,18 @@
     "profDiff": 3,
     "ratings": 3,
     "dept": "Statistics",
+    "syllabus": 7.1,
+    "syllabusOf": "044",
+    "flags": [
+     {
+      "why": "no late work",
+      "w": 0.6
+     },
+     {
+      "why": "4 exams",
+      "w": 1.5
+     }
+    ],
     "parts": {
      "grades": 9.7,
      "prof": 5.0,
@@ -745,6 +1012,9 @@
     "profDiff": 3.3,
     "ratings": 69,
     "dept": "Mathematics",
+    "syllabus": null,
+    "syllabusOf": null,
+    "flags": [],
     "parts": {
      "grades": 7.1,
      "prof": 5.7,
@@ -763,6 +1033,9 @@
     "profDiff": 2.7,
     "ratings": 41,
     "dept": "Statistics",
+    "syllabus": null,
+    "syllabusOf": null,
+    "flags": [],
     "parts": {
      "grades": 6.7,
      "prof": 4.3,
@@ -773,7 +1046,7 @@
     "course": "VIP 27920",
     "title": "Sophomore Participation In Vertically Integrated Projects (VIP)",
     "credits": 2,
-    "score": 5.1,
+    "score": 5.0,
     "gpa": 3.4,
     "gpaOf": "Mark Johnson",
     "prof": "Mark Johnson",
@@ -781,6 +1054,14 @@
     "profDiff": 4.5,
     "ratings": 29,
     "dept": "Engineering",
+    "syllabus": 4.6,
+    "syllabusOf": "023",
+    "flags": [
+     {
+      "why": "no textbook",
+      "w": -0.4
+     }
+    ],
     "parts": {
      "grades": 3.3,
      "prof": 8.2,
@@ -791,7 +1072,7 @@
     "course": "ECE 20875",
     "title": "Python For Data Science",
     "credits": 3,
-    "score": 4.6,
+    "score": 4.7,
     "gpa": 3.17,
     "gpaOf": "Qiang Qiu",
     "prof": "Qiang Qiu",
@@ -799,6 +1080,18 @@
     "profDiff": 2.2,
     "ratings": 6,
     "dept": "Computer Engineering",
+    "syllabus": 5.6,
+    "syllabusOf": "002",
+    "flags": [
+     {
+      "why": "no textbook",
+      "w": -0.4
+     },
+     {
+      "why": "3 exams",
+      "w": 1.0
+     }
+    ],
     "parts": {
      "grades": 4.9,
      "prof": 3.9,
@@ -817,6 +1110,22 @@
     "profDiff": null,
     "ratings": 0,
     "dept": null,
+    "syllabus": 5.2,
+    "syllabusOf": "029",
+    "flags": [
+     {
+      "why": "no late work",
+      "w": 0.6
+     },
+     {
+      "why": "no textbook",
+      "w": -0.4
+     },
+     {
+      "why": "1 exam",
+      "w": 0.0
+     }
+    ],
     "parts": {
      "grades": 2.9,
      "prof": 2.9,
@@ -835,6 +1144,9 @@
     "profDiff": 2,
     "ratings": 11,
     "dept": "Electrical Engineering",
+    "syllabus": 5.0,
+    "syllabusOf": "001",
+    "flags": [],
     "parts": {
      "grades": 2.2,
      "prof": 3.3,
@@ -845,7 +1157,7 @@
   "credits": 18,
   "hours": 17.0,
   "load": 0.6,
-  "score": 6.6
+  "score": 6.7
  },
  "Noah": {
   "courses": [
@@ -853,7 +1165,7 @@
     "course": "ECE 20001",
     "title": "Electrical Engineering Fundamentals I",
     "credits": 3,
-    "score": 7.4,
+    "score": 7.8,
     "gpa": 2.44,
     "gpaOf": null,
     "prof": "Can Wu",
@@ -861,6 +1173,18 @@
     "profDiff": 3,
     "ratings": 3,
     "dept": "Statistics",
+    "syllabus": 7.1,
+    "syllabusOf": "044",
+    "flags": [
+     {
+      "why": "no late work",
+      "w": 0.6
+     },
+     {
+      "why": "4 exams",
+      "w": 1.5
+     }
+    ],
     "parts": {
      "grades": 9.7,
      "prof": 5.0,
@@ -879,6 +1203,9 @@
     "profDiff": 3.3,
     "ratings": 69,
     "dept": "Mathematics",
+    "syllabus": null,
+    "syllabusOf": null,
+    "flags": [],
     "parts": {
      "grades": 7.1,
      "prof": 5.7,
@@ -886,28 +1213,10 @@
     }
    },
    {
-    "course": "VIP 27920",
-    "title": "Sophomore Participation In Vertically Integrated Projects (VIP)",
-    "credits": 2,
-    "score": 4.7,
-    "gpa": 3.4,
-    "gpaOf": "Mark Johnson",
-    "prof": "Johnathan Hong",
-    "rating": 3.2,
-    "profDiff": 4.3,
-    "ratings": 6,
-    "dept": "Economics",
-    "parts": {
-     "grades": 3.3,
-     "prof": 6.8,
-     "level": 5.0
-    }
-   },
-   {
     "course": "ECE 20875",
     "title": "Python For Data Science",
     "credits": 3,
-    "score": 4.6,
+    "score": 4.7,
     "gpa": 3.17,
     "gpaOf": "Qiang Qiu",
     "prof": "Qiang Qiu",
@@ -915,9 +1224,47 @@
     "profDiff": 2.2,
     "ratings": 6,
     "dept": "Computer Engineering",
+    "syllabus": 5.6,
+    "syllabusOf": "002",
+    "flags": [
+     {
+      "why": "no textbook",
+      "w": -0.4
+     },
+     {
+      "why": "3 exams",
+      "w": 1.0
+     }
+    ],
     "parts": {
      "grades": 4.9,
      "prof": 3.9,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "VIP 27920",
+    "title": "Sophomore Participation In Vertically Integrated Projects (VIP)",
+    "credits": 2,
+    "score": 4.6,
+    "gpa": 3.4,
+    "gpaOf": "Mark Johnson",
+    "prof": "Johnathan Hong",
+    "rating": 3.2,
+    "profDiff": 4.3,
+    "ratings": 6,
+    "dept": "Economics",
+    "syllabus": 4.6,
+    "syllabusOf": "023",
+    "flags": [
+     {
+      "why": "no textbook",
+      "w": -0.4
+     }
+    ],
+    "parts": {
+     "grades": 3.3,
+     "prof": 6.8,
      "level": 5.0
     }
    },
@@ -933,6 +1280,22 @@
     "profDiff": null,
     "ratings": 0,
     "dept": null,
+    "syllabus": 5.2,
+    "syllabusOf": "029",
+    "flags": [
+     {
+      "why": "no late work",
+      "w": 0.6
+     },
+     {
+      "why": "no textbook",
+      "w": -0.4
+     },
+     {
+      "why": "1 exam",
+      "w": 0.0
+     }
+    ],
     "parts": {
      "grades": 2.9,
      "prof": 2.9,
@@ -951,6 +1314,9 @@
     "profDiff": 2,
     "ratings": 11,
     "dept": "Electrical Engineering",
+    "syllabus": 5.0,
+    "syllabusOf": "001",
+    "flags": [],
     "parts": {
      "grades": 2.2,
      "prof": 3.3,
@@ -961,7 +1327,7 @@
   "credits": 14,
   "hours": 12.7,
   "load": -0.3,
-  "score": 5.2
+  "score": 5.3
  },
  "Romir": {
   "courses": [
@@ -969,7 +1335,7 @@
     "course": "ECE 20001",
     "title": "Electrical Engineering Fundamentals I",
     "credits": 3,
-    "score": 8.0,
+    "score": 8.4,
     "gpa": 2.25,
     "gpaOf": "Alexander Kildishev",
     "prof": "Alexander Kildishev",
@@ -977,6 +1343,18 @@
     "profDiff": 3.9,
     "ratings": 12,
     "dept": "Electrical Engineering",
+    "syllabus": 7.1,
+    "syllabusOf": "044",
+    "flags": [
+     {
+      "why": "no late work",
+      "w": 0.6
+     },
+     {
+      "why": "4 exams",
+      "w": 1.5
+     }
+    ],
     "parts": {
      "grades": 10,
      "prof": 6.6,
@@ -995,6 +1373,9 @@
     "profDiff": 2.6,
     "ratings": 26,
     "dept": "Mathematics",
+    "syllabus": 5.0,
+    "syllabusOf": "010",
+    "flags": [],
     "parts": {
      "grades": 9.8,
      "prof": 4.2,
@@ -1005,7 +1386,7 @@
     "course": "ECE 26400",
     "title": "Advanced C Programming",
     "credits": 3,
-    "score": 6.4,
+    "score": 6.8,
     "gpa": 2.92,
     "gpaOf": "Cheng-Kok Koh",
     "prof": "Cheng-Kok Koh",
@@ -1013,6 +1394,18 @@
     "profDiff": 3.9,
     "ratings": 57,
     "dept": "Computer Engineering",
+    "syllabus": 7.1,
+    "syllabusOf": "001",
+    "flags": [
+     {
+      "why": "no rounding",
+      "w": 0.6
+     },
+     {
+      "why": "4 exams",
+      "w": 1.5
+     }
+    ],
     "parts": {
      "grades": 6.5,
      "prof": 7.1,
@@ -1020,28 +1413,10 @@
     }
    },
    {
-    "course": "VIP 27920",
-    "title": "Sophomore Participation In Vertically Integrated Projects (VIP)",
-    "credits": 2,
-    "score": 5.1,
-    "gpa": 3.4,
-    "gpaOf": "Mark Johnson",
-    "prof": "Mark Johnson",
-    "rating": 4,
-    "profDiff": 4.5,
-    "ratings": 29,
-    "dept": "Engineering",
-    "parts": {
-     "grades": 3.3,
-     "prof": 8.2,
-     "level": 5.0
-    }
-   },
-   {
     "course": "ECE 27000",
     "title": "Introduction To Digital System Design",
     "credits": 4,
-    "score": 5.0,
+    "score": 5.3,
     "gpa": 3.1,
     "gpaOf": "Junfei Li",
     "prof": "Junfei Li",
@@ -1049,9 +1424,43 @@
     "profDiff": 2.8,
     "ratings": 49,
     "dept": "Engineering",
+    "syllabus": 6.5,
+    "syllabusOf": "011",
+    "flags": [
+     {
+      "why": "5 exams",
+      "w": 1.5
+     }
+    ],
     "parts": {
      "grades": 5.3,
      "prof": 4.5,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "VIP 27920",
+    "title": "Sophomore Participation In Vertically Integrated Projects (VIP)",
+    "credits": 2,
+    "score": 5.0,
+    "gpa": 3.4,
+    "gpaOf": "Mark Johnson",
+    "prof": "Mark Johnson",
+    "rating": 4,
+    "profDiff": 4.5,
+    "ratings": 29,
+    "dept": "Engineering",
+    "syllabus": 4.6,
+    "syllabusOf": "023",
+    "flags": [
+     {
+      "why": "no textbook",
+      "w": -0.4
+     }
+    ],
+    "parts": {
+     "grades": 3.3,
+     "prof": 8.2,
      "level": 5.0
     }
    },
@@ -1067,6 +1476,22 @@
     "profDiff": null,
     "ratings": 0,
     "dept": null,
+    "syllabus": 5.2,
+    "syllabusOf": "029",
+    "flags": [
+     {
+      "why": "no late work",
+      "w": 0.6
+     },
+     {
+      "why": "no textbook",
+      "w": -0.4
+     },
+     {
+      "why": "1 exam",
+      "w": 0.0
+     }
+    ],
     "parts": {
      "grades": 2.9,
      "prof": 2.9,
@@ -1085,6 +1510,9 @@
     "profDiff": 2,
     "ratings": 11,
     "dept": "Electrical Engineering",
+    "syllabus": 5.0,
+    "syllabusOf": "001",
+    "flags": [],
     "parts": {
      "grades": 2.2,
      "prof": 3.3,
@@ -1095,7 +1523,7 @@
   "credits": 17,
   "hours": 17.2,
   "load": 0.5,
-  "score": 7.0
+  "score": 7.3
  },
  "Vlad": {
   "courses": [
@@ -1103,7 +1531,7 @@
     "course": "ECE 30100",
     "title": "Signals And Systems",
     "credits": 3,
-    "score": 7.7,
+    "score": 7.9,
     "gpa": 2.66,
     "gpaOf": null,
     "prof": "I-Fan Lin",
@@ -1111,6 +1539,18 @@
     "profDiff": 4.4,
     "ratings": 9,
     "dept": "Statistics",
+    "syllabus": 6.1,
+    "syllabusOf": "004",
+    "flags": [
+     {
+      "why": "no late work",
+      "w": 0.6
+     },
+     {
+      "why": "2 exams",
+      "w": 0.5
+     }
+    ],
     "parts": {
      "grades": 8.3,
      "prof": 7.2,
@@ -1129,6 +1569,18 @@
     "profDiff": 2.5,
     "ratings": 2,
     "dept": "Electrical Engineering",
+    "syllabus": 5.0,
+    "syllabusOf": "001",
+    "flags": [
+     {
+      "why": "attendance graded",
+      "w": 0.5
+     },
+     {
+      "why": "no exams",
+      "w": -0.5
+     }
+    ],
     "parts": {
      "grades": 7.3,
      "prof": 4.6,
@@ -1147,6 +1599,9 @@
     "profDiff": 3.3,
     "ratings": 8,
     "dept": "Computer Engineering",
+    "syllabus": 5.0,
+    "syllabusOf": "001",
+    "flags": [],
     "parts": {
      "grades": 5.6,
      "prof": 5.5,
@@ -1157,7 +1612,7 @@
     "course": "VIP 27920",
     "title": "Sophomore Participation In Vertically Integrated Projects (VIP)",
     "credits": 2,
-    "score": 5.1,
+    "score": 5.0,
     "gpa": 3.4,
     "gpaOf": "Mark Johnson",
     "prof": "Mark Johnson",
@@ -1165,6 +1620,14 @@
     "profDiff": 4.5,
     "ratings": 29,
     "dept": "Engineering",
+    "syllabus": 4.6,
+    "syllabusOf": "023",
+    "flags": [
+     {
+      "why": "no textbook",
+      "w": -0.4
+     }
+    ],
     "parts": {
      "grades": 3.3,
      "prof": 8.2,
@@ -1175,7 +1638,7 @@
     "course": "ECE 33700",
     "title": "ASIC Design Laboratory",
     "credits": 2,
-    "score": 4.7,
+    "score": 4.8,
     "gpa": 3.49,
     "gpaOf": "Matthew Swabey",
     "prof": "Matthew Swabey",
@@ -1183,6 +1646,14 @@
     "profDiff": 4.3,
     "ratings": 4,
     "dept": "Engineering",
+    "syllabus": 5.5,
+    "syllabusOf": "010",
+    "flags": [
+     {
+      "why": "2 exams",
+      "w": 0.5
+     }
+    ],
     "parts": {
      "grades": 2.7,
      "prof": 6.4,
@@ -1201,6 +1672,9 @@
     "profDiff": null,
     "ratings": 0,
     "dept": null,
+    "syllabus": 5.0,
+    "syllabusOf": "001",
+    "flags": [],
     "parts": {
      "grades": 2.4,
      "prof": 2.4,
@@ -1219,6 +1693,9 @@
     "profDiff": null,
     "ratings": 0,
     "dept": null,
+    "syllabus": null,
+    "syllabusOf": null,
+    "flags": [],
     "parts": {
      "grades": 1.7,
      "prof": 1.7,
@@ -1229,6 +1706,6 @@
   "credits": 18,
   "hours": 16.5,
   "load": 0.6,
-  "score": 6.1
+  "score": 6.2
  }
 }

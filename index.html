@@ -504,7 +504,7 @@ function difficulty(){                    // same board as weekly hours, scored 
     <span class="v">${DIFF[n].score.toFixed(1)}</span></div>`).join("");
   $("#diff").onclick=e=>{const b=e.target.closest(".bar"); if(b) overlay(b.dataset.n)};
   const skipped=NAMES.filter(n=>!(n in DIFF));
-  $("#diffnote").innerHTML="Weighted by credits: half course grade history, a third the instructor&rsquo;s own difficulty rating, the rest course level, then nudged by course load &mdash; credits and weekly contact hours both. Click anyone for the breakdown."
+  $("#diffnote").innerHTML="Weighted by credits: half course grade history, a third the instructor&rsquo;s own difficulty rating, the rest course level, plus how strict the posted syllabus is, then nudged by course load &mdash; credits and weekly contact hours both. Click anyone for the breakdown."
     +(skipped.length?` Imported schedules are not scored (${skipped.join(", ")}).`:"");
 }
 
@@ -517,15 +517,16 @@ function overlay(name){
   $("#ovlh").innerHTML=`${name}: <b style="color:${color(name)}">${p.score.toFixed(1)}</b> / 10
     <span style="color:var(--dim);font-size:12px;text-transform:none;letter-spacing:0">
     ${p.credits} credits, ${p.hours.toFixed(1)} contact hours, load adjustment ${p.load>0?"+":""}${p.load.toFixed(1)}</span>`;
-  $("#ovlbody").innerHTML='<table><tr><th>Course</th><th>Cr</th><th>Avg GPA</th><th>Instructor (RateMyProfessors)</th><th>Score</th></tr>'
+  $("#ovlbody").innerHTML='<table><tr><th>Course</th><th>Cr</th><th>Avg GPA</th><th>Instructor (RateMyProfessors)</th><th>Syllabus</th><th>Score</th></tr>'
     +p.courses.map(c=>`<tr>
       <td><b>${c.course}</b><div style="color:var(--dim)">${c.title}</div></td>
       <td>${c.credits}</td>
       <td>${c.gpa==null?'<span class="empty">no data</span>':c.gpa.toFixed(2)+(c.gpaOf?`<div style="color:var(--dim)">${c.gpaOf}</div>`:'<div style="color:var(--dim)">all instructors</div>')}</td>
       <td>${c.prof?`${c.prof}<div style="color:var(--dim)">${c.rating.toFixed(1)}/5 rating, ${c.profDiff.toFixed(1)}/5 difficulty, ${c.ratings} ratings, ${c.dept}</div>`:'<span class="empty">not rated</span>'}</td>
+      <td>${c.syllabus==null?'<span class="empty">none posted</span>':`<b>${c.syllabus.toFixed(1)}</b><div style="color:var(--dim)">sec ${c.syllabusOf}${c.flags.length?" &middot; "+c.flags.map(f=>`${f.why} ${f.w>0?"+":""}${f.w.toFixed(1)}`).join(", "):""}</div>`}</td>
       <td><b>${c.score.toFixed(1)}</b> ${bar(c.score,color(name))}
         <div style="color:var(--dim)">grades ${c.parts.grades.toFixed(1)} &middot; prof ${c.parts.prof.toFixed(1)} &middot; level ${c.parts.level.toFixed(1)}</div></td></tr>`).join("")
-    +'</table><div class="note">Course GPA is that instructor&rsquo;s own average when they have taught it before, otherwise the course average across every instructor on record. A professor with few ratings is pulled toward the middle. No ratings at all means the grade history carries the whole score.</div>';
+    +'</table><div class="note">Course GPA is that instructor&rsquo;s own average when they have taught it before, otherwise the course average across every instructor on record. A professor with few ratings is pulled toward the middle. The syllabus score reads Purdue&rsquo;s public Simple Syllabus posting for that section &mdash; exam count, late-work and make-up policy, rounding, attendance &mdash; and only nudges the total. No ratings at all means the grade history carries the whole score.</div>';
   box.hidden=false;
 }
 $("#ovlx").onclick=()=>$("#ovl").hidden=true;

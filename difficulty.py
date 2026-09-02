@@ -5,6 +5,7 @@ Bundled schedules only: CSVs uploaded in the browser are never scored.
 Run: python difficulty.py
 """
 import json, re, io, collections, urllib.request, time
+import syllabus
 
 SCHOOL = "U2Nob29sLTc4Mw=="                        # Purdue, RateMyProfessors node id
 RMPQ = ("query S($t:String!,$s:ID!){newSearch{teachers(query:{text:$t,schoolID:$s},first:8)"
@@ -89,8 +90,10 @@ def stretch(x):     # spread the top: a hard term should read hard, not "6.1 lik
 def main():
     sched = json.load(open("schedule.json", encoding="utf-8"))
     taking = collections.defaultdict(list)                   # (person, course) -> instructors, lecture ones first
+    sections = {}
     for who, p in sched.items():
         for b in p["blocks"]:
+            sections.setdefault((who, b["course"]), b["section"].split("-")[-1])
             t = taking[(who, b["course"])]
             for n in instructors(b.get("instructor")):
                 if n not in t: t.insert(0, n) if not re.search(r"Lab|Recit", b["type"]) else t.append(n)
@@ -98,6 +101,7 @@ def main():
             taking.setdefault((who, u["course"]), [])
 
     bc = boilerclasses({c.split()[0] for _, c in taking})
+    syl = syllabus.fetch({(c, s) for (_, c), s in sections.items()})
     rmp = ratemyprofessors({n for v in taking.values() for n in v})
 
     people = {}
@@ -108,13 +112,17 @@ def main():
         r = rmp.get(prof)
         g, p = score(gpa, r)
         lvl = LEVEL[int(course.split()[1][0])]
-        d = clamp(round(.5 * g + .3 * p + .2 * lvl, 1))
+        doc = syl.get(course, {})
+        rig, flags = syllabus.rigor(doc["text"]) if doc.get("text") else (None, [])
+        # The syllabus is a nudge, not a pillar: it says how the course is run, not how hard it grades.
+        d = clamp(round(.5 * g + .3 * p + .2 * lvl + (0 if rig is None else (rig - 5) * .2), 1))
         cr = meta["credits"] or 1
         people.setdefault(who, {"courses": []})["courses"].append({
             "course": course, "title": meta["title"], "credits": cr, "score": d,
             "gpa": gpa, "gpaOf": gsrc, "prof": prof, "rating": r and r["avgRating"],
             "profDiff": r and r["avgDifficulty"], "ratings": r["numRatings"] if r else 0,
-            "dept": r and r["department"], "parts": {"grades": round(g, 1), "prof": round(p, 1), "level": lvl}})
+            "dept": r and r["department"], "syllabus": rig, "syllabusOf": doc.get("section"), "flags": [{"why": n, "w": w} for n, w in flags],
+            "parts": {"grades": round(g, 1), "prof": round(p, 1), "level": lvl}})
 
     for who, p in people.items():
         cr = sum(c["credits"] for c in p["courses"])
@@ -138,6 +146,8 @@ def _test(people):
     assert all(0 <= c["score"] <= 10 for p in people.values() for c in p["courses"])
     assert all(p["courses"] for p in people.values())
     assert stretch(4) == 4 and stretch(7) == 7.8
+    scored = [c for p in people.values() for c in p["courses"] if c["syllabus"] is not None]
+    assert len(scored) > 20 and all(0 <= c["syllabus"] <= 10 for c in scored), len(scored)
 
 
 if __name__ == "__main__":
