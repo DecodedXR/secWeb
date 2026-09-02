@@ -365,7 +365,11 @@ function selfTest(){                               // load the page with ?test t
   return !t.some(x=>x.startsWith("FAIL"));
 }
 if(location.search.includes("test")) addEventListener("load",()=>console.log("selfTest passed:",selfTest()));
-const color=n=>COLORS[NAMES.indexOf(n)%COLORS.length];
+// Noah is purple whoever else is on the grid; his colour is held out of the pool so the
+// person who would have drawn it gets the next one instead of a duplicate
+const PIN={Noah:"#c084fc"};
+const POOL=COLORS.filter(c=>!Object.values(PIN).includes(c));
+const color=n=>PIN[n]||POOL[NAMES.filter(x=>!(x in PIN)).indexOf(n)%POOL.length];
 const on=()=>NAMES.filter(n=>sel.has(n));
 let days=new Set([0,1,2,3,4]);                    // which weekdays the grid (and the PNG) shows
 const onDays=()=>[...days].sort();

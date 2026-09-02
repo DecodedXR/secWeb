@@ -80,8 +80,12 @@ const fmt=m=>{const h=Math.floor(m/60),x=m%60,ap=h>=12?"p":"a",hh=h%12===0?12:h%
   return hh+(x?":"+String(x).padStart(2,"0"):"")+ap};
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
+// CSVs added in the browser live in localStorage, so a block belonging to an uploaded
+// person opens a real page here instead of "nothing on the schedule"
+let EXTRA={}; try{ EXTRA=JSON.parse(localStorage.getItem("extra-schedules")||"{}") }catch(e){ EXTRA={} }
+
 Promise.all(["schedule.json","difficulty.json"].map(f=>fetch(f,{cache:"no-cache"}).then(r=>r.json())))
-  .then(([sched,diff])=>render(sched,diff))
+  .then(([sched,diff])=>render({...sched,...EXTRA},diff))
   .catch(e=>$out(`<p class="empty">Could not load the schedule data (${esc(e.message)}).</p>`));
 
 const $out=h=>document.getElementById("out").innerHTML=h;
@@ -90,7 +94,10 @@ const $out=h=>document.getElementById("out").innerHTML=h;
 document.getElementById("back").onclick=e=>{
   if(document.referrer.startsWith(location.origin)){ e.preventDefault(); history.back() }
 };
-const color=(sched,n)=>COLORS[Object.keys(sched).indexOf(n)%COLORS.length];
+// same pinning as the grid, so a person keeps one colour across both pages
+const PIN={Noah:"#c084fc"};
+const POOL=COLORS.filter(c=>!Object.values(PIN).includes(c));
+const color=(sched,n)=>PIN[n]||POOL[Object.keys(sched).sort().filter(x=>!(x in PIN)).indexOf(n)%POOL.length];
 
 // green when it is easy, amber in the middle, red when it is brutal
 const shade=v=>`hsl(${140-14*Math.min(v,10)} 78% ${58-1.2*Math.min(v,10)}%)`;
