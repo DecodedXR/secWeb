@@ -49,6 +49,22 @@ tr:last-child td{border-bottom:0}
 .flag.up{color:#ff8f8f;border-color:#452a2a}
 .flag.down{color:#7fe0bd;border-color:#22412f}
 .empty{color:var(--dim);font-style:italic}
+.card{animation:rise .32s cubic-bezier(.22,1,.36,1) both}
+.card:nth-of-type(2){animation-delay:.05s}
+.card:nth-of-type(3){animation-delay:.1s}
+.card:nth-of-type(4){animation-delay:.15s}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+tbody tr,table tr{transition:background .13s}
+table tr:hover td{background:#0e1018}
+.pill,.flag{transition:transform .13s cubic-bezier(.22,1,.36,1),filter .13s}
+.pill:hover,.flag:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.back{transition:transform .13s cubic-bezier(.22,1,.36,1),color .13s}
+.back:hover{transform:translateX(-3px)}
+.back:active{transform:translateX(-3px) scale(.98);transition-duration:.06s}
+.meter i{transition:width .5s cubic-bezier(.22,1,.36,1)}
+@media (prefers-reduced-motion:reduce){
+  .card,.pill,.flag,.back,.meter i{animation:none;transition:none;transform:none}
+}
 .note{color:var(--dim);font-size:12px;margin-top:14px;line-height:1.6}
 </style>
 </head>
@@ -58,7 +74,7 @@ tr:last-child td{border-bottom:0}
   <div id="out"><p class="empty">Loading&hellip;</p></div>
 </div>
 <script>
-const P = new URLSearchParams(location.search), COURSE = P.get("course"), WHO = P.get("who");
+const P = new URLSearchParams(location.search), COURSE = P.get("course"), WHO = P.get("who"), SEC = P.get("sec");
 const COLORS=["#ff6b6b","#4dd4ac","#5aa9ff","#c084fc","#ffa94d","#f472b6","#7dd3fc","#a3e635","#facc15","#94a3b8"];
 const DABBR=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 const fmt=m=>{const h=Math.floor(m/60),x=m%60,ap=h>=12?"p":"a",hh=h%12===0?12:h%12;
@@ -74,8 +90,10 @@ const color=(sched,n)=>COLORS[Object.keys(sched).indexOf(n)%COLORS.length];
 
 function render(sched,diff){
   if(!COURSE) return $out('<p class="empty">No course given. Open this page by clicking a block on the grid.</p>');
-  // everyone on the roster, not just whoever was clicked: the point of the site is who shares what
-  const roster=Object.keys(sched).filter(n=>sched[n].blocks.some(b=>b.course===COURSE));
+  // Sharing a course number is not sharing a class: two people in different sections of ECE 20001
+  // never sit in the same room. Only the section that was clicked counts as together.
+  const inSec=(n)=>sched[n].blocks.some(b=>b.course===COURSE&&(!SEC||b.section===SEC));
+  const roster=Object.keys(sched).filter(inSec);
   const blocks=(sched[WHO]?.blocks||[]).filter(b=>b.course===COURSE);
   const mine=(diff[WHO]?.courses||[]).find(c=>c.course===COURSE)
           || Object.values(diff).flatMap(p=>p.courses).find(c=>c.course===COURSE);
@@ -89,9 +107,10 @@ function render(sched,diff){
   <header class="top">
     <h1>${esc(COURSE)}<small>${esc(any.title)}${mine&&mine.credits?` &middot; ${mine.credits} credit${mine.credits===1?"":"s"}`:""}</small></h1>
     ${sc==null?"":`<div><div class="big">${sc.toFixed(1)} <span>/ 10 difficulty</span></div>
-      <div class="meter"><i style="width:${sc*10}%"></i></div></div>`}
+      <div class="meter"><i data-w="${sc*10}"></i></div></div>`}
   </header>
-  <div class="who">${roster.map(n=>`<span class="pill" style="--c:${color(sched,n)}">${esc(n)}</span>`).join("")
+  <div class="who">${SEC?`<span class="pill ghost">section ${esc(SEC)}</span>`:""}
+    ${roster.map(n=>`<span class="pill" style="--c:${color(sched,n)}">${esc(n)}</span>`).join("")
     ||'<span class="pill ghost">nobody</span>'}</div>
 
   ${mine&&mine.desc?`<div class="card"><h2>What it is</h2><p style="margin:0">${esc(mine.desc)}</p></div>`:""}
@@ -132,6 +151,9 @@ function render(sched,diff){
     ${exams.map(e=>`<tr><td><b>${esc(e.date)}</b></td><td>${esc(e.type)}</td>
       <td>${fmt(e.start)}${e.end&&e.end!==e.start?"&ndash;"+fmt(e.end):""}</td></tr>`).join("")}</table></div>`:""}
   `);
+  // fills from empty on load rather than appearing already full
+  const m=document.querySelector(".meter i");
+  if(m) requestAnimationFrame(()=>m.style.width=m.dataset.w+"%");
 }
 </script>
 </body>

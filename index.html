@@ -62,7 +62,17 @@ h1{margin:0;font-size:clamp(28px,4vw,46px);letter-spacing:-.03em;font-weight:800
 .free{position:absolute;left:0;right:0;background:repeating-linear-gradient(45deg,#1f3a2e,#1f3a2e 6px,#183026 6px,#183026 12px);
   border-top:1px solid #2f6b52;border-bottom:1px solid #2f6b52}
 .blk{position:absolute;cursor:pointer;border-radius:7px;padding:3px 5px;overflow:hidden;font-size:10.5px;line-height:1.2;
-  color:#0a0b10;font-weight:600;border:1px solid rgba(0,0,0,.35)}
+  color:#0a0b10;font-weight:600;border:1px solid rgba(0,0,0,.35);
+  transition:transform .13s cubic-bezier(.22,1,.36,1),box-shadow .13s,filter .13s}
+.blk:hover{transform:scale(1.04);z-index:5;filter:saturate(1.25) brightness(1.08);
+  box-shadow:0 8px 20px -6px rgba(0,0,0,.75),0 0 0 1.5px rgba(255,255,255,.55)}
+.blk:active{transform:scale(.97);transition-duration:.06s}
+.bar.click{transition:transform .13s cubic-bezier(.22,1,.36,1),opacity .13s}
+.bar.click:hover{transform:translateX(3px)}
+.bar.click:active{transform:translateX(3px) scale(.99);transition-duration:.06s}
+@media (prefers-reduced-motion:reduce){
+  .blk,.blk:hover,.blk:active,.bar.click,.bar.click:hover,.bar.click:active{transition:none;transform:none}
+}
 .blk b{display:block;font-size:11px;font-weight:800;letter-spacing:-.01em}
 .blk i b{display:inline;font-size:9.5px;font-weight:800;letter-spacing:.04em}
 .blk i{font-style:normal;opacity:.82;font-size:9.5px;display:block}
@@ -432,7 +442,7 @@ function grid(people){
         const lab=/Lab|Recit|Studio|Distance/i.test(b.type)?" lab":"";
         const kind=TYPE[b.type]||b.type.slice(0,3).toUpperCase();
         c+=`<div class="blk${lab}" data-n="${n}" data-c="${b.course}"
-             title="${n}: ${b.course} ${b.type}\n${fmt(b.start)}–${fmt(b.end)} · ${b.loc}\n${b.title}\nclick for course details"
+             data-s="${b.section}" title="${n}: ${b.course} ${b.type}\n${fmt(b.start)}–${fmt(b.end)} · ${b.loc}\n${b.title}\nclick for course details"
              style="top:${top}px;height:${h}px;left:${i*w}%;width:${w}%;background:${color(n)}">
              <b>${b.course}</b>${h>40?`<i><b>${kind}</b> ${b.loc}</i>`:""}${h>78?`<i>${fmt(b.start)}–${fmt(b.end)}</i>`:""}</div>`;
       }
@@ -442,7 +452,8 @@ function grid(people){
   $("#grid").innerHTML=html;
   // a new tab, so the grid you were reading stays exactly where it was
   $("#grid").onclick=e=>{const b=e.target.closest(".blk"); if(b)
-    open(`course.html?course=${encodeURIComponent(b.dataset.c)}&who=${encodeURIComponent(b.dataset.n)}`,"_blank","noopener")};
+    open(`course.html?course=${encodeURIComponent(b.dataset.c)}&who=${encodeURIComponent(b.dataset.n)}`
+         +`&sec=${encodeURIComponent(b.dataset.s)}`,"_blank","noopener")};
   nowLine();
 }
 
