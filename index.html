@@ -504,7 +504,7 @@ function difficulty(){                    // same board as weekly hours, scored 
     <span class="v">${DIFF[n].score.toFixed(1)}</span></div>`).join("");
   $("#diff").onclick=e=>{const b=e.target.closest(".bar"); if(b) overlay(b.dataset.n)};
   const skipped=NAMES.filter(n=>!(n in DIFF));
-  $("#diffnote").innerHTML="Weighted by credits: half course grade history, a third the instructor&rsquo;s own difficulty rating, the rest course level, then nudged by credit load. Click anyone for the breakdown."
+  $("#diffnote").innerHTML="Weighted by credits: half course grade history, a third the instructor&rsquo;s own difficulty rating, the rest course level, then nudged by course load &mdash; credits and weekly contact hours both. Click anyone for the breakdown."
     +(skipped.length?` Imported schedules are not scored (${skipped.join(", ")}).`:"");
 }
 
@@ -516,7 +516,7 @@ function overlay(name){
   const p=DIFF[name], bar=(v,c)=>`<span class="mini" style="width:${v*7}px;background:${c}"></span>`;
   $("#ovlh").innerHTML=`${name}: <b style="color:${color(name)}">${p.score.toFixed(1)}</b> / 10
     <span style="color:var(--dim);font-size:12px;text-transform:none;letter-spacing:0">
-    ${p.credits} credits, load adjustment ${p.load>0?"+":""}${p.load.toFixed(1)}</span>`;
+    ${p.credits} credits, ${p.hours.toFixed(1)} contact hours, load adjustment ${p.load>0?"+":""}${p.load.toFixed(1)}</span>`;
   $("#ovlbody").innerHTML='<table><tr><th>Course</th><th>Cr</th><th>Avg GPA</th><th>Instructor (RateMyProfessors)</th><th>Score</th></tr>'
     +p.courses.map(c=>`<tr>
       <td><b>${c.course}</b><div style="color:var(--dim)">${c.title}</div></td>

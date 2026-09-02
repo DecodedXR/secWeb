@@ -82,6 +82,10 @@ def score(gpa, rmp):
     return g, p
 
 
+def stretch(x):     # spread the top: a hard term should read hard, not "6.1 like everyone else"
+    return 5 + (x - 5) * 1.4 if x > 5 else x
+
+
 def main():
     sched = json.load(open("schedule.json", encoding="utf-8"))
     taking = collections.defaultdict(list)                   # (person, course) -> instructors, lecture ones first
@@ -115,9 +119,12 @@ def main():
     for who, p in people.items():
         cr = sum(c["credits"] for c in p["courses"])
         base = sum(c["score"] * c["credits"] for c in p["courses"]) / cr
-        load = clamp((cr - 15) * .08, -1, 1)                 # 15 credits is a normal term
-        p["credits"], p["load"] = cr, round(load, 1)
-        p["score"] = clamp(round(base + load, 1))
+        # 15 credits / 15 contact hours is a normal term. Hours count too: a 1-credit lab or
+        # ensemble still eats an afternoon, and credits alone said those weeks were empty.
+        hrs = sum(b["end"] - b["start"] for b in sched[who]["blocks"]) / 60
+        load = clamp((cr - 15) * .15 + (hrs - 15) * .08, -1.5, 2.5)
+        p["credits"], p["hours"], p["load"] = cr, round(hrs, 1), round(load, 1)
+        p["score"] = clamp(round(stretch(base + load), 1))
         p["courses"].sort(key=lambda c: -c["score"])
     json.dump(people, open("difficulty.json", "w", encoding="utf-8"), indent=1)
     return people
@@ -130,11 +137,12 @@ def _test(people):
     assert set(people) == set(json.load(open("schedule.json", encoding="utf-8")))
     assert all(0 <= c["score"] <= 10 for p in people.values() for c in p["courses"])
     assert all(p["courses"] for p in people.values())
+    assert stretch(4) == 4 and stretch(7) == 7.8
 
 
 if __name__ == "__main__":
     ppl = main()
     _test(ppl)
     for w, p in sorted(ppl.items(), key=lambda x: -x[1]["score"]):
-        print(f"{w:7} {p['score']:4.1f}/10  {p['credits']:2} cr  " +
+        print(f"{w:7} {p['score']:4.1f}/10  {p['credits']:2}cr {p['hours']:4.1f}h  " +
               " ".join(f"{c['course'].replace(' ','')}:{c['score']}" for c in p["courses"]))

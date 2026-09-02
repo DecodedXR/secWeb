@@ -111,6 +111,7 @@
    }
   ],
   "credits": 15,
+  "hours": 15.5,
   "load": 0.0,
   "score": 4.9
  },
@@ -208,8 +209,9 @@
    }
   ],
   "credits": 17,
-  "load": 0.2,
-  "score": 6.1
+  "hours": 15.2,
+  "load": 0.3,
+  "score": 6.8
  },
  "Diana": {
   "courses": [
@@ -323,8 +325,9 @@
    }
   ],
   "credits": 17,
-  "load": 0.2,
-  "score": 5.9
+  "hours": 15.2,
+  "load": 0.3,
+  "score": 6.4
  },
  "Manny": {
   "courses": [
@@ -456,8 +459,9 @@
    }
   ],
   "credits": 17,
-  "load": 0.2,
-  "score": 5.3
+  "hours": 17.2,
+  "load": 0.5,
+  "score": 5.9
  },
  "Matt": {
   "courses": [
@@ -589,8 +593,9 @@
    }
   ],
   "credits": 16,
-  "load": 0.1,
-  "score": 4.0
+  "hours": 19.3,
+  "load": 0.5,
+  "score": 4.5
  },
  "Mila": {
   "courses": [
@@ -704,8 +709,9 @@
    }
   ],
   "credits": 18,
-  "load": 0.2,
-  "score": 5.2
+  "hours": 19.2,
+  "load": 0.8,
+  "score": 6.0
  },
  "Morgan": {
   "courses": [
@@ -837,8 +843,9 @@
    }
   ],
   "credits": 18,
-  "load": 0.2,
-  "score": 5.8
+  "hours": 17.0,
+  "load": 0.6,
+  "score": 6.6
  },
  "Noah": {
   "courses": [
@@ -952,8 +959,9 @@
    }
   ],
   "credits": 14,
-  "load": -0.1,
-  "score": 5.4
+  "hours": 12.7,
+  "load": -0.3,
+  "score": 5.2
  },
  "Romir": {
   "courses": [
@@ -1085,8 +1093,9 @@
    }
   ],
   "credits": 17,
-  "load": 0.2,
-  "score": 6.1
+  "hours": 17.2,
+  "load": 0.5,
+  "score": 7.0
  },
  "Vlad": {
   "courses": [
@@ -1218,7 +1227,8 @@
    }
   ],
   "credits": 18,
-  "load": 0.2,
-  "score": 5.5
+  "hours": 16.5,
+  "load": 0.6,
+  "score": 6.1
  }
 }
