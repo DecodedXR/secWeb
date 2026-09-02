@@ -450,10 +450,9 @@ function grid(people){
     html+=c+"</div>";
   }
   $("#grid").innerHTML=html;
-  // a new tab, so the grid you were reading stays exactly where it was
   $("#grid").onclick=e=>{const b=e.target.closest(".blk"); if(b)
-    open(`course.html?course=${encodeURIComponent(b.dataset.c)}&who=${encodeURIComponent(b.dataset.n)}`
-         +`&sec=${encodeURIComponent(b.dataset.s)}`,"_blank","noopener")};
+    location.href=`course.html?course=${encodeURIComponent(b.dataset.c)}&who=${encodeURIComponent(b.dataset.n)}`
+                 +`&sec=${encodeURIComponent(b.dataset.s)}`};
   nowLine();
 }
 

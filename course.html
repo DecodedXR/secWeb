@@ -69,7 +69,7 @@ table tr:hover td{background:#0e1018}
 </head>
 <body>
 <div class="wrap">
-  <a class="back" href="index.html">&larr; back to the grid</a>
+  <a class="back" id="back" href="index.html">&larr; back to the grid</a>
   <div id="out"><p class="empty">Loading&hellip;</p></div>
 </div>
 <script>
@@ -85,6 +85,11 @@ Promise.all(["schedule.json","difficulty.json"].map(f=>fetch(f,{cache:"no-cache"
   .catch(e=>$out(`<p class="empty">Could not load the schedule data (${esc(e.message)}).</p>`));
 
 const $out=h=>document.getElementById("out").innerHTML=h;
+
+// going back restores the days and people you had picked; a fresh index.html would reset them
+document.getElementById("back").onclick=e=>{
+  if(document.referrer.startsWith(location.origin)){ e.preventDefault(); history.back() }
+};
 const color=(sched,n)=>COLORS[Object.keys(sched).indexOf(n)%COLORS.length];
 
 // green when it is easy, amber in the middle, red when it is brutal
