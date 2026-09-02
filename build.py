@@ -3,7 +3,7 @@ import csv, json, glob, re, os
 from datetime import datetime
 
 NAMES = {"BremerFall2026Schedule": "Bremer", "diana_events": "Diana", "Morgan": "Morgan",
-         "Noah": "Noah", "Romir": "Romir", "Vlad": "Vlad", "Abby": "Abby", "Manny": "Manny", "Matt": "Matt"}
+         "Noah": "Noah", "Romir": "Romir", "Vlad": "Vlad", "Abby": "Abby", "Manny": "Manny", "Matt": "Matt", "Mila": "Mila"}
 DAYMAP = [("Th", 3), ("Su", 6), ("M", 0), ("T", 1), ("W", 2), ("F", 4), ("S", 5)]
 
 def as_date(s):                         # some exports write 9/24/2026, others 09/24/2026
@@ -32,6 +32,7 @@ def parse_days(s):
     return out
 
 def parse_time(t):  # "10:30a" -> minutes from midnight
+    if t.strip().lower() == "noon": return 720   # some exports spell 12:00p out
     m = re.match(r"(\d+):(\d+)\s*([ap])", t.strip(), re.I)
     if not m: return None
     h, mi, ap = int(m.group(1)), int(m.group(2)), m.group(3).lower()
@@ -93,10 +94,13 @@ print({k: (len(v["blocks"]), len(v["exams"]), len(v["untimed"])) for k, v in peo
 def _test():
     assert course_of("ECE 29401 Breakout Session\n  ECE 29401") == "ECE 29401"
     assert parse_days("TTh") == [1, 3] and parse_days("MWF") == [0, 2, 4]
+    assert parse_time("noon") == 720
     assert parse_time("12:30p") == 750 and parse_time("8:30a") == 510 and parse_time("12:05a") == 5
     assert all(b["end"] > b["start"] for p in people.values() for b in p["blocks"])
     assert all(p["blocks"] for p in people.values())
     assert [u["course"] for u in people["Vlad"]["untimed"]] == ["EAPS 10500"], people["Vlad"]["untimed"]
+    soc = [b for b in people["Mila"]["blocks"] if b["course"] == "SOC 10000"]
+    assert len(soc) == 2 and soc[0]["start"] == 720, soc
     engr = [b for b in people["Matt"]["blocks"] if b["course"] == "ENGR 13100"]
     assert len(engr) == 2 and engr[0]["loc"] == "LMBS 3239A +2", engr
     assert label_of("Course", "ECE 29401 Breakout Session\n  ECE 29401", "ECE 29401") == "Breakout Session"
