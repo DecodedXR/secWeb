@@ -61,7 +61,7 @@ h1{margin:0;font-size:clamp(28px,4vw,46px);letter-spacing:-.03em;font-weight:800
 .gutter span.nowlbl{background:#ff4d4f;color:#fff;border-radius:5px;padding:1px 5px;font-size:11px;z-index:6}
 .free{position:absolute;left:0;right:0;background:repeating-linear-gradient(45deg,#1f3a2e,#1f3a2e 6px,#183026 6px,#183026 12px);
   border-top:1px solid #2f6b52;border-bottom:1px solid #2f6b52}
-.blk{position:absolute;border-radius:7px;padding:3px 5px;overflow:hidden;font-size:10.5px;line-height:1.2;
+.blk{position:absolute;cursor:pointer;border-radius:7px;padding:3px 5px;overflow:hidden;font-size:10.5px;line-height:1.2;
   color:#0a0b10;font-weight:600;border:1px solid rgba(0,0,0,.35)}
 .blk b{display:block;font-size:11px;font-weight:800;letter-spacing:-.01em}
 .blk i b{display:inline;font-size:9.5px;font-weight:800;letter-spacing:.04em}
@@ -431,7 +431,8 @@ function grid(people){
         const top=(b.start-T0)*PX, h=Math.max((b.end-b.start)*PX,16);
         const lab=/Lab|Recit|Studio|Distance/i.test(b.type)?" lab":"";
         const kind=TYPE[b.type]||b.type.slice(0,3).toUpperCase();
-        c+=`<div class="blk${lab}" title="${n}: ${b.course} ${b.type}\n${fmt(b.start)}–${fmt(b.end)} · ${b.loc}\n${b.title}"
+        c+=`<div class="blk${lab}" data-n="${n}" data-c="${b.course}"
+             title="${n}: ${b.course} ${b.type}\n${fmt(b.start)}–${fmt(b.end)} · ${b.loc}\n${b.title}\nclick for course details"
              style="top:${top}px;height:${h}px;left:${i*w}%;width:${w}%;background:${color(n)}">
              <b>${b.course}</b>${h>40?`<i><b>${kind}</b> ${b.loc}</i>`:""}${h>78?`<i>${fmt(b.start)}–${fmt(b.end)}</i>`:""}</div>`;
       }
@@ -439,6 +440,9 @@ function grid(people){
     html+=c+"</div>";
   }
   $("#grid").innerHTML=html;
+  // a new tab, so the grid you were reading stays exactly where it was
+  $("#grid").onclick=e=>{const b=e.target.closest(".blk"); if(b)
+    open(`course.html?course=${encodeURIComponent(b.dataset.c)}&who=${encodeURIComponent(b.dataset.n)}`,"_blank","noopener")};
   nowLine();
 }
 

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Course &middot; secWeb</title>
+<style>
+:root{
+  --bg:#0a0b10; --panel:#12141d; --panel2:#171a25; --line:#252938;
+  --txt:#e8eaf2; --dim:#8b91a8; --accent:#ffd54a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:
+  radial-gradient(900px 500px at 12% -8%,#1c2340 0%,transparent 60%),
+  radial-gradient(700px 460px at 92% 0%,#2a1836 0%,transparent 55%),var(--bg);
+  color:var(--txt);font:14px/1.5 ui-sans-serif,system-ui,"Segoe UI",Inter,sans-serif;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:28px 20px 60px}
+a{color:var(--accent)}
+.back{display:inline-block;color:var(--dim);text-decoration:none;font-weight:600;margin-bottom:18px}
+.back:hover{color:var(--accent)}
+h1{margin:0;font-size:clamp(26px,4vw,40px);letter-spacing:-.03em;font-weight:800}
+h1 small{display:block;font-size:15px;font-weight:600;color:var(--dim);letter-spacing:0;margin-top:6px}
+.card{background:linear-gradient(180deg,var(--panel) 0%,var(--panel2) 100%);
+  border:1px solid var(--line);border-radius:16px;padding:18px;margin:18px 0;
+  box-shadow:0 12px 40px -20px #000}
+.card h2{margin:0 0 14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);font-weight:700}
+.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px}
+.big{font-size:44px;font-weight:800;line-height:1;letter-spacing:-.03em}
+.big span{font-size:16px;color:var(--dim);font-weight:600}
+.who{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.pill{padding:5px 12px;border-radius:999px;font-weight:700;font-size:12px;color:#0a0b10;background:var(--c,#8b91a8)}
+.pill.ghost{background:transparent;color:var(--dim);border:1px solid var(--line)}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);
+   font-weight:700;padding:0 10px 8px;border-bottom:1px solid var(--line)}
+td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.dim{color:var(--dim)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.stat{background:#0e1018;border:1px solid var(--line);border-radius:12px;padding:13px}
+.stat b{display:block;font-size:24px;font-weight:800;letter-spacing:-.02em}
+.stat span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);font-weight:700}
+.stat i{display:block;font-style:normal;color:var(--dim);margin-top:5px;font-size:12px}
+.meter{height:7px;border-radius:99px;background:#0a0b10;border:1px solid var(--line);margin-top:9px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--accent)}
+.flags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.flag{font-size:12px;font-weight:600;padding:4px 10px;border-radius:8px;border:1px solid var(--line);background:#0e1018}
+.flag.up{color:#ff8f8f;border-color:#452a2a}
+.flag.down{color:#7fe0bd;border-color:#22412f}
+.empty{color:var(--dim);font-style:italic}
+.note{color:var(--dim);font-size:12px;margin-top:14px;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; back to the grid</a>
+  <div id="out"><p class="empty">Loading&hellip;</p></div>
+</div>
+<script>
+const P = new URLSearchParams(location.search), COURSE = P.get("course"), WHO = P.get("who");
+const COLORS=["#ff6b6b","#4dd4ac","#5aa9ff","#c084fc","#ffa94d","#f472b6","#7dd3fc","#a3e635","#facc15","#94a3b8"];
+const DABBR=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+const fmt=m=>{const h=Math.floor(m/60),x=m%60,ap=h>=12?"p":"a",hh=h%12===0?12:h%12;
+  return hh+(x?":"+String(x).padStart(2,"0"):"")+ap};
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+Promise.all(["schedule.json","difficulty.json"].map(f=>fetch(f,{cache:"no-cache"}).then(r=>r.json())))
+  .then(([sched,diff])=>render(sched,diff))
+  .catch(e=>$out(`<p class="empty">Could not load the schedule data (${esc(e.message)}).</p>`));
+
+const $out=h=>document.getElementById("out").innerHTML=h;
+const color=(sched,n)=>COLORS[Object.keys(sched).indexOf(n)%COLORS.length];
+
+function render(sched,diff){
+  if(!COURSE) return $out('<p class="empty">No course given. Open this page by clicking a block on the grid.</p>');
+  // everyone on the roster, not just whoever was clicked: the point of the site is who shares what
+  const roster=Object.keys(sched).filter(n=>sched[n].blocks.some(b=>b.course===COURSE));
+  const blocks=(sched[WHO]?.blocks||[]).filter(b=>b.course===COURSE);
+  const mine=(diff[WHO]?.courses||[]).find(c=>c.course===COURSE)
+          || Object.values(diff).flatMap(p=>p.courses).find(c=>c.course===COURSE);
+  const any=blocks[0]||Object.values(sched).flatMap(p=>p.blocks).find(b=>b.course===COURSE);
+  if(!any) return $out(`<p class="empty">Nothing on the schedule for ${esc(COURSE)}.</p>`);
+  document.title=COURSE+" · secWeb";
+
+  const exams=(sched[WHO]?.exams||[]).filter(e=>e.course===COURSE);
+  const sc=mine&&mine.score, syl=mine&&mine.syllabus;
+  $out(`
+  <header class="top">
+    <h1>${esc(COURSE)}<small>${esc(any.title)}${mine&&mine.credits?` &middot; ${mine.credits} credit${mine.credits===1?"":"s"}`:""}</small></h1>
+    ${sc==null?"":`<div><div class="big">${sc.toFixed(1)} <span>/ 10 difficulty</span></div>
+      <div class="meter"><i style="width:${sc*10}%"></i></div></div>`}
+  </header>
+  <div class="who">${roster.map(n=>`<span class="pill" style="--c:${color(sched,n)}">${esc(n)}</span>`).join("")
+    ||'<span class="pill ghost">nobody</span>'}</div>
+
+  ${mine&&mine.desc?`<div class="card"><h2>What it is</h2><p style="margin:0">${esc(mine.desc)}</p></div>`:""}
+
+  <div class="card"><h2>${WHO?esc(WHO)+"&rsquo;s meetings":"Meetings"}</h2>
+    ${blocks.length?`<table><tr><th>Day</th><th>Time</th><th>Type</th><th>Room</th><th>Instructor</th><th>Runs</th></tr>
+    ${blocks.map(b=>`<tr><td><b>${DABBR[b.day]}</b></td><td>${fmt(b.start)}&ndash;${fmt(b.end)}</td>
+      <td>${esc(b.type)}<div class="dim">sec ${esc(b.section)}</div></td><td>${esc(b.loc)}</td>
+      <td>${esc(b.instructor)||'<span class="empty">not listed</span>'}</td>
+      <td class="dim">${esc(b.first)} &ndash; ${esc(b.last)}</td></tr>`).join("")}</table>`
+    :'<p class="empty">No meeting times on this schedule.</p>'}
+  </div>
+
+  ${sc==null?`<div class="card"><h2>Difficulty</h2>
+    <p class="empty">Not scored &mdash; uploaded schedules are never sent anywhere to be researched.</p></div>`
+  :`<div class="card"><h2>Why it scores ${sc.toFixed(1)}</h2>
+    <div class="grid2">
+      <div class="stat"><span>Grade history</span><b>${mine.parts.grades.toFixed(1)}</b>
+        <i>${mine.gpa==null?"no GPA on record":`${mine.gpa.toFixed(2)} average GPA &middot; ${esc(mine.gpaOf||"all instructors")}`}</i></div>
+      <div class="stat"><span>Instructor</span><b>${mine.parts.prof.toFixed(1)}</b>
+        <i>${mine.prof?`${esc(mine.prof)} &middot; ${mine.rating.toFixed(1)}/5 rating, ${mine.profDiff.toFixed(1)}/5 difficulty (${mine.ratings} ratings)`
+            :"not rated on RateMyProfessors"}</i></div>
+      <div class="stat"><span>Course level</span><b>${mine.parts.level.toFixed(1)}</b>
+        <i>${esc(COURSE.split(" ")[1][0])}00-level course</i></div>
+      <div class="stat"><span>Syllabus</span><b>${syl==null?"&mdash;":syl.toFixed(1)}</b>
+        <i>${syl==null?"none posted for this course":`section ${esc(mine.syllabusOf)}`}</i></div>
+    </div>
+    ${mine.flags&&mine.flags.length?`<div class="flags">${mine.flags.map(f=>
+      `<span class="flag ${f.w>0?"up":f.w<0?"down":""}">${esc(f.why)} ${f.w>0?"+":""}${f.w.toFixed(1)}</span>`).join("")}</div>`:""}
+    ${mine.syllabusUrl?`<p class="note">Policies read from the
+      <a href="${esc(mine.syllabusUrl)}" target="_blank" rel="noopener">public Simple Syllabus posting</a>
+      for section ${esc(mine.syllabusOf)}. Half the score is grade history, a third the instructor&rsquo;s own
+      difficulty rating, the rest course level, nudged by the syllabus.</p>`:""}
+  </div>`}
+
+  ${exams.length?`<div class="card"><h2>${esc(WHO)}&rsquo;s dated sittings</h2>
+    <table><tr><th>Date</th><th>What</th><th>Time</th></tr>
+    ${exams.map(e=>`<tr><td><b>${esc(e.date)}</b></td><td>${esc(e.type)}</td>
+      <td>${fmt(e.start)}${e.end&&e.end!==e.start?"&ndash;"+fmt(e.end):""}</td></tr>`).join("")}</table></div>`:""}
+  `);
+}
+</script>
+</body>
+</html>

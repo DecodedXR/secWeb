@@ -121,7 +121,8 @@ def main():
             "course": course, "title": meta["title"], "credits": cr, "score": d,
             "gpa": gpa, "gpaOf": gsrc, "prof": prof, "rating": r and r["avgRating"],
             "profDiff": r and r["avgDifficulty"], "ratings": r["numRatings"] if r else 0,
-            "dept": r and r["department"], "syllabus": rig, "syllabusOf": doc.get("section"), "flags": [{"why": n, "w": w} for n, w in flags],
+            "dept": r and r["department"], "syllabus": rig, "syllabusOf": doc.get("section"), "syllabusUrl": doc.get("url"),
+            "desc": syllabus.describe(doc["text"]) if doc.get("text") else None, "flags": [{"why": n, "w": w} for n, w in flags],
             "parts": {"grades": round(g, 1), "prof": round(p, 1), "level": lvl}})
 
     for who, p in people.items():

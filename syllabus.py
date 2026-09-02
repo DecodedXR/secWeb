@@ -35,6 +35,8 @@ def find(course, section):
 def fetch(courses):
     """courses: {(course, section)}. Returns {course: {...}} cached across runs."""
     cache = json.load(open(CACHE, encoding="utf-8")) if os.path.exists(CACHE) else {}
+    for v in cache.values():                        # entries cached before links were kept
+        if v.get("code"): v.setdefault("url", "https://purdue.simplesyllabus.com/en-US/doc/" + v["code"])
     for course, section in sorted(courses):
         hit = cache.get(course)
         if hit and (hit.get("section") == section or not hit.get("miss")): continue
@@ -44,6 +46,7 @@ def fetch(courses):
             cache[course] = {"miss": True}
             continue
         cache[course] = {"code": item["code"], "section": item["title"].split()[3],
+                         "url": "https://purdue.simplesyllabus.com/en-US/doc/" + item["code"],
                          "asked": section, "text": plain(GET(API + "doc-html/" + item["code"]))}
     json.dump(cache, open(CACHE, "w", encoding="utf-8"), indent=1)
     return cache
@@ -77,6 +80,16 @@ def exams(body):
     return min(n + final, 5)
 
 
+DESC = re.compile(r"Course Description\s*(.*?)(?=Course Learning Outcomes|Learning Resources|Assignments|Grading|$)", re.S)
+
+
+def describe(text):
+    """The catalog blurb the syllabus opens with, minus the credit-hours prefix."""
+    m = DESC.search(text)
+    d = re.sub(r"^Credit Hours:\s*[\d.]+\.?\s*", "", (m.group(1) if m else "").strip())
+    return d[:600].strip() or None
+
+
 def rigor(text):
     """0-10 with the flags that got it there, or None when the syllabus says nothing useful."""
     body = TAIL.split(text)[0]
@@ -101,6 +114,7 @@ def _test():
     assert exams("tests (3 midterms), 2 timed coding") == 3
     assert exams("a final exam and weekly quizzes") == 1 and exams("no assessments listed") == 0
     assert rigor("short")[0] is None
+    assert describe("x Course Description Credit Hours: 3.00. Pointers and files. Course Learning Outcomes y")         == "Pointers and files."
     hard = "x" * 700 + " Grades will not be rounded. There are no make-up exams. 3 midterms and a final exam."
     assert rigor(hard)[0] > 6.5, rigor(hard)
 
