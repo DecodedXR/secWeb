@@ -39,7 +39,7 @@ h1{margin:0;font-size:clamp(28px,4vw,46px);letter-spacing:-.03em;font-weight:800
 .chip small{font-weight:500;opacity:.75}
 .tools{display:flex;flex-wrap:wrap;gap:9px;margin-left:auto}
 .act{display:inline-flex;align-items:center;gap:5px;padding:8px 14px;border-radius:10px;border:1px solid var(--line);
-  background:#0e1018;color:var(--txt);font:600 13px/1 inherit;font-family:inherit;cursor:pointer}
+  background:#0e1018;color:var(--txt);font:600 13px/1 inherit;font-family:inherit;cursor:pointer;text-decoration:none}
 .act:hover{border-color:var(--accent);color:var(--accent)}
 .act.primary{background:var(--accent);color:#191100;border-color:var(--accent)}
 .statgrid{display:flex;gap:10px;overflow-x:auto}
@@ -139,6 +139,7 @@ footer{color:var(--dim);font-size:11.5px;text-align:center;margin-top:26px}
     <button class="act" id="freebtn">Free-time overlay: <b id="freestate">on</b></button>
     <label class="act" for="csv">&#43; Add CSV</label>
     <input id="csv" type="file" accept=".csv,text/csv" multiple hidden>
+    <a class="act" href="plan.html">&#128274; Degree run</a>
     <button class="act primary" id="dl">&#11015; Download PNG</button>
   </div>
 </header>
