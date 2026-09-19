@@ -448,6 +448,211 @@
   "load": 0.3,
   "score": 6.5
  },
+ "Kit": {
+  "courses": [
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engineering Fundamentals I",
+    "credits": 3,
+    "score": 7.9,
+    "gpa": 2.48,
+    "gpaOf": "Pramey Upadhyaya",
+    "prof": "Pramey Upadhyaya",
+    "rating": 4.8,
+    "profDiff": 3.4,
+    "ratings": 12,
+    "dept": "Electrical Engineering",
+    "syllabus": 7.1,
+    "syllabusOf": "044",
+    "syllabusUrl": "https://purdue.simplesyllabus.com/en-US/doc/vym5u8e3o",
+    "desc": "This course covers fundamental concepts and applications for electrical and computer engineers as well as for engineers who need to gain a broad understanding of these disciplines. The course starts by the basic concepts of charge, current, and voltage as well as their expressions with regards to resistors and resistive circuits. Essential concepts, devices, theorems, and applications of direct-current (DC), 1st order, and alternating-current (AC) circuits are subsequently discussed. Besides electrical devices and circuits, basic electronic components including diodes and transistors as well a",
+    "flags": [
+     {
+      "why": "no late work",
+      "w": 0.6
+     },
+     {
+      "why": "4 exams",
+      "w": 1.5
+     }
+    ],
+    "parts": {
+     "grades": 9.5,
+     "prof": 5.7,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "MA 26600",
+    "title": "Ordinary Differential Equations",
+    "credits": 3,
+    "score": 6.9,
+    "gpa": 2.68,
+    "gpaOf": null,
+    "prof": "Steven Lancette",
+    "rating": 3.3,
+    "profDiff": 4,
+    "ratings": 4,
+    "dept": "Mathematics",
+    "syllabus": 5.0,
+    "syllabusOf": "010",
+    "syllabusUrl": "https://purdue.simplesyllabus.com/en-US/doc/zheve0szo",
+    "desc": "First order equations, second and n'th order linear equations, series solutions, solution by Laplace transform, systems of linear equations. It is preferable but not required to take MA 26500 either first or concurrently. Not open to students with credit in MA 26200, 27200, 36000, 36100, or 36600. Prerequisites: Undergraduate level, MA 26100, Minimum Grade of C- or Undergraduate level, MA 17400, Minimum Grade of C- or Undergraduate level, MA 18200, Minimum Grade of C- or Undergraduate level, MA 27100, Minimum Grade of C- or Undergraduate level, MA 27101, Minimum Grade of C- or Undergraduate le",
+    "flags": [],
+    "parts": {
+     "grades": 8.1,
+     "prof": 6.1,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 20875",
+    "title": "Python For Data Science",
+    "credits": 3,
+    "score": 5.9,
+    "gpa": 3.01,
+    "gpaOf": "Philip Pare",
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
+    "syllabus": 5.6,
+    "syllabusOf": "002",
+    "syllabusUrl": "https://purdue.simplesyllabus.com/en-US/doc/lrk8i01xk",
+    "desc": "This course provides an introduction to the fundamentals and applications of data science using Python. Students will explore essential data science topics, while developing proficiency in Python. Core topics include basic statistical methods and introductory machine learning. The course aims to equip students with the skills necessary to tackle data science problems using Python. Prerequisites: Undergraduate level, CS 15900, Minimum Grade of C-",
+    "flags": [
+     {
+      "why": "no textbook",
+      "w": -0.4
+     },
+     {
+      "why": "3 exams",
+      "w": 1.0
+     }
+    ],
+    "parts": {
+     "grades": 5.9,
+     "prof": 5.9,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "PHYS 27200",
+    "title": "Electric And Magnetic Interactions",
+    "credits": 4,
+    "score": 5.6,
+    "gpa": 2.9,
+    "gpaOf": "Laura Urba",
+    "prof": "Laura Urba",
+    "rating": 4.3,
+    "profDiff": 2.7,
+    "ratings": 41,
+    "dept": "Statistics",
+    "syllabus": null,
+    "syllabusOf": null,
+    "syllabusUrl": null,
+    "desc": null,
+    "flags": [],
+    "parts": {
+     "grades": 6.7,
+     "prof": 4.3,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "VIP 27920",
+    "title": "Sophomore Participation In Vertically Integrated Projects (VIP)",
+    "credits": 2,
+    "score": 4.6,
+    "gpa": 3.4,
+    "gpaOf": "Mark Johnson",
+    "prof": "Johnathan Hong",
+    "rating": 3.2,
+    "profDiff": 4.3,
+    "ratings": 6,
+    "dept": "Economics",
+    "syllabus": 4.6,
+    "syllabusOf": "023",
+    "syllabusUrl": "https://purdue.simplesyllabus.com/en-US/doc/9sxtg1sro",
+    "desc": "is for one of the associated courses. Please see your course schedule to confirm your course and number of credit hours: Three credit hours: VIP 27930, 37930, 47930 Two credit hours: VIP 27920, 37920, 47920, 47921, 47922 One credit hour: VIP 17910, 17911, 17912 Zero credit hour: VIP 37900 VIP Program Personnel VIP Position Name Office Email Director/PD Instructor Dr. Carla Zoltowski ARMS 1217 cbz@purdue.edu Assistant Director / PD Instructor, WL Cyndi Lynch ARMS 1219 clynch@purdue.edu Assistant Director / PD Instructor, Indianapolis Dr. Steve Higbee SL 220D shigbee@purdue.edu Senior Program Ma",
+    "flags": [
+     {
+      "why": "no textbook",
+      "w": -0.4
+     }
+    ],
+    "parts": {
+     "grades": 3.3,
+     "prof": 6.8,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 20007",
+    "title": "Electrical Engineering Fundamentals I Lab",
+    "credits": 1,
+    "score": 3.3,
+    "gpa": 3.47,
+    "gpaOf": null,
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
+    "syllabus": 5.2,
+    "syllabusOf": "029",
+    "syllabusUrl": "https://purdue.simplesyllabus.com/en-US/doc/gboojpqeh",
+    "desc": "This is an introduction course in electronic measurement and circuit modeling, simulation and design techniques. These skills are developed through a variety of laboratory experiments ranging from voltage, current, and frequency, to resistors, inductors, capacitors, and operational amplifiers. When possible, the experiments develop practical skills through small design and soldering tasks. Finally, the course culminates in a two week group design project. In many ways this course is the laboratory of the co-requisite lecture course ECE 20001: Electrical Engineering Fundamentals I; however, we",
+    "flags": [
+     {
+      "why": "no late work",
+      "w": 0.6
+     },
+     {
+      "why": "no textbook",
+      "w": -0.4
+     },
+     {
+      "why": "1 exam",
+      "w": 0.0
+     }
+    ],
+    "parts": {
+     "grades": 2.9,
+     "prof": 2.9,
+     "level": 5.0
+    }
+   },
+   {
+    "course": "ECE 29401",
+    "title": "Electrical And Computer Engineering Sophomore Seminar",
+    "credits": 1,
+    "score": 3.1,
+    "gpa": 3.57,
+    "gpaOf": "Angela Rainwater",
+    "prof": "Angela Rainwater",
+    "rating": 2.8,
+    "profDiff": 2,
+    "ratings": 11,
+    "dept": "Electrical Engineering",
+    "syllabus": 5.0,
+    "syllabusOf": "001",
+    "syllabusUrl": "https://purdue.simplesyllabus.com/en-US/doc/zdex7f5vp",
+    "desc": "An introduction to the School of Electrical and Computer Engineering, the program's objectives, and outcomes, BSEE and BSCmpE degree requirements, professional writing and multicultural and professional development.",
+    "flags": [],
+    "parts": {
+     "grades": 2.2,
+     "prof": 3.3,
+     "level": 5.0
+    }
+   }
+  ],
+  "credits": 17,
+  "hours": 16.2,
+  "load": 0.4,
+  "score": 6.8
+ },
  "Manny": {
   "courses": [
    {
@@ -698,7 +903,7 @@
     "prof": "Garth Simpson",
     "rating": 3,
     "profDiff": 3.6,
-    "ratings": 30,
+    "ratings": 31,
     "dept": "Chemistry",
     "syllabus": 5.5,
     "syllabusOf": "001",
@@ -930,14 +1135,14 @@
     "course": "ACCT 21200",
     "title": "Business Accounting",
     "credits": 3,
-    "score": 5.4,
+    "score": 5.3,
     "gpa": null,
     "gpaOf": null,
-    "prof": null,
-    "rating": null,
-    "profDiff": null,
-    "ratings": 0,
-    "dept": null,
+    "prof": "Erin Anderson",
+    "rating": 5,
+    "profDiff": 2,
+    "ratings": 1,
+    "dept": "Accounting",
     "syllabus": 7.2,
     "syllabusOf": "001",
     "syllabusUrl": "https://purdue.simplesyllabus.com/en-US/doc/k505n5qkx",
@@ -958,7 +1163,7 @@
     ],
     "parts": {
      "grades": 5.0,
-     "prof": 5.0,
+     "prof": 4.6,
      "level": 5.0
     }
    },
@@ -1040,7 +1245,7 @@
   "credits": 18,
   "hours": 19.2,
   "load": 0.8,
-  "score": 6.2
+  "score": 6.1
  },
  "Morgan": {
   "courses": [
@@ -1645,14 +1850,14 @@
     "course": "ECE 30100",
     "title": "Signals And Systems",
     "credits": 3,
-    "score": 7.9,
+    "score": 8.2,
     "gpa": 2.66,
     "gpaOf": null,
-    "prof": "I-Fan Lin",
-    "rating": 1.2,
-    "profDiff": 4.4,
-    "ratings": 9,
-    "dept": "Statistics",
+    "prof": null,
+    "rating": null,
+    "profDiff": null,
+    "ratings": 0,
+    "dept": null,
     "syllabus": 6.1,
     "syllabusOf": "004",
     "syllabusUrl": "https://purdue.simplesyllabus.com/en-US/doc/5f0lig8j5",
@@ -1669,7 +1874,7 @@
     ],
     "parts": {
      "grades": 8.3,
-     "prof": 7.2,
+     "prof": 8.3,
      "level": 7.0
     }
    },
