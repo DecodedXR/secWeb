@@ -3,7 +3,7 @@ import csv, json, glob, re, os
 from datetime import datetime
 
 NAMES = {"BremerFall2026Schedule": "Bremer", "diana_events": "Diana", "Morgan": "Morgan",
-         "Noah": "Noah", "Romir": "Romir", "Vlad": "Vlad", "Abby": "Abby", "Manny": "Manny", "Matt": "Matt", "Mila": "Mila"}
+         "Noah": "Noah", "Romir": "Romir", "Vlad": "Vlad", "Abby": "Abby", "Manny": "Manny", "Matt": "Matt", "Mila": "Mila", "Kit": "Kit"}
 DAYMAP = [("Th", 3), ("Su", 6), ("M", 0), ("T", 1), ("W", 2), ("F", 4), ("S", 5)]
 
 def as_date(s):                         # some exports write 9/24/2026, others 09/24/2026

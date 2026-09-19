@@ -456,6 +456,333 @@
   ],
   "untimed": []
  },
+ "Kit": {
+  "blocks": [
+   {
+    "course": "PHYS 27200",
+    "title": "E&M Interactions",
+    "type": "Lecture",
+    "section": "11848-093",
+    "day": 0,
+    "start": 510,
+    "end": 560,
+    "loc": "PHYS 112",
+    "instructor": "Urba, Laura Gabriela (Instr)",
+    "first": "08/24/2026",
+    "last": "09/02/2026"
+   },
+   {
+    "course": "MA 26600",
+    "title": "Ordinary Differ Equatn",
+    "type": "Lecture",
+    "section": "19738-898",
+    "day": 0,
+    "start": 690,
+    "end": 740,
+    "loc": "WALC 3127",
+    "instructor": "Lancette, Steven R (Instr)",
+    "first": "08/24/2026",
+    "last": "09/04/2026"
+   },
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Lecture",
+    "section": "20739-002",
+    "day": 0,
+    "start": 750,
+    "end": 800,
+    "loc": "BHEE 129",
+    "instructor": "Diaz Rivas, Rosa E (Instr)",
+    "first": "08/24/2026",
+    "last": "09/02/2026"
+   },
+   {
+    "course": "ECE 20007",
+    "title": "Elec Engr Fundamentals I Lab",
+    "type": "Laboratory",
+    "section": "21702-009",
+    "day": 1,
+    "start": 570,
+    "end": 680,
+    "loc": "BHEE 166",
+    "instructor": "Au, Wei-Chen (Instr)",
+    "first": "08/25/2026",
+    "last": "10/06/2026"
+   },
+   {
+    "course": "ECE 20875",
+    "title": "Data Science Using Python",
+    "type": "Lecture",
+    "section": "21503-001",
+    "day": 1,
+    "start": 720,
+    "end": 795,
+    "loc": "BHEE 129",
+    "instructor": "Pare, Philip Eugene (Instr)",
+    "first": "08/25/2026",
+    "last": "10/08/2026"
+   },
+   {
+    "course": "PHYS 27200",
+    "title": "E&M Interactions",
+    "type": "Lecture",
+    "section": "11848-093",
+    "day": 2,
+    "start": 510,
+    "end": 560,
+    "loc": "PHYS 112",
+    "instructor": "Urba, Laura Gabriela (Instr)",
+    "first": "08/24/2026",
+    "last": "09/02/2026"
+   },
+   {
+    "course": "MA 26600",
+    "title": "Ordinary Differ Equatn",
+    "type": "Lecture",
+    "section": "19738-898",
+    "day": 2,
+    "start": 690,
+    "end": 740,
+    "loc": "WALC 3127",
+    "instructor": "Lancette, Steven R (Instr)",
+    "first": "08/24/2026",
+    "last": "09/04/2026"
+   },
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Lecture",
+    "section": "20739-002",
+    "day": 2,
+    "start": 750,
+    "end": 800,
+    "loc": "BHEE 129",
+    "instructor": "Diaz Rivas, Rosa E (Instr)",
+    "first": "08/24/2026",
+    "last": "09/02/2026"
+   },
+   {
+    "course": "ECE 20875",
+    "title": "Data Science Using Python",
+    "type": "Lecture",
+    "section": "21503-001",
+    "day": 3,
+    "start": 720,
+    "end": 795,
+    "loc": "BHEE 129",
+    "instructor": "Pare, Philip Eugene (Instr)",
+    "first": "08/25/2026",
+    "last": "10/08/2026"
+   },
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Recitation",
+    "section": "19874-035",
+    "day": 3,
+    "start": 870,
+    "end": 920,
+    "loc": "PHYS 238",
+    "instructor": "Upadhyaya, Pramey (Instr)",
+    "first": "08/27/2026",
+    "last": "11/19/2026"
+   },
+   {
+    "course": "VIP 27920",
+    "title": "Soph Part In VIP",
+    "type": "Laboratory",
+    "section": "17647-420*",
+    "day": 3,
+    "start": 990,
+    "end": 1040,
+    "loc": "WALC 1132",
+    "instructor": "Hong, Johnathan (Instr) Johnson, Mark C (Instr) Swabey, Matthew A (Instr)",
+    "first": "08/27/2026",
+    "last": "11/19/2026"
+   },
+   {
+    "course": "VIP 27920",
+    "title": "Soph Part In VIP",
+    "type": "Laboratory",
+    "section": "17647-420*",
+    "day": 3,
+    "start": 1050,
+    "end": 1100,
+    "loc": "BHEE 129",
+    "instructor": "Hong, Johnathan (Instr) Johnson, Mark C (Instr) Swabey, Matthew A (Instr)",
+    "first": "08/27/2026",
+    "last": "11/19/2026"
+   },
+   {
+    "course": "PHYS 27200",
+    "title": "E&M Interactions",
+    "type": "Laboratory",
+    "section": "11460-087",
+    "day": 4,
+    "start": 570,
+    "end": 680,
+    "loc": "PHYS 160",
+    "instructor": "Daniels, Gino Christian (Instr)",
+    "first": "08/28/2026",
+    "last": "11/20/2026"
+   },
+   {
+    "course": "MA 26600",
+    "title": "Ordinary Differ Equatn",
+    "type": "Lecture",
+    "section": "19738-898",
+    "day": 4,
+    "start": 690,
+    "end": 740,
+    "loc": "WALC 3127",
+    "instructor": "Lancette, Steven R (Instr)",
+    "first": "08/24/2026",
+    "last": "09/04/2026"
+   },
+   {
+    "course": "ECE 29401",
+    "title": "ECE Sophomore Seminar",
+    "type": "Lecture",
+    "section": "20774-001",
+    "day": 4,
+    "start": 810,
+    "end": 860,
+    "loc": "WALC 1018",
+    "instructor": "Rainwater, Angela Sue Jones (Instr)",
+    "first": "08/28/2026",
+    "last": "10/16/2026"
+   },
+   {
+    "course": "PHYS 27200",
+    "title": "E&M Interactions",
+    "type": "Recitation",
+    "section": "11451-083",
+    "day": 4,
+    "start": 870,
+    "end": 920,
+    "loc": "PHYS 338",
+    "instructor": "Clarke, Trevor Anthony Robert (Instr)",
+    "first": "08/28/2026",
+    "last": "11/20/2026"
+   }
+  ],
+  "exams": [
+   {
+    "course": "ECE 29401",
+    "title": "ECE Sophomore Seminar",
+    "type": "Breakout Session",
+    "date": "09/08/2026",
+    "start": 630,
+    "end": 680
+   },
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Midterm Examination",
+    "date": "09/24/2026",
+    "start": 1200,
+    "end": 1260
+   },
+   {
+    "course": "PHYS 27200",
+    "title": "E&M Interactions",
+    "type": "Midterm Examination",
+    "date": "09/28/2026",
+    "start": 1200,
+    "end": 1290
+   },
+   {
+    "course": "ECE 20875",
+    "title": "Data Science Using Python",
+    "type": "Midterm Examination",
+    "date": "10/07/2026",
+    "start": 1110,
+    "end": 1170
+   },
+   {
+    "course": "MA 26600",
+    "title": "Ordinary Differ Equatn",
+    "type": "Midterm Examination",
+    "date": "10/08/2026",
+    "start": 1200,
+    "end": 1260
+   },
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Midterm Examination",
+    "date": "11/05/2026",
+    "start": 1200,
+    "end": 1260
+   },
+   {
+    "course": "ECE 29401",
+    "title": "ECE Sophomore Seminar",
+    "type": "Breakout Session",
+    "date": "11/10/2026",
+    "start": 630,
+    "end": 680
+   },
+   {
+    "course": "MA 26600",
+    "title": "Ordinary Differ Equatn",
+    "type": "Midterm Examination",
+    "date": "11/10/2026",
+    "start": 1200,
+    "end": 1260
+   },
+   {
+    "course": "ECE 20875",
+    "title": "Data Science Using Python",
+    "type": "Midterm Examination",
+    "date": "11/12/2026",
+    "start": 1200,
+    "end": 1260
+   },
+   {
+    "course": "PHYS 27200",
+    "title": "E&M Interactions",
+    "type": "Midterm Examination",
+    "date": "11/16/2026",
+    "start": 1200,
+    "end": 1290
+   },
+   {
+    "course": "MA 26600",
+    "title": "Ordinary Differ Equatn",
+    "type": "Final Examination",
+    "date": "12/14/2026",
+    "start": 1140,
+    "end": 1260
+   },
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Final Examination",
+    "date": "12/15/2026",
+    "start": 1140,
+    "end": 1260
+   },
+   {
+    "course": "PHYS 27200",
+    "title": "E&M Interactions",
+    "type": "Final Examination",
+    "date": "12/16/2026",
+    "start": 780,
+    "end": 900
+   },
+   {
+    "course": "ECE 20875",
+    "title": "Data Science Using Python",
+    "type": "Final Examination",
+    "date": "12/18/2026",
+    "start": 1140,
+    "end": 1260
+   }
+  ],
+  "untimed": []
+ },
  "Manny": {
   "blocks": [
    {
