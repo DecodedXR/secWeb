@@ -1678,7 +1678,7 @@
     "prof": "Gert Vercleyen",
     "rating": 4.9,
     "profDiff": 2.6,
-    "ratings": 26,
+    "ratings": 29,
     "dept": "Mathematics",
     "syllabus": 5.0,
     "syllabusOf": "010",
@@ -1687,7 +1687,7 @@
     "flags": [],
     "parts": {
      "grades": 9.8,
-     "prof": 4.2,
+     "prof": 4.1,
      "level": 5.0
     }
    },
@@ -2013,11 +2013,11 @@
     }
    },
    {
-    "course": "EAPS 10500",
-    "title": "The Planets",
+    "course": "EAPS 10600",
+    "title": "Geosciences In The Cinema",
     "credits": 3,
-    "score": 1.9,
-    "gpa": 3.65,
+    "score": 0.9,
+    "gpa": 3.85,
     "gpaOf": null,
     "prof": null,
     "rating": null,
@@ -2030,8 +2030,8 @@
     "desc": null,
     "flags": [],
     "parts": {
-     "grades": 1.7,
-     "prof": 1.7,
+     "grades": 0.3,
+     "prof": 0.3,
      "level": 3.0
     }
    }
@@ -2039,6 +2039,6 @@
   "credits": 18,
   "hours": 16.5,
   "load": 0.6,
-  "score": 6.2
+  "score": 6.0
  }
 }

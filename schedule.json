@@ -2476,7 +2476,7 @@
     "start": 510,
     "end": 680,
     "loc": "POTR 176",
-    "instructor": "",
+    "instructor": "Nelson, Cole Aaron (Instr) Swabey, Matthew A (Instr)",
     "first": "08/27/2026",
     "last": "11/19/2026"
    },
@@ -2564,10 +2564,26 @@
     "end": 1170
    },
    {
+    "course": "ECE 36800",
+    "title": "Data Structures",
+    "type": "Midterm Examination",
+    "date": "10/06/2026",
+    "start": 1110,
+    "end": 1170
+   },
+   {
     "course": "ECE 36200",
     "title": "Micropro Sys & Intrfac",
     "type": "Midterm Examination",
     "date": "10/19/2026",
+    "start": 1200,
+    "end": 1320
+   },
+   {
+    "course": "ECE 33700",
+    "title": "ASIC Design Lab",
+    "type": "Midterm Examination",
+    "date": "10/20/2026",
     "start": 1200,
     "end": 1320
    },
@@ -2588,18 +2604,58 @@
     "end": 680
    },
    {
+    "course": "ECE 36800",
+    "title": "Data Structures",
+    "type": "Midterm Examination",
+    "date": "11/16/2026",
+    "start": 1200,
+    "end": 1260
+   },
+   {
     "course": "ECE 30100",
     "title": "Signals And Systems",
     "type": "Midterm Examination",
     "date": "11/23/2026",
     "start": 1110,
     "end": 1170
+   },
+   {
+    "course": "ECE 30100",
+    "title": "Signals And Systems",
+    "type": "Final Examination",
+    "date": "12/15/2026",
+    "start": 780,
+    "end": 900
+   },
+   {
+    "course": "ECE 33700",
+    "title": "ASIC Design Lab",
+    "type": "Final Examination",
+    "date": "12/16/2026",
+    "start": 480,
+    "end": 600
+   },
+   {
+    "course": "ECE 36200",
+    "title": "Micropro Sys & Intrfac",
+    "type": "Final Examination",
+    "date": "12/17/2026",
+    "start": 630,
+    "end": 750
+   },
+   {
+    "course": "ECE 36800",
+    "title": "Data Structures",
+    "type": "Final Examination",
+    "date": "12/18/2026",
+    "start": 630,
+    "end": 750
    }
   ],
   "untimed": [
    {
-    "course": "EAPS 10500",
-    "title": "The Planets",
+    "course": "EAPS 10600",
+    "title": "Geosciences Cinema",
     "type": "Distance Learning (Online)",
     "loc": "ASYNC ONLINE"
    }

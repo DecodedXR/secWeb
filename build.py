@@ -98,7 +98,7 @@ def _test():
     assert parse_time("12:30p") == 750 and parse_time("8:30a") == 510 and parse_time("12:05a") == 5
     assert all(b["end"] > b["start"] for p in people.values() for b in p["blocks"])
     assert all(p["blocks"] for p in people.values())
-    assert [u["course"] for u in people["Vlad"]["untimed"]] == ["EAPS 10500"], people["Vlad"]["untimed"]
+    assert [u["course"] for u in people["Vlad"]["untimed"]] == ["EAPS 10600"], people["Vlad"]["untimed"]
     soc = [b for b in people["Mila"]["blocks"] if b["course"] == "SOC 10000"]
     assert len(soc) == 2 and soc[0]["start"] == 720, soc
     engr = [b for b in people["Matt"]["blocks"] if b["course"] == "ENGR 13100"]
