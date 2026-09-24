@@ -106,5 +106,5 @@ def _test():
     assert label_of("Course", "ECE 29401 Breakout Session\n  ECE 29401", "ECE 29401") == "Breakout Session"
     # the Tuesday 10:30a ECE 29401 breakout is a one-off: only Vlad's weekly section actually meets then
     tue = {n: [b for b in p["blocks"] if b["day"] == 1 and b["course"] == "ECE 29401"] for n, p in people.items()}
-    assert not any(tue[n] for n in ("Morgan", "Noah", "Romir")) and tue["Vlad"], tue
+    assert not any(tue.get(n) for n in ("Morgan", "Noah", "Romir")) and tue["Vlad"], tue
 _test()
