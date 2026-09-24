@@ -42,8 +42,8 @@ def parse_time(t):  # "10:30a" -> minutes from midnight
 
 people = {}
 for path in sorted(glob.glob("*.csv")):
-    person = NAMES.get(os.path.splitext(os.path.basename(path))[0])
-    if not person: continue
+    stem = os.path.splitext(os.path.basename(path))[0]
+    person = NAMES.get(stem, stem)          # new files (e.g. from the Discord bot) are named <Person>.csv
     seen, blocks, exams, eseen = {}, [], [], set()
     timed, listed = set(), {}                       # every course seen, and which ones ever have a time
     with open(path, newline="", encoding="utf-8-sig") as f:
