@@ -1897,7 +1897,7 @@
     "start": 930,
     "end": 1040,
     "loc": "BHEE 166",
-    "instructor": "Alukkal, Carl Robanto (Instr)",
+    "instructor": "Mathai, Abishai K (Instr)",
     "first": "08/25/2026",
     "last": "10/06/2026"
    },
@@ -2082,6 +2082,30 @@
     "type": "Midterm Examination",
     "date": "11/18/2026",
     "start": 1200,
+    "end": 1260
+   },
+   {
+    "course": "MA 26100",
+    "title": "Multivariate Calculus",
+    "type": "Final Examination",
+    "date": "12/15/2026",
+    "start": 780,
+    "end": 900
+   },
+   {
+    "course": "ECE 20001",
+    "title": "Electrical Engr Fundamentals I",
+    "type": "Final Examination",
+    "date": "12/15/2026",
+    "start": 1140,
+    "end": 1260
+   },
+   {
+    "course": "ECE 20875",
+    "title": "Data Science Using Python",
+    "type": "Final Examination",
+    "date": "12/18/2026",
+    "start": 1140,
     "end": 1260
    }
   ],
