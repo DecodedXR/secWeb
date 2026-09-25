@@ -1069,8 +1069,8 @@
     "end": 560,
     "loc": "CL50 224",
     "instructor": "Johnstone, Daniel Lentine (Instr)",
-    "first": "8/24/2026",
-    "last": "9/4/2026"
+    "first": "08/24/2026",
+    "last": "09/04/2026"
    },
    {
     "course": "BAND 11800",
@@ -1082,8 +1082,8 @@
     "end": 680,
     "loc": "HAGL 178",
     "instructor": "Blon, David Matthew (Instr)",
-    "first": "8/24/2026",
-    "last": "9/2/2026"
+    "first": "08/24/2026",
+    "last": "09/02/2026"
    },
    {
     "course": "ENGR 10301",
@@ -1095,8 +1095,8 @@
     "end": 680,
     "loc": "HAGL 378",
     "instructor": "Benner, Caitlin A (Instr) Petersen, Lucas Harry (Instr)",
-    "first": "8/24/2026",
-    "last": "8/31/2026"
+    "first": "08/24/2026",
+    "last": "08/31/2026"
    },
    {
     "course": "CHM 11510",
@@ -1108,8 +1108,8 @@
     "end": 560,
     "loc": "WTHR 200",
     "instructor": "Rienstra-Kiracofe, Jonathan C (Instr) Simpson, Garth J (Instr)",
-    "first": "8/25/2026",
-    "last": "10/8/2026"
+    "first": "08/25/2026",
+    "last": "10/08/2026"
    },
    {
     "course": "ENGR 13100",
@@ -1121,8 +1121,8 @@
     "end": 680,
     "loc": "LMBS 3239A +2",
     "instructor": "Jeong, Taeho (Instr)",
-    "first": "8/25/2026",
-    "last": "10/8/2026"
+    "first": "08/25/2026",
+    "last": "10/08/2026"
    },
    {
     "course": "SCLA 10200",
@@ -1134,8 +1134,8 @@
     "end": 795,
     "loc": "GRIS 133",
     "instructor": "Latoz, Traci Lynn (Instr)",
-    "first": "8/25/2026",
-    "last": "10/8/2026"
+    "first": "08/25/2026",
+    "last": "10/08/2026"
    },
    {
     "course": "MA 26100",
@@ -1147,8 +1147,8 @@
     "end": 1040,
     "loc": "WALC 3084",
     "instructor": "Lossada, Vicente Celedonio (Instr)",
-    "first": "8/25/2026",
-    "last": "10/6/2026"
+    "first": "08/25/2026",
+    "last": "10/06/2026"
    },
    {
     "course": "MA 26100",
@@ -1160,8 +1160,8 @@
     "end": 560,
     "loc": "CL50 224",
     "instructor": "Johnstone, Daniel Lentine (Instr)",
-    "first": "8/24/2026",
-    "last": "9/4/2026"
+    "first": "08/24/2026",
+    "last": "09/04/2026"
    },
    {
     "course": "BAND 11800",
@@ -1173,8 +1173,8 @@
     "end": 680,
     "loc": "HAGL 178",
     "instructor": "Blon, David Matthew (Instr)",
-    "first": "8/24/2026",
-    "last": "9/2/2026"
+    "first": "08/24/2026",
+    "last": "09/02/2026"
    },
    {
     "course": "CHM 11520",
@@ -1186,7 +1186,7 @@
     "end": 1070,
     "loc": "CHAS 1034",
     "instructor": "Rishabh, Kumar (Instr)",
-    "first": "8/26/2026",
+    "first": "08/26/2026",
     "last": "11/18/2026"
    },
    {
@@ -1199,8 +1199,8 @@
     "end": 560,
     "loc": "WTHR 200",
     "instructor": "Rienstra-Kiracofe, Jonathan C (Instr) Simpson, Garth J (Instr)",
-    "first": "8/25/2026",
-    "last": "10/8/2026"
+    "first": "08/25/2026",
+    "last": "10/08/2026"
    },
    {
     "course": "ENGR 13100",
@@ -1212,8 +1212,8 @@
     "end": 680,
     "loc": "LMBS 3239A +2",
     "instructor": "Jeong, Taeho (Instr)",
-    "first": "8/25/2026",
-    "last": "10/8/2026"
+    "first": "08/25/2026",
+    "last": "10/08/2026"
    },
    {
     "course": "SCLA 10200",
@@ -1225,8 +1225,8 @@
     "end": 795,
     "loc": "GRIS 133",
     "instructor": "Latoz, Traci Lynn (Instr)",
-    "first": "8/25/2026",
-    "last": "10/8/2026"
+    "first": "08/25/2026",
+    "last": "10/08/2026"
    },
    {
     "course": "CHM 11510",
@@ -1238,7 +1238,7 @@
     "end": 920,
     "loc": "BRWN 3102",
     "instructor": "Purnell, Zachary Myles (Instr)",
-    "first": "8/27/2026",
+    "first": "08/27/2026",
     "last": "11/19/2026"
    },
    {
@@ -1251,8 +1251,8 @@
     "end": 560,
     "loc": "CL50 224",
     "instructor": "Johnstone, Daniel Lentine (Instr)",
-    "first": "8/24/2026",
-    "last": "9/4/2026"
+    "first": "08/24/2026",
+    "last": "09/04/2026"
    }
   ],
   "exams": [
@@ -1260,7 +1260,7 @@
     "course": "CHM 11510",
     "title": "General Chemistry I",
     "type": "Midterm Examination",
-    "date": "9/24/2026",
+    "date": "09/24/2026",
     "start": 1200,
     "end": 1260
    },
@@ -1268,7 +1268,7 @@
     "course": "MA 26100",
     "title": "Multivariate Calculus",
     "type": "Midterm Examination",
-    "date": "10/5/2026",
+    "date": "10/05/2026",
     "start": 1200,
     "end": 1260
    },
@@ -1295,6 +1295,22 @@
     "date": "11/19/2026",
     "start": 1200,
     "end": 1260
+   },
+   {
+    "course": "MA 26100",
+    "title": "Multivariate Calculus",
+    "type": "Final Examination",
+    "date": "12/15/2026",
+    "start": 780,
+    "end": 900
+   },
+   {
+    "course": "CHM 11510",
+    "title": "General Chemistry I",
+    "type": "Final Examination",
+    "date": "12/16/2026",
+    "start": 480,
+    "end": 600
    }
   ],
   "untimed": []
