@@ -153,12 +153,29 @@
     "start": 570,
     "end": 740,
     "loc": "LILY G130",
-    "instructor": "Zielinski, Denise Lore (Instr)",
+    "instructor": "Laitinen, Marisa Maureen (Instr) Lopez, Jonathan (Instr) Najarro, Romina Andrea (Instr) Villalobos, Michelle (Instr) Zielinski, Denise Lore (Instr)",
     "first": "08/28/2026",
     "last": "11/20/2026"
    }
   ],
-  "exams": [],
+  "exams": [
+   {
+    "course": "BIOL 58601",
+    "title": "Ecology",
+    "type": "Final Examination",
+    "date": "12/16/2026",
+    "start": 480,
+    "end": 600
+   },
+   {
+    "course": "PHYS 23300",
+    "title": "Physics For Life Sci I",
+    "type": "Final Examination",
+    "date": "12/16/2026",
+    "start": 930,
+    "end": 1050
+   }
+  ],
   "untimed": []
  },
  "Bremer": {
