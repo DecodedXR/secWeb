@@ -12,7 +12,7 @@
     "dfw": 12.2,
     "withdraw": 1.2,
     "dfwAll": 12.2,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": null,
     "peer": null,
     "recent": true,
@@ -49,14 +49,14 @@
     "course": "PHYS 23300",
     "title": "Physics For Life Sciences I",
     "credits": 4,
-    "score": 5.2,
+    "score": 5.0,
     "gpa": 3.2,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 3.7,
     "withdraw": 0.8,
     "dfwAll": 4.1,
-    "reach": 0.57,
+    "reach": 0.66,
     "peerPct": 27,
     "peer": "PHYS 2xx",
     "recent": true,
@@ -78,12 +78,12 @@
      }
     ],
     "parts": {
-     "grades": 4.5,
-     "prof": 6.4,
+     "grades": 4.2,
+     "prof": 6.2,
      "material": 5.0
     },
     "weight": 4.6,
-    "work": 1.24
+    "work": 1.15
    },
    {
     "course": "BIOL 58602",
@@ -96,7 +96,7 @@
     "dfw": 2.5,
     "withdraw": 1.2,
     "dfwAll": 2.5,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 32,
     "peer": "BIOL 5xx",
     "recent": true,
@@ -131,7 +131,7 @@
     "dfw": 9.0,
     "withdraw": 5.2,
     "dfwAll": 8.2,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 84,
     "peer": "ANTH 2xx",
     "recent": true,
@@ -171,7 +171,7 @@
     "dfw": 7.5,
     "withdraw": 4.2,
     "dfwAll": 6.8,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 48,
     "peer": "2xx",
     "recent": true,
@@ -238,8 +238,8 @@
   ],
   "credits": 15,
   "hours": 15.5,
-  "work": 3.3,
-  "score": 4.2
+  "work": 3.2,
+  "score": 4.1
  },
  "Bremer": {
   "courses": [
@@ -254,7 +254,7 @@
     "dfw": 21.6,
     "withdraw": 4.8,
     "dfwAll": 21.7,
-    "reach": 0.47,
+    "reach": 0.6,
     "peerPct": 97,
     "peer": "ME 2xx",
     "recent": true,
@@ -271,8 +271,8 @@
     "desc": null,
     "flags": [],
     "parts": {
-     "grades": 8.9,
-     "prof": 8.9,
+     "grades": 8.8,
+     "prof": 8.8,
      "material": 7.5
     },
     "weight": 3,
@@ -289,7 +289,7 @@
     "dfw": 22.0,
     "withdraw": 3.1,
     "dfwAll": 22.1,
-    "reach": 0.59,
+    "reach": 0.65,
     "peerPct": 95,
     "peer": "ME 2xx",
     "recent": true,
@@ -307,7 +307,7 @@
     "flags": [],
     "parts": {
      "grades": 9.0,
-     "prof": 7.1,
+     "prof": 7.0,
      "material": 7.0
     },
     "weight": 3,
@@ -317,14 +317,14 @@
     "course": "MA 26100",
     "title": "Multivariate Calculus",
     "credits": 4,
-    "score": 6.6,
+    "score": 6.5,
     "gpa": 2.69,
     "gpaOf": "Yik Li",
     "gpaSrc": "boiler.tools",
     "dfw": 14.4,
     "withdraw": 2.8,
     "dfwAll": 14.7,
-    "reach": 0.6,
+    "reach": 0.66,
     "peerPct": 94,
     "peer": "2xx",
     "recent": true,
@@ -341,12 +341,12 @@
     "desc": null,
     "flags": [],
     "parts": {
-     "grades": 7.5,
-     "prof": 5.4,
+     "grades": 7.4,
+     "prof": 5.3,
      "material": 6.0
     },
     "weight": 4,
-    "work": 1.74
+    "work": 1.69
    },
    {
     "course": "PHYS 27200",
@@ -359,7 +359,7 @@
     "dfw": 11.1,
     "withdraw": 2.7,
     "dfwAll": 11.3,
-    "reach": 0.69,
+    "reach": 0.73,
     "peerPct": 60,
     "peer": "PHYS 2xx",
     "recent": true,
@@ -376,8 +376,8 @@
     "desc": null,
     "flags": [],
     "parts": {
-     "grades": 5.8,
-     "prof": 5.2,
+     "grades": 5.7,
+     "prof": 5.1,
      "material": 7.0
     },
     "weight": 4.6,
@@ -394,7 +394,7 @@
     "dfw": 13.9,
     "withdraw": 3.8,
     "dfwAll": 13.7,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 90,
     "peer": "2xx",
     "recent": true,
@@ -426,7 +426,7 @@
   ],
   "credits": 17,
   "hours": 15.2,
-  "work": 8.3,
+  "work": 8.2,
   "score": 7.5
  },
  "Diana": {
@@ -435,14 +435,14 @@
     "course": "MA 26600",
     "title": "Ordinary Differential Equations",
     "credits": 3,
-    "score": 7.3,
+    "score": 7.2,
     "gpa": 2.67,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 16.6,
     "withdraw": 2.8,
     "dfwAll": 16.1,
-    "reach": 0.51,
+    "reach": 0.61,
     "peerPct": 95,
     "peer": "2xx",
     "recent": true,
@@ -459,25 +459,25 @@
     "desc": "First order equations, second and n'th order linear equations, series solutions, solution by Laplace transform, systems of linear equations. It is preferable but not required to take MA 26500 either first or concurrently. Not open to students with credit in MA 26200, 27200, 36000, 36100, or 36600. Prerequisites: Undergraduate level, MA 26100, Minimum Grade of C- or Undergraduate level, MA 17400, Minimum Grade of C- or Undergraduate level, MA 18200, Minimum Grade of C- or Undergraduate level, MA 27100, Minimum Grade of C- or Undergraduate level, MA 27101, Minimum Grade of C- or Undergraduate le",
     "flags": [],
     "parts": {
-     "grades": 8.0,
-     "prof": 8.0,
+     "grades": 7.8,
+     "prof": 7.8,
      "material": 6.0
     },
     "weight": 3,
-    "work": 1.6
+    "work": 1.56
    },
    {
     "course": "PHYS 27200",
     "title": "Electric And Magnetic Interactions",
     "credits": 4,
-    "score": 6.4,
+    "score": 6.3,
     "gpa": 3.0,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 11.1,
     "withdraw": 2.7,
     "dfwAll": 11.3,
-    "reach": 0.69,
+    "reach": 0.73,
     "peerPct": 60,
     "peer": "PHYS 2xx",
     "recent": true,
@@ -494,25 +494,25 @@
     "desc": null,
     "flags": [],
     "parts": {
-     "grades": 5.9,
-     "prof": 6.5,
+     "grades": 5.8,
+     "prof": 6.4,
      "material": 7.0
     },
     "weight": 4.6,
-    "work": 1.88
+    "work": 1.83
    },
    {
     "course": "MSE 25000",
     "title": "Physical Properties In Engineering Systems",
     "credits": 3,
-    "score": 6.0,
+    "score": 5.8,
     "gpa": 2.99,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 8.2,
     "withdraw": 1.5,
     "dfwAll": 8.7,
-    "reach": 0.48,
+    "reach": 0.6,
     "peerPct": 79,
     "peer": "2xx",
     "recent": true,
@@ -534,25 +534,25 @@
      }
     ],
     "parts": {
-     "grades": 6.0,
-     "prof": 5.3,
+     "grades": 5.7,
+     "prof": 4.9,
      "material": 5.5
     },
     "weight": 3,
-    "work": 1.08
+    "work": 1.01
    },
    {
     "course": "MSE 23000",
     "title": "Structure And Properties Of Materials",
     "credits": 3,
-    "score": 5.8,
+    "score": 5.7,
     "gpa": 3.02,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 7.7,
     "withdraw": 1.9,
     "dfwAll": 8.1,
-    "reach": 0.67,
+    "reach": 0.71,
     "peerPct": 81,
     "peer": "2xx",
     "recent": true,
@@ -569,12 +569,12 @@
     "desc": "The relationship between the structure of materials and the resulting mechanical, thermal, electrical, and optical properties. Atomic structure, bonding, atomic arrangement; crystal symmetry, crystal structure, habit, lattices, defects, and the use of X-ray diffraction. Phase equilibria and microstructural development. Applications to design. Prerequisites: Undergraduate level, CHM 11500, Minimum Grade of D- or (Undergraduate level, CHM 11510, Minimum Grade of D- and Undergraduate level, CHM 11520, Minimum Grade of D- or Undergraduate level, CHM 11530, Minimum Grade of D-) or (Undergraduate le",
     "flags": [],
     "parts": {
-     "grades": 5.4,
-     "prof": 6.3,
+     "grades": 5.2,
+     "prof": 6.2,
      "material": 6.0
     },
     "weight": 3,
-    "work": 1.01
+    "work": 0.97
    },
    {
     "course": "MSE 42000",
@@ -587,7 +587,7 @@
     "dfw": 2.8,
     "withdraw": 0.7,
     "dfwAll": 2.3,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 61,
     "peer": "4xx",
     "recent": true,
@@ -622,7 +622,7 @@
     "dfw": 1.519583103448276,
     "withdraw": 1.5,
     "dfwAll": 1.5,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": null,
     "peer": null,
     "recent": false,
@@ -649,8 +649,8 @@
   ],
   "credits": 17,
   "hours": 15.2,
-  "work": 6.0,
-  "score": 6.3
+  "work": 5.8,
+  "score": 6.2
  },
  "Kit": {
   "courses": [
@@ -658,14 +658,14 @@
     "course": "ECE 20001",
     "title": "Electrical Engineering Fundamentals I",
     "credits": 3,
-    "score": 8.1,
+    "score": 8.0,
     "gpa": 2.57,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 19.4,
     "withdraw": 3.2,
     "dfwAll": 18.9,
-    "reach": 0.54,
+    "reach": 0.63,
     "peerPct": 82,
     "peer": "ECE 2xx",
     "recent": true,
@@ -691,25 +691,25 @@
      }
     ],
     "parts": {
-     "grades": 8.6,
-     "prof": 6.7,
+     "grades": 8.5,
+     "prof": 6.5,
      "material": 7.0
     },
     "weight": 3,
-    "work": 1.97
+    "work": 1.92
    },
    {
     "course": "MA 26600",
     "title": "Ordinary Differential Equations",
     "credits": 3,
-    "score": 7.1,
+    "score": 7.0,
     "gpa": 2.67,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 16.6,
     "withdraw": 2.8,
     "dfwAll": 16.1,
-    "reach": 0.51,
+    "reach": 0.61,
     "peerPct": 95,
     "peer": "2xx",
     "recent": true,
@@ -726,12 +726,12 @@
     "desc": "First order equations, second and n'th order linear equations, series solutions, solution by Laplace transform, systems of linear equations. It is preferable but not required to take MA 26500 either first or concurrently. Not open to students with credit in MA 26200, 27200, 36000, 36100, or 36600. Prerequisites: Undergraduate level, MA 26100, Minimum Grade of C- or Undergraduate level, MA 17400, Minimum Grade of C- or Undergraduate level, MA 18200, Minimum Grade of C- or Undergraduate level, MA 27100, Minimum Grade of C- or Undergraduate level, MA 27101, Minimum Grade of C- or Undergraduate le",
     "flags": [],
     "parts": {
-     "grades": 8.0,
-     "prof": 7.2,
+     "grades": 7.8,
+     "prof": 7.0,
      "material": 6.0
     },
     "weight": 3,
-    "work": 1.51
+    "work": 1.47
    },
    {
     "course": "PHYS 27200",
@@ -744,7 +744,7 @@
     "dfw": 11.1,
     "withdraw": 2.7,
     "dfwAll": 11.3,
-    "reach": 0.69,
+    "reach": 0.73,
     "peerPct": 60,
     "peer": "PHYS 2xx",
     "recent": true,
@@ -761,8 +761,8 @@
     "desc": null,
     "flags": [],
     "parts": {
-     "grades": 5.8,
-     "prof": 5.2,
+     "grades": 5.7,
+     "prof": 5.1,
      "material": 7.0
     },
     "weight": 4.6,
@@ -816,14 +816,14 @@
     "course": "ECE 20007",
     "title": "Electrical Engineering Fundamentals I Lab",
     "credits": 1,
-    "score": 3.7,
+    "score": 3.5,
     "gpa": 3.63,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 6.8,
     "withdraw": 3.1,
     "dfwAll": 7.1,
-    "reach": 0.54,
+    "reach": 0.63,
     "peerPct": 10,
     "peer": "ECE 2xx",
     "recent": true,
@@ -853,12 +853,12 @@
      }
     ],
     "parts": {
-     "grades": 3.8,
-     "prof": 3.8,
+     "grades": 3.4,
+     "prof": 3.4,
      "material": 3.5
     },
     "weight": 1.6,
-    "work": 0.22
+    "work": 0.2
    },
    {
     "course": "VIP 27920",
@@ -871,7 +871,7 @@
     "dfw": 6.9,
     "withdraw": 6.0,
     "dfwAll": 5.5,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 35,
     "peer": "2xx",
     "recent": true,
@@ -911,7 +911,7 @@
     "dfw": 7.7,
     "withdraw": 1.9,
     "dfwAll": 8.2,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 6,
     "peer": "ECE 2xx",
     "recent": true,
@@ -938,8 +938,8 @@
   ],
   "credits": 17,
   "hours": 16.2,
-  "work": 6.4,
-  "score": 6.6
+  "work": 6.3,
+  "score": 6.5
  },
  "Manny": {
   "courses": [
@@ -947,14 +947,14 @@
     "course": "ECE 20001",
     "title": "Electrical Engineering Fundamentals I",
     "credits": 3,
-    "score": 8.0,
+    "score": 7.9,
     "gpa": 2.57,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 19.4,
     "withdraw": 3.2,
     "dfwAll": 18.9,
-    "reach": 0.54,
+    "reach": 0.63,
     "peerPct": 82,
     "peer": "ECE 2xx",
     "recent": true,
@@ -980,52 +980,12 @@
      }
     ],
     "parts": {
-     "grades": 8.6,
-     "prof": 6.2,
+     "grades": 8.5,
+     "prof": 5.9,
      "material": 7.0
     },
     "weight": 3,
-    "work": 1.92
-   },
-   {
-    "course": "ECE 27000",
-    "title": "Introduction To Digital System Design",
-    "credits": 4,
-    "score": 7.0,
-    "gpa": 2.87,
-    "gpaOf": "Junfei Li",
-    "gpaSrc": "boiler.tools",
-    "dfw": 18.4,
-    "withdraw": 4.7,
-    "dfwAll": 19.2,
-    "reach": 0.54,
-    "peerPct": 79,
-    "peer": "ECE 2xx",
-    "recent": true,
-    "prof": "Junfei Li",
-    "rating": 3.7,
-    "profDiff": 2.8,
-    "ratings": 51,
-    "dept": "Engineering",
-    "material": 6.0,
-    "materialWhy": "Boolean algebra, K-maps, sequential state machines and Verilog: a new mental model, but well structured",
-    "syllabus": 6.5,
-    "syllabusOf": "011",
-    "syllabusUrl": "https://purdue.simplesyllabus.com/en-US/doc/scjv02m37",
-    "desc": "An introduction to digital system design and hardware engineering, with an emphasis on practical design techniques and circuit implementation. Prerequisites: Undergraduate level, ECE 20100, Minimum Grade of D- [may be taken concurrently] or Undergraduate level, ECE 20001, Minimum Grade of D- [may be taken concurrently]",
-    "flags": [
-     {
-      "why": "5 exams",
-      "w": 1.5
-     }
-    ],
-    "parts": {
-     "grades": 7.7,
-     "prof": 5.8,
-     "material": 6.0
-    },
-    "weight": 5.2,
-    "work": 2.55
+    "work": 1.87
    },
    {
     "course": "ECE 26400",
@@ -1072,6 +1032,46 @@
     "work": 1.43
    },
    {
+    "course": "ECE 27000",
+    "title": "Introduction To Digital System Design",
+    "credits": 4,
+    "score": 6.9,
+    "gpa": 2.87,
+    "gpaOf": "Junfei Li",
+    "gpaSrc": "boiler.tools",
+    "dfw": 18.4,
+    "withdraw": 4.7,
+    "dfwAll": 19.2,
+    "reach": 0.63,
+    "peerPct": 79,
+    "peer": "ECE 2xx",
+    "recent": true,
+    "prof": "Junfei Li",
+    "rating": 3.7,
+    "profDiff": 2.8,
+    "ratings": 51,
+    "dept": "Engineering",
+    "material": 6.0,
+    "materialWhy": "Boolean algebra, K-maps, sequential state machines and Verilog: a new mental model, but well structured",
+    "syllabus": 6.5,
+    "syllabusOf": "011",
+    "syllabusUrl": "https://purdue.simplesyllabus.com/en-US/doc/scjv02m37",
+    "desc": "An introduction to digital system design and hardware engineering, with an emphasis on practical design techniques and circuit implementation. Prerequisites: Undergraduate level, ECE 20100, Minimum Grade of D- [may be taken concurrently] or Undergraduate level, ECE 20001, Minimum Grade of D- [may be taken concurrently]",
+    "flags": [
+     {
+      "why": "5 exams",
+      "w": 1.5
+     }
+    ],
+    "parts": {
+     "grades": 7.5,
+     "prof": 5.6,
+     "material": 6.0
+    },
+    "weight": 5.2,
+    "work": 2.48
+   },
+   {
     "course": "ECE 20869",
     "title": "Discrete Math For Computer Engineering",
     "credits": 3,
@@ -1115,14 +1115,14 @@
     "course": "ECE 20007",
     "title": "Electrical Engineering Fundamentals I Lab",
     "credits": 1,
-    "score": 3.7,
+    "score": 3.5,
     "gpa": 3.63,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 6.8,
     "withdraw": 3.1,
     "dfwAll": 7.1,
-    "reach": 0.54,
+    "reach": 0.63,
     "peerPct": 10,
     "peer": "ECE 2xx",
     "recent": true,
@@ -1152,12 +1152,12 @@
      }
     ],
     "parts": {
-     "grades": 3.8,
-     "prof": 3.8,
+     "grades": 3.4,
+     "prof": 3.4,
      "material": 3.5
     },
     "weight": 1.6,
-    "work": 0.22
+    "work": 0.2
    },
    {
     "course": "VIP 27920",
@@ -1170,7 +1170,7 @@
     "dfw": 6.9,
     "withdraw": 6.0,
     "dfwAll": 5.5,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 35,
     "peer": "2xx",
     "recent": true,
@@ -1210,7 +1210,7 @@
     "dfw": 7.7,
     "withdraw": 1.9,
     "dfwAll": 8.2,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 6,
     "peer": "ECE 2xx",
     "recent": true,
@@ -1237,8 +1237,8 @@
   ],
   "credits": 17,
   "hours": 17.2,
-  "work": 7.6,
-  "score": 7.2
+  "work": 7.5,
+  "score": 7.1
  },
  "Matt": {
   "courses": [
@@ -1253,7 +1253,7 @@
     "dfw": 18.1,
     "withdraw": 6.0,
     "dfwAll": 17.5,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 88,
     "peer": "CHM 1xx",
     "recent": true,
@@ -1293,7 +1293,7 @@
     "dfw": 14.4,
     "withdraw": 2.8,
     "dfwAll": 14.7,
-    "reach": 0.6,
+    "reach": 0.66,
     "peerPct": 94,
     "peer": "2xx",
     "recent": true,
@@ -1310,8 +1310,8 @@
     "desc": null,
     "flags": [],
     "parts": {
-     "grades": 7.5,
-     "prof": 6.2,
+     "grades": 7.4,
+     "prof": 6.1,
      "material": 6.0
     },
     "weight": 4,
@@ -1328,7 +1328,7 @@
     "dfw": 3.3,
     "withdraw": 1.7,
     "dfwAll": 2.2,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 54,
     "peer": "ENGR 1xx",
     "recent": true,
@@ -1368,7 +1368,7 @@
     "dfw": 8.1,
     "withdraw": 5.8,
     "dfwAll": 7.4,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 28,
     "peer": "CHM 1xx",
     "recent": true,
@@ -1403,7 +1403,7 @@
     "dfw": 5.0,
     "withdraw": 2.3,
     "dfwAll": 5.1,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 34,
     "peer": "1xx",
     "recent": true,
@@ -1443,7 +1443,7 @@
     "dfw": 5.0,
     "withdraw": 4.3,
     "dfwAll": 6.6,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 71,
     "peer": "ENGR 1xx",
     "recent": true,
@@ -1478,7 +1478,7 @@
     "dfw": 1.0,
     "withdraw": 1.0,
     "dfwAll": 1.4,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 53,
     "peer": "BAND 1xx",
     "recent": true,
@@ -1582,7 +1582,7 @@
     "dfw": 21.8,
     "withdraw": 6.3,
     "dfwAll": 21.2,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 92,
     "peer": "CGT 1xx",
     "recent": true,
@@ -1705,7 +1705,7 @@
     "dfw": 0.9,
     "withdraw": 0.2,
     "dfwAll": 0.9,
-    "reach": 0.78,
+    "reach": 0.79,
     "peerPct": 0,
     "peer": "CGT 3xx",
     "recent": true,
@@ -1727,7 +1727,7 @@
      }
     ],
     "parts": {
-     "grades": 1.2,
+     "grades": 1.1,
      "prof": 6.8,
      "material": 2.5
     },
@@ -1745,7 +1745,7 @@
     "dfw": 5.1,
     "withdraw": 1.5,
     "dfwAll": 5.7,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 39,
     "peer": "1xx",
     "recent": true,
@@ -1781,14 +1781,14 @@
     "course": "ECE 20001",
     "title": "Electrical Engineering Fundamentals I",
     "credits": 3,
-    "score": 8.0,
+    "score": 7.9,
     "gpa": 2.57,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 19.4,
     "withdraw": 3.2,
     "dfwAll": 18.9,
-    "reach": 0.54,
+    "reach": 0.63,
     "peerPct": 82,
     "peer": "ECE 2xx",
     "recent": true,
@@ -1814,25 +1814,25 @@
      }
     ],
     "parts": {
-     "grades": 8.6,
-     "prof": 6.2,
+     "grades": 8.5,
+     "prof": 5.9,
      "material": 7.0
     },
     "weight": 3,
-    "work": 1.92
+    "work": 1.87
    },
    {
     "course": "MA 26100",
     "title": "Multivariate Calculus",
     "credits": 4,
-    "score": 6.8,
+    "score": 6.7,
     "gpa": 2.69,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 14.4,
     "withdraw": 2.8,
     "dfwAll": 14.7,
-    "reach": 0.6,
+    "reach": 0.66,
     "peerPct": 94,
     "peer": "2xx",
     "recent": true,
@@ -1849,12 +1849,12 @@
     "desc": null,
     "flags": [],
     "parts": {
-     "grades": 7.5,
-     "prof": 6.6,
+     "grades": 7.4,
+     "prof": 6.4,
      "material": 6.0
     },
     "weight": 4,
-    "work": 1.85
+    "work": 1.8
    },
    {
     "course": "PHYS 27200",
@@ -1867,7 +1867,7 @@
     "dfw": 11.1,
     "withdraw": 2.7,
     "dfwAll": 11.3,
-    "reach": 0.69,
+    "reach": 0.73,
     "peerPct": 60,
     "peer": "PHYS 2xx",
     "recent": true,
@@ -1884,8 +1884,8 @@
     "desc": null,
     "flags": [],
     "parts": {
-     "grades": 5.8,
-     "prof": 5.2,
+     "grades": 5.7,
+     "prof": 5.1,
      "material": 7.0
     },
     "weight": 4.6,
@@ -1939,14 +1939,14 @@
     "course": "ECE 20007",
     "title": "Electrical Engineering Fundamentals I Lab",
     "credits": 1,
-    "score": 3.7,
+    "score": 3.5,
     "gpa": 3.63,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 6.8,
     "withdraw": 3.1,
     "dfwAll": 7.1,
-    "reach": 0.54,
+    "reach": 0.63,
     "peerPct": 10,
     "peer": "ECE 2xx",
     "recent": true,
@@ -1976,12 +1976,12 @@
      }
     ],
     "parts": {
-     "grades": 3.8,
-     "prof": 3.8,
+     "grades": 3.4,
+     "prof": 3.4,
      "material": 3.5
     },
     "weight": 1.6,
-    "work": 0.22
+    "work": 0.2
    },
    {
     "course": "VIP 27920",
@@ -1994,7 +1994,7 @@
     "dfw": 6.9,
     "withdraw": 6.0,
     "dfwAll": 5.5,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 35,
     "peer": "2xx",
     "recent": true,
@@ -2034,7 +2034,7 @@
     "dfw": 7.7,
     "withdraw": 1.9,
     "dfwAll": 8.2,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 6,
     "peer": "ECE 2xx",
     "recent": true,
@@ -2061,8 +2061,8 @@
   ],
   "credits": 18,
   "hours": 17.0,
-  "work": 6.6,
-  "score": 6.7
+  "work": 6.5,
+  "score": 6.6
  },
  "Noah": {
   "courses": [
@@ -2070,14 +2070,14 @@
     "course": "ECE 20001",
     "title": "Electrical Engineering Fundamentals I",
     "credits": 3,
-    "score": 8.0,
+    "score": 7.9,
     "gpa": 2.57,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 19.4,
     "withdraw": 3.2,
     "dfwAll": 18.9,
-    "reach": 0.54,
+    "reach": 0.63,
     "peerPct": 82,
     "peer": "ECE 2xx",
     "recent": true,
@@ -2103,25 +2103,25 @@
      }
     ],
     "parts": {
-     "grades": 8.6,
-     "prof": 6.2,
+     "grades": 8.5,
+     "prof": 5.9,
      "material": 7.0
     },
     "weight": 3,
-    "work": 1.92
+    "work": 1.87
    },
    {
     "course": "MA 26100",
     "title": "Multivariate Calculus",
     "credits": 4,
-    "score": 6.8,
+    "score": 6.7,
     "gpa": 2.69,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 14.4,
     "withdraw": 2.8,
     "dfwAll": 14.7,
-    "reach": 0.6,
+    "reach": 0.66,
     "peerPct": 94,
     "peer": "2xx",
     "recent": true,
@@ -2138,12 +2138,12 @@
     "desc": null,
     "flags": [],
     "parts": {
-     "grades": 7.5,
-     "prof": 6.6,
+     "grades": 7.4,
+     "prof": 6.4,
      "material": 6.0
     },
     "weight": 4,
-    "work": 1.85
+    "work": 1.8
    },
    {
     "course": "ECE 20875",
@@ -2193,14 +2193,14 @@
     "course": "ECE 20007",
     "title": "Electrical Engineering Fundamentals I Lab",
     "credits": 1,
-    "score": 3.7,
+    "score": 3.5,
     "gpa": 3.63,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 6.8,
     "withdraw": 3.1,
     "dfwAll": 7.1,
-    "reach": 0.54,
+    "reach": 0.63,
     "peerPct": 10,
     "peer": "ECE 2xx",
     "recent": true,
@@ -2230,12 +2230,12 @@
      }
     ],
     "parts": {
-     "grades": 3.8,
-     "prof": 3.8,
+     "grades": 3.4,
+     "prof": 3.4,
      "material": 3.5
     },
     "weight": 1.6,
-    "work": 0.22
+    "work": 0.2
    },
    {
     "course": "VIP 27920",
@@ -2248,7 +2248,7 @@
     "dfw": 6.9,
     "withdraw": 6.0,
     "dfwAll": 5.5,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 35,
     "peer": "2xx",
     "recent": true,
@@ -2288,7 +2288,7 @@
     "dfw": 7.7,
     "withdraw": 1.9,
     "dfwAll": 8.2,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 6,
     "peer": "ECE 2xx",
     "recent": true,
@@ -2315,8 +2315,8 @@
   ],
   "credits": 14,
   "hours": 12.7,
-  "work": 4.9,
-  "score": 5.6
+  "work": 4.8,
+  "score": 5.5
  },
  "Romir": {
   "courses": [
@@ -2331,7 +2331,7 @@
     "dfw": 19.4,
     "withdraw": 3.2,
     "dfwAll": 18.9,
-    "reach": 0.54,
+    "reach": 0.63,
     "peerPct": 82,
     "peer": "ECE 2xx",
     "recent": true,
@@ -2357,8 +2357,8 @@
      }
     ],
     "parts": {
-     "grades": 8.6,
-     "prof": 7.4,
+     "grades": 8.5,
+     "prof": 7.2,
      "material": 7.0
     },
     "weight": 3,
@@ -2412,14 +2412,14 @@
     "course": "ECE 27000",
     "title": "Introduction To Digital System Design",
     "credits": 4,
-    "score": 7.0,
+    "score": 6.9,
     "gpa": 2.87,
     "gpaOf": "Junfei Li",
     "gpaSrc": "boiler.tools",
     "dfw": 18.4,
     "withdraw": 4.7,
     "dfwAll": 19.2,
-    "reach": 0.54,
+    "reach": 0.63,
     "peerPct": 79,
     "peer": "ECE 2xx",
     "recent": true,
@@ -2441,25 +2441,25 @@
      }
     ],
     "parts": {
-     "grades": 7.7,
-     "prof": 5.8,
+     "grades": 7.5,
+     "prof": 5.6,
      "material": 6.0
     },
     "weight": 5.2,
-    "work": 2.55
+    "work": 2.48
    },
    {
     "course": "MA 26600",
     "title": "Ordinary Differential Equations",
     "credits": 3,
-    "score": 6.8,
+    "score": 6.7,
     "gpa": 2.68,
     "gpaOf": "Gert Vercleyen",
     "gpaSrc": "boiler.tools",
     "dfw": 16.6,
     "withdraw": 2.8,
     "dfwAll": 16.1,
-    "reach": 0.51,
+    "reach": 0.61,
     "peerPct": 95,
     "peer": "2xx",
     "recent": true,
@@ -2476,25 +2476,25 @@
     "desc": "First order equations, second and n'th order linear equations, series solutions, solution by Laplace transform, systems of linear equations. It is preferable but not required to take MA 26500 either first or concurrently. Not open to students with credit in MA 26200, 27200, 36000, 36100, or 36600. Prerequisites: Undergraduate level, MA 26100, Minimum Grade of C- or Undergraduate level, MA 17400, Minimum Grade of C- or Undergraduate level, MA 18200, Minimum Grade of C- or Undergraduate level, MA 27100, Minimum Grade of C- or Undergraduate level, MA 27101, Minimum Grade of C- or Undergraduate le",
     "flags": [],
     "parts": {
-     "grades": 7.9,
-     "prof": 5.6,
+     "grades": 7.8,
+     "prof": 5.3,
      "material": 6.0
     },
     "weight": 3,
-    "work": 1.39
+    "work": 1.35
    },
    {
     "course": "ECE 20007",
     "title": "Electrical Engineering Fundamentals I Lab",
     "credits": 1,
-    "score": 3.7,
+    "score": 3.5,
     "gpa": 3.63,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 6.8,
     "withdraw": 3.1,
     "dfwAll": 7.1,
-    "reach": 0.54,
+    "reach": 0.63,
     "peerPct": 10,
     "peer": "ECE 2xx",
     "recent": true,
@@ -2524,12 +2524,12 @@
      }
     ],
     "parts": {
-     "grades": 3.8,
-     "prof": 3.8,
+     "grades": 3.4,
+     "prof": 3.4,
      "material": 3.5
     },
     "weight": 1.6,
-    "work": 0.22
+    "work": 0.2
    },
    {
     "course": "VIP 27920",
@@ -2542,7 +2542,7 @@
     "dfw": 6.9,
     "withdraw": 6.0,
     "dfwAll": 5.5,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 35,
     "peer": "2xx",
     "recent": true,
@@ -2582,7 +2582,7 @@
     "dfw": 7.7,
     "withdraw": 1.9,
     "dfwAll": 8.2,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 6,
     "peer": "ECE 2xx",
     "recent": true,
@@ -2609,7 +2609,7 @@
   ],
   "credits": 17,
   "hours": 17.2,
-  "work": 7.9,
+  "work": 7.8,
   "score": 7.3
  },
  "Vlad": {
@@ -2618,14 +2618,14 @@
     "course": "ECE 30100",
     "title": "Signals And Systems",
     "credits": 3,
-    "score": 8.4,
+    "score": 8.1,
     "gpa": 2.78,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 15.7,
     "withdraw": 2.1,
     "dfwAll": 15.9,
-    "reach": 0.24,
+    "reach": 0.47,
     "peerPct": 72,
     "peer": "ECE 3xx",
     "recent": true,
@@ -2651,25 +2651,25 @@
      }
     ],
     "parts": {
-     "grades": 7.9,
-     "prof": 7.9,
+     "grades": 7.6,
+     "prof": 7.6,
      "material": 8.5
     },
     "weight": 3,
-    "work": 2.12
+    "work": 1.97
    },
    {
     "course": "ECE 33700",
     "title": "ASIC Design Laboratory",
     "credits": 2,
-    "score": 7.9,
+    "score": 7.8,
     "gpa": 2.97,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 21.4,
     "withdraw": 10.9,
     "dfwAll": 24.0,
-    "reach": 0.43,
+    "reach": 0.57,
     "peerPct": 89,
     "peer": "ECE 3xx",
     "recent": true,
@@ -2691,12 +2691,12 @@
      }
     ],
     "parts": {
-     "grades": 8.2,
-     "prof": 7.5,
+     "grades": 8.1,
+     "prof": 7.2,
      "material": 7.5
     },
     "weight": 3.2,
-    "work": 2.0
+    "work": 1.95
    },
    {
     "course": "ECE 36800",
@@ -2709,7 +2709,7 @@
     "dfw": 20.4,
     "withdraw": 7.9,
     "dfwAll": 20.6,
-    "reach": 0.68,
+    "reach": 0.72,
     "peerPct": 83,
     "peer": "ECE 3xx",
     "recent": true,
@@ -2735,8 +2735,8 @@
      }
     ],
     "parts": {
-     "grades": 7.7,
-     "prof": 5.5,
+     "grades": 7.6,
+     "prof": 5.4,
      "material": 7.0
     },
     "weight": 3,
@@ -2746,14 +2746,14 @@
     "course": "ECE 36200",
     "title": "Microprocessor Systems And Interfacing",
     "credits": 4,
-    "score": 6.9,
+    "score": 6.7,
     "gpa": 2.95,
     "gpaOf": null,
     "gpaSrc": "boiler.tools",
     "dfw": 11.9,
     "withdraw": 3.2,
     "dfwAll": 14.8,
-    "reach": 0.38,
+    "reach": 0.55,
     "peerPct": 70,
     "peer": "ECE 3xx",
     "recent": true,
@@ -2770,12 +2770,12 @@
     "desc": "An introduction to basic computer organization, microprocessor instruction sets, assembly language programming, and microcontroller peripherals. Prerequisites: Undergraduate level, ECE 27000, Minimum Grade of C and (Undergraduate level, ENGR 11700, Minimum Grade of D- or Undergraduate level, CS 15900, Minimum Grade of D-)",
     "flags": [],
     "parts": {
-     "grades": 6.9,
-     "prof": 6.9,
+     "grades": 6.5,
+     "prof": 6.5,
      "material": 7.0
     },
     "weight": 5.2,
-    "work": 2.48
+    "work": 2.33
    },
    {
     "course": "VIP 27920",
@@ -2788,7 +2788,7 @@
     "dfw": 6.9,
     "withdraw": 6.0,
     "dfwAll": 5.5,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 35,
     "peer": "2xx",
     "recent": true,
@@ -2828,7 +2828,7 @@
     "dfw": 7.7,
     "withdraw": 1.9,
     "dfwAll": 8.2,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 6,
     "peer": "ECE 2xx",
     "recent": true,
@@ -2863,7 +2863,7 @@
     "dfw": 2.1,
     "withdraw": 0.7,
     "dfwAll": 2.1,
-    "reach": 1,
+    "reach": 1.0,
     "peerPct": 3,
     "peer": "EAPS 1xx",
     "recent": true,
@@ -2890,7 +2890,7 @@
   ],
   "credits": 18,
   "hours": 16.5,
-  "work": 8.3,
-  "score": 7.5
+  "work": 8.0,
+  "score": 7.3
  }
 }

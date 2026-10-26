@@ -1,10 +1,10 @@
 """Difficulty for planned courses, written to difficulty-plan.json. Run: python plandiff.py
 
-The site already scores the courses people are enrolled in (difficulty.py), but that path
-needs an instructor: it blends grade history, the professor's own RateMyProfessors difficulty
-and the posted syllabus. A course three years out has none of those, so this scores the only
-thing that exists yet - the course's grade history across every instructor on record, plus its
-level. That is the same "no ratings at all" path difficulty.py already falls back to.
+Same per-course model as difficulty.py - boiler.tools GPA and DFW scaled up for how many
+starters its prerequisites filter out, plus how hard the material is - minus what a course
+three years out does not have yet: no instructor (so grades stand in for the RateMyProfessors
+share, the "no ratings" path difficulty.py already takes) and no posted syllabus. Courses not in
+difficulty.MATERIAL fall back to their level for the material share.
 """
 import json, time, collections
 import difficulty as D                       # same sources and the same scoring curve
@@ -27,28 +27,40 @@ def codes():
 
 
 def main():
-    want = codes()
-    subs = sorted({c.split()[0] for c in want})
-    print(f"{len(want)} courses across {len(subs)} subjects")
+    want = sorted(codes())
+    print(f"{len(want)} courses")
+    bt = {}
+    for i, c in enumerate(want, 1):
+        bt.update(D.boilertools({c: None}))   # one at a time: a dead page must not lose the rest
+        if i % 50 == 0: print(f"  [{i}/{len(want)}] {len(bt)} found", flush=True)
+    subs = sorted({c.split()[0] for c in want if c not in bt})
     bc = {}
-    for i, s in enumerate(subs, 1):
+    for s in subs:                            # BoilerClasses for what boiler.tools has no grades for
         try:
             bc.update(D.boilerclasses({s}))
-        except Exception as e:                # a dead subject page must not lose the other 59
+        except Exception as e:
             print(f"  !! {s}: {e}")
-        print(f"  [{i}/{len(subs)}] {s} -> {len(bc)}", flush=True)
         time.sleep(.2)
 
     out = {}
-    for c in sorted(want):
-        meta = bc.get(c)
-        if not meta: continue
-        gpa, _ = D.course_gpa(meta, [])       # no instructor yet, so the course average is the whole story
-        if gpa is None: continue
-        g, _ = D.score(gpa, None)
+    for c in want:
+        b, meta = bt.get(c), bc.get(c)
+        if b and b["gpa"] is not None:
+            gpa, dfw = round(b["gpa"], 2), round(b["dfw"], 1)
+            s = D.reach(b["prereq"], entry=c.split()[1][0] == "1")
+        elif meta and D.course_gpa(meta, [])[0] is not None:
+            gpa, dfw, s = D.course_gpa(meta, [])[0], None, 1.0
+        else:
+            continue
         lvl = D.LEVEL[int(c.split()[1][0])]
-        out[c] = {"s": D.clamp(round(.5 * g + .3 * g + .2 * lvl, 1)),   # prof term falls back to grades
-                  "g": gpa, "cr": meta["credits"], "t": meta["title"]}
+        m = D.MATERIAL.get(c, (lvl, None))[0]
+        g = D.score(gpa, None)[0]
+        f = D.dfw_score(dfw, b and b["w"])
+        o = D.general(g if f is None else .6 * g + .4 * f, s)
+        out[c] = {"s": D.clamp(round(.65 * o + .35 * m, 1)),   # instructor share falls back to grades
+                  "g": gpa, "dfw": dfw, "reach": round(s, 2),
+                  "cr": (meta or {}).get("credits") or (b and b["credits"]) or 3,
+                  "t": (meta or {}).get("title") or (b and b["title"]) or c}
     json.dump(out, open("difficulty-plan.json", "w", encoding="utf-8"), separators=(",", ":"))
     print(f"scored {len(out)} of {len(want)}")
     return out

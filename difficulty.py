@@ -6,6 +6,7 @@ Bundled schedules only: CSVs uploaded in the browser are never scored.
 Run: python difficulty.py
 """
 import json, re, io, math, collections, urllib.request, time
+from statistics import NormalDist
 import syllabus
 
 SCHOOL = "U2Nob29sLTc4Mw=="                        # Purdue, RateMyProfessors node id
@@ -100,7 +101,7 @@ def boilertools(courses):
         # Half the whole record, half the last four years: courses drift (ECE 20001 swung 2.1-3.1 by
         # term), but a one-section course is noisy term to term and its bad years still count.
         mean = lambda k: (c[k] + sum(t[k] for t in recent) / len(recent)) / 2 if len(recent) >= 2 else c[k]
-        out[course] = {"gpa": mean("gpa"), "dfw": mean("pctDfw"), "w": mean("pctWithdraw"),
+        out[course] = {"title": c["title"], "gpa": mean("gpa"), "dfw": mean("pctDfw"), "w": mean("pctWithdraw"),
                        "allDfw": c["pctDfw"], "pct": c["difficulty"], "peer": c["peerGroup"], "recent": len(recent) >= 2,
                        "credits": (o.get("catalog") or {}).get("creditsMin"),
                        "prereq": (o.get("catalog") or {}).get("prereqTree"),
@@ -171,10 +172,30 @@ def chain(tree, depth=0, entry=False):
     return set().union(*parts) if parts else None
 
 
+# Failures land on the same students: whoever fails MA 16100 is likelier to fail PHYS 17200 too, so
+# multiplying pass rates counts one struggling student as several. Grades across courses correlate
+# about 0.5; each student gets one shared ability and each course a threshold matching its DFW.
+# RHO = 0 is the plain product, 1 is "only the hardest prerequisite filters anyone".
+# ponytail: retakes are not modelled - DFW counts enrollments and the public data has no student
+# IDs - so H in general() stays below 1 to leave room for those who retake and pass.
+RHO = 0.5
+
+
+def joint(passes, rho=RHO):
+    """P(a student passes every course) given each course's pass rate and correlation rho."""
+    N, r = NormalDist(), math.sqrt(rho)
+    cut = [N.inv_cdf(1 - min(max(p, 1e-6), 1 - 1e-6)) for p in passes]   # fail below the cut
+    if not cut:
+        return 1.0
+    # ponytail: midpoint rule over the shared ability, 1201 steps; exact to ~1e-4, plenty here
+    xs = [-6 + i * .01 for i in range(1201)]
+    return sum(N.pdf(x) * .01 * math.prod(1 - N.cdf((c - r * x) / math.sqrt(1 - rho)) for c in cut) for x in xs)
+
+
 def reach(tree, entry=False):
     """Share of students starting from scratch who pass everything the course requires first,
-    from each prerequisite's DFW rate on boiler.tools."""
-    return math.prod(_course(c)[0] for c in (chain(tree, entry=entry) or ()))
+    from each prerequisite's DFW rate on boiler.tools, with failures correlated across courses."""
+    return joint([_course(c)[0] for c in (chain(tree, entry=entry) or ())])
 
 
 def instructor_record(bt, who_teaches):
@@ -399,6 +420,8 @@ def _test(people):
     assert instructor_record(bt, ["Matthew Swabey"])[2] is None   # co-taught: nothing to compare against
     assert chain({"kind": "or", "items": [{"kind": "test"}]}, entry=True) == set() and chain(None) is None
     assert chain({"kind": "or", "items": [{"kind": "test"}]}) is None             # AP above 100-level is no route
+    assert abs(joint([.9, .9], 0) - .81) < 1e-3 and abs(joint([.8]) - .8) < 1e-3 and joint([]) == 1
+    assert .729 < joint([.9] * 3) < .9           # correlated: milder than the product, never above the hardest
     scored = [c for p in people.values() for c in p["courses"] if c["syllabus"] is not None]
     assert len(scored) > 20 and all(0 <= c["syllabus"] <= 10 for c in scored), len(scored)
 

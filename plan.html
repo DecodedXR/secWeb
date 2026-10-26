@@ -247,15 +247,15 @@ const loadOpts=Promise.all([
   fetch("difficulty-plan.json").then(r=>r.json()).then(o=>DIFF=o).catch(()=>{})]);
 
 // 0-10, from the course's grade history across every instructor on record. No professor is
-// assigned to a course three years out, so this is grades and level only.
+// assigned to a course three years out, so this is grades, prerequisites and material only.
 const dif=code=>{const d=DIFF[code]; return d?d.s:null};
 const difOf=c=>dif(PICKS[c.c]?PICKS[c.c].c:c.c);
 const dcol=v=>v>=7.5?"#ff8f8f":v>=5?"#ffd54a":"#7fe0bd";
 const chip=v=>v==null?"":`<i class="ds" style="--c:${dcol(v)}">${v.toFixed(1)}</i>`;
-const termDif=cs=>{                       // credit-weighted, so a 1-credit seminar cannot flatten a term
+const termDif=cs=>{                       // summed, as in difficulty.py's semester(): an easy class only adds
   const w=cs.filter(c=>difOf(c)!=null);
   if(!w.length) return null;
-  return w.reduce((a,c)=>a+difOf(c)*cr(c),0)/w.reduce((a,c)=>a+cr(c),0);
+  return 10*(1-Math.exp(-w.reduce((a,c)=>a+cr(c)*(difOf(c)/10)**2,0)/6));   // K = 6
 };
 
 const PK="plan-picks";
