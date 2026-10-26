@@ -161,12 +161,12 @@ function render(sched,diff){
   :`<div class="card"><h2>Why it scores ${sc.toFixed(1)}</h2>
     <div class="grid2">
       <div class="stat"><span>Grade history</span><b>${mine.parts.grades.toFixed(1)}</b>
-        <i>${mine.gpa==null?"no GPA on record":`${mine.gpa.toFixed(2)} average GPA &middot; ${esc(mine.gpaOf||"all instructors")}`}</i></div>
+        <i>${mine.gpa==null?"no GPA on record":`${mine.gpa.toFixed(2)} average GPA${mine.dfw==null?"":`, ${mine.dfw.toFixed(0)}% D/F/W`} &middot; ${esc(mine.gpaOf||"all instructors")}${mine.reach<1?` &middot; only ${Math.round(mine.reach*100)}% of starters get through its prerequisites`:""}`}</i></div>
       <div class="stat"><span>Instructor</span><b>${mine.parts.prof.toFixed(1)}</b>
         <i>${mine.prof?`${esc(mine.prof)} &middot; ${mine.rating.toFixed(1)}/5 rating, ${mine.profDiff.toFixed(1)}/5 difficulty (${mine.ratings} ratings)`
             :"not rated on RateMyProfessors"}</i></div>
-      <div class="stat"><span>Course level</span><b>${mine.parts.level.toFixed(1)}</b>
-        <i>${esc(COURSE.split(" ")[1][0])}00-level course</i></div>
+      <div class="stat"><span>Material</span><b>${mine.parts.material.toFixed(1)}</b>
+        <i>${esc(mine.materialWhy||COURSE.split(" ")[1][0]+"00-level course")}</i></div>
       <div class="stat"><span>Syllabus</span><b>${syl==null?"&mdash;":syl.toFixed(1)}</b>
         <i>${syl==null?"none posted for this course":`section ${esc(mine.syllabusOf)}`}</i></div>
     </div>
@@ -174,8 +174,8 @@ function render(sched,diff){
       `<span class="flag ${f.w>0?"up":f.w<0?"down":""}">${esc(f.why)} ${f.w>0?"+":""}${f.w.toFixed(1)}</span>`).join("")}</div>`:""}
     ${mine.syllabusUrl?`<p class="note">Policies read from the
       <a href="${esc(mine.syllabusUrl)}" target="_blank" rel="noopener">public Simple Syllabus posting</a>
-      for section ${esc(mine.syllabusOf)}. Half the score is grade history, a third the instructor&rsquo;s own
-      difficulty rating, the rest course level, nudged by the syllabus.</p>`:""}
+      for section ${esc(mine.syllabusOf)}. The score is 45% grades and DFW rate, scaled for how many students the prerequisites already filtered out, 20% the instructor&rsquo;s own
+      difficulty rating and 35% how hard the material is, nudged by the syllabus.</p>`:""}
   </div>`}
 
   ${exams.length?`<div class="card"><h2>${esc(WHO)}&rsquo;s dated sittings</h2>
